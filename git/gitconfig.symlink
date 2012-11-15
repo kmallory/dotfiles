@@ -5,8 +5,8 @@
 [hub]
         protocol = https
 [user]
-        name = Zach Holman
-        email = zach@zachholman.com
+        name = Kevin Mallory
+        email = kevin_mallory@intuit.com
 [credential]
         helper = osxkeychain
 [alias]
@@ -23,6 +23,12 @@
 [core]
         excludesfile = ~/.gitignore
         editor = vim
+[difftool "sourcetree"]
+        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+                path = 
+[mergetool "sourcetree"]
+                        cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+
 [apply]
         whitespace = nowarn
 [mergetool]
