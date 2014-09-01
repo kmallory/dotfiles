@@ -1,0 +1,87 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+let path='~/.vim/bundle'
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'https://kmallory@github.com/vim-scripts/L9.git'
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+"Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'https://kmallory@github.com/rstacruz/sparkup.git', {'rtp': 'vim/'}
+Plugin 'https://kmallory@github.com/vim-scripts/The-NERD-tree.git'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'https://kmallory@github.com/tpope/vim-sensible.git'
+Plugin 'https://kmallory@github.com/tpope/vim-sleuth.git'
+Plugin 'syntastic'
+Plugin 'https://kmallory@github.com/docunext/closetag.vim.git'
+Plugin 'HTMLHelper'
+Plugin 'HTML5-Syntax-File'
+"Plugin 'HTML-Source-Explorer'
+"Plugin 'ctrlp.vim'
+"
+"
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+"set ffs=dos,unix,mac
+set t_co=256
+colorscheme darkburn
+vmap ,x :!tidy -q -config c:\bin\tidy-aspvbs.conf -c -i --show-errors 0>
+set softtabstop=4          " yep, two
+set tabstop=4
+set expandtab              " expand tabs to spaces
+set nosmarttab             " no tabs
+if has("gui_running")
+  " GUI is running or is about to start.
+  " Maximize gvim window (for an alternative on Windows, see simalt below).
+  set lines=999 columns=999
+else
+  " This is console Vim.
+  if exists("+lines")
+    set lines=50
+  endif
+  if exists("+columns")
+    set columns=100
+  endif
+endif
+set guifont=courier_new:h14:b
+"set guifont=Monaco:h18
+
+autocmd FileType aspvbs,html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
+
+set omnifunc=syntaxcomplete#Complete
+set completeopt=longest,menuone
+function! Auto_complete_string()
+    if pumvisible()
+        return "\<C-n>"
+    else
+        return "\<C-x>\<C-o>\<C-r>=Auto_complete_opened()\<CR>"
+    end
+endfunction
+
+function! Auto_complete_opened()
+    if pumvisible()
+        return "\<Down>"
+    end
+    return ""
+endfunction
+
+inoremap <expr> <Nul> Auto_complete_string()
+inoremap <expr> <C-Space> Auto_complete_string()
