@@ -1,0 +1,10 @@
+[user]
+	name = Kevin Mallory
+	email = kmallory@gourmetgeeks.org
+[diff]
+	tool = winmerge
+	external = gitdiff.bat
+[difftool "winmerge"]
+	cmd = winmerge.sh \"
+[difftool]
+	prompt = false
