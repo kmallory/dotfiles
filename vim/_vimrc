@@ -3,6 +3,7 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+let path='~/.vim/bundle'
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -13,7 +14,7 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'git://github.com/tpope/vim-fugitive.git'
+Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'https://kmallory@github.com/vim-scripts/L9.git'
 " Git plugin not hosted on GitHub
@@ -28,11 +29,10 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'https://kmallory@github.com/tpope/vim-sensible.git'
 Plugin 'https://kmallory@github.com/tpope/vim-sleuth.git'
 Plugin 'syntastic'
-Plugin 'SuperTab'
 Plugin 'https://kmallory@github.com/docunext/closetag.vim.git'
 Plugin 'HTMLHelper'
 Plugin 'HTML5-Syntax-File'
-"Plugin 'https://kmallory@github.com/brunosilva/html-source-explorer.git'!
+"Plugin 'HTML-Source-Explorer'
 "Plugin 'ctrlp.vim'
 "
 "
@@ -43,7 +43,7 @@ filetype plugin indent on    " required
 "set ffs=dos,unix,mac
 set t_co=256
 colorscheme darkburn
-vmap ,x :!tidy -q -c -i --show-errors 0>
+vmap ,x :!tidy -q -config c:\bin\tidy-aspvbs.conf -c -i --show-errors 0>
 set softtabstop=4          " yep, two
 set tabstop=4
 set expandtab              " expand tabs to spaces
@@ -61,25 +61,13 @@ else
     set columns=100
   endif
 endif
-set guifont=Monaco:h16
+set guifont=courier_new:h14:b
+"set guifont=Monaco:h18
 
-if (&ft=='aspvbs')
-    compiler tidy
-'    setlocal makeprg=tidy -c -quiet -e %
-endif
-autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
-autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim 
+autocmd FileType aspvbs,html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 
 set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
-" Ctrl-Space for completions. Heck Yeah!
-"
-"imap <C-@> <C-Space>
-"noremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?  \ "\<lt>C-n>" : \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .  \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .  \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
-
-"let g:SuperTabDefaultCompletionType = "context"
-"let g:SuperTabDefaultCompletionType = ""
-"
 function! Auto_complete_string()
     if pumvisible()
         return "\<C-n>"

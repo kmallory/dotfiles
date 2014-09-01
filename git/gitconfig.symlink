@@ -5,8 +5,8 @@
 [hub]
         protocol = https
 [user]
-        name = Kevin Mallory
-        email = kevin_mallory@intuit.com
+	name = kevin mallory
+	email = kevin_mallory@intuit.com
 [credential]
         helper = osxkeychain
 [alias]
@@ -21,13 +21,14 @@
         branch = auto
         ui = true
 [core]
-        excludesfile = ~/.gitignore
+	excludesfile = /Users/kmallory/.gitignore_global
         editor = vim
 [difftool "sourcetree"]
-        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-                path = 
+	cmd = /usr/local/bin/bbdiff --resume --reverse --wait \"$LOCAL\" \"$REMOTE\"
+	path = 
 [mergetool "sourcetree"]
-                        cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Shareware/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 
 [apply]
         whitespace = nowarn
@@ -37,3 +38,5 @@
         prompt = false
 [help]
         autocorrect = 1
+[push]
+	default = simple
