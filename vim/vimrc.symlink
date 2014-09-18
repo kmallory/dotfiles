@@ -1,8 +1,10 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+let mapleader = ","
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/Documents/github/powerline/powerline/bindings/vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -28,13 +30,15 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'https://kmallory@github.com/tpope/vim-sensible.git'
 Plugin 'https://kmallory@github.com/tpope/vim-sleuth.git'
 Plugin 'syntastic'
-Plugin 'SuperTab'
+"Plugin 'SuperTab'
 Plugin 'https://kmallory@github.com/docunext/closetag.vim.git'
 Plugin 'HTMLHelper'
 Plugin 'HTML5-Syntax-File'
-"Plugin 'https://kmallory@github.com/brunosilva/html-source-explorer.git'!
-"Plugin 'ctrlp.vim'
-"
+Plugin 'https://kmallory@github.com/Valloric/YouCompleteMe.git'
+Plugin 'https://kmallory@github.com/Shougo/unite.vim.git'
+Plugin 'https://kmallory@github.com/Shougo/neomru.vim'
+Plugin 'https://kmallory@github.com/kien/ctrlp.vim.git'
+Plugin 'https://kmallory@github.com/zhaocai/linepower.vim'
 "
 
 " All of your Plugins must be added before the following line
@@ -42,14 +46,14 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 "set ffs=dos,unix,mac
 set t_co=256
-colorscheme darkburn
+"colorscheme distinguished
 vmap ,x :!tidy -q -c -i --show-errors 0>
 set softtabstop=4          " yep, two
 set tabstop=4
 set expandtab              " expand tabs to spaces
 set nosmarttab             " no tabs
 if has("gui_running")
-  " GUI is running or is about to start.
+  " GUI  s running or is about to start.
   " Maximize gvim window (for an alternative on Windows, see simalt below).
   set lines=999 columns=999
 else
@@ -58,28 +62,29 @@ else
     set lines=50
   endif
   if exists("+columns")
-    set columns=100
+    set columns=150
   endif
 endif
-set guifont=Monaco:h16
+"set guifont=Monaco:h16
+set guifont=Inconsolata-g\ for\ Powerline:h14
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
+
 
 if (&ft=='aspvbs')
     compiler tidy
-'    setlocal makeprg=tidy -c -quiet -e %
+    setlocal makeprg=tidy -c -quiet -e %
 endif
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim 
 
-set omnifunc=syntaxcomplete#Complete
-set completeopt=longest,menuone
-" Ctrl-Space for completions. Heck Yeah!
-"
-"imap <C-@> <C-Space>
-"noremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?  \ "\<lt>C-n>" : \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .  \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .  \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+"set omnifunc=syntaxcomplete#Complete
+"set completeopt=longest,menuone
 
-"let g:SuperTabDefaultCompletionType = "context"
-"let g:SuperTabDefaultCompletionType = ""
-"
+let g:SuperTabDefaultCompletionType = "context"
+
+
 function! Auto_complete_string()
     if pumvisible()
         return "\<C-n>"
@@ -94,8 +99,19 @@ function! Auto_complete_opened()
     end
     return ""
 endfunction
-
-inoremap <expr> <Nul> Auto_complete_string()
-inoremap <expr> <C-Space> Auto_complete_string()
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
+set ic
+inoremap <C-@> <C-Space>
+noremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?  \ "\<lt>C-n>" : \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .  \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .  \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+inoremap <expr> <Nul> Auto_complete_string()
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
+            \ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+" tab navigation like firefox
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>
