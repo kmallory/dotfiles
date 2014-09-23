@@ -1,4 +1,3 @@
-set nocompatible              " be iMproved, required
 filetype off                  " required
 
 let mapleader = ","
@@ -6,39 +5,31 @@ let mapleader = ","
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/Documents/github/powerline/powerline/bindings/vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'git://github.com/tpope/vim-fugitive.git'
-" plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'https://kmallory@github.com/vim-scripts/L9.git'
-" Git plugin not hosted on GitHub
-Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-Plugin 'https://kmallory@github.com/rstacruz/sparkup.git', {'rtp': 'vim/'}
-Plugin 'https://kmallory@github.com/vim-scripts/The-NERD-tree.git'
+Plugin 'MatchTag' " Find matching XML/HTML Tags
+Plugin 'https://github.com/Valloric/MatchTagAlways.git'
+Plugin 'git://github.com/tpope/vim-fugitive.git' "git support
+Plugin 'https://kmallory@github.com/vim-scripts/L9.git' "grep buffer, grepbufferall 
+Plugin 'https://github.com/wincent/command-t.git' " file explorer
+Plugin 'https://kmallory@github.com/vim-scripts/The-NERD-tree.git' " file explorer
 Plugin 'flazz/vim-colorschemes'
-Plugin 'https://kmallory@github.com/tpope/vim-sensible.git'
-Plugin 'https://kmallory@github.com/tpope/vim-sleuth.git'
-Plugin 'syntastic'
-"Plugin 'SuperTab'
-Plugin 'https://kmallory@github.com/docunext/closetag.vim.git'
-Plugin 'HTMLHelper'
-Plugin 'HTML5-Syntax-File'
-Plugin 'https://kmallory@github.com/Valloric/YouCompleteMe.git'
-Plugin 'https://kmallory@github.com/Shougo/unite.vim.git'
-Plugin 'https://kmallory@github.com/Shougo/neomru.vim'
+Plugin 'https://kmallory@github.com/tpope/vim-sensible.git' "common keys 
+Plugin 'https://kmallory@github.com/tpope/vim-sleuth.git' "guess at tab settings based on file 
+Plugin 'syntastic' "syntax checking
+Plugin 'https://github.com/ervandew/supertab.git' " use tab for syntax completions
+"Plugin 'https://kmallory@github.com/docunext/closetag.vim.git'
+Plugin 'https://github.com/vim-scripts/HTML-AutoCloseTag.git' "better auto close?
+Plugin 'HTML5-Syntax-File' " still have to copy files to ~./vim/syntax
+Plugin 'https://kmallory@github.com/Valloric/YouCompleteMe.git' "as you type compile support
+Plugin 'https://kmallory@github.com/Shougo/neomru.vim' " :
 Plugin 'https://kmallory@github.com/kien/ctrlp.vim.git'
 Plugin 'https://kmallory@github.com/zhaocai/linepower.vim'
+Plugin 'bkad/CamelCaseMotion'
+Plugin 'https://github.com/scrooloose/nerdcommenter.git' 
+Plugin 'https://github.com/mileszs/ack.vim.git' "grep current project tree
+Plugin 'https://github.com/sjl/gundo.vim.git' "view vim undo tree (and patch!)
+
 "
 
 " All of your Plugins must be added before the following line
@@ -48,14 +39,18 @@ filetype plugin indent on    " required
 set t_co=256
 "colorscheme distinguished
 vmap ,x :!tidy -q -c -i --show-errors 0>
-set softtabstop=4          " yep, two
-set tabstop=4
-set expandtab              " expand tabs to spaces
-set nosmarttab             " no tabs
+set macmeta
+
+"set softtabstop=4          " yep, two
+"set tabstop=4
+
 if has("gui_running")
   " GUI  s running or is about to start.
   " Maximize gvim window (for an alternative on Windows, see simalt below).
   set lines=999 columns=999
+"colorscheme Monokai-Refined
+"colorscheme solarized
+set background=light
 else
   " This is console Vim.
   if exists("+lines")
@@ -64,11 +59,12 @@ else
   if exists("+columns")
     set columns=150
   endif
+set term=xterm-256color
+colorscheme solarized
+set background=light
 endif
 "set guifont=Monaco:h16
-set guifont=Inconsolata-g\ for\ Powerline:h14
-set background=dark
-colorscheme solarized
+set guifont=Inconsolata-g\ for\ Powerline:h16
 let g:solarized_termcolors=256
 
 
@@ -77,10 +73,13 @@ if (&ft=='aspvbs')
     setlocal makeprg=tidy -c -quiet -e %
 endif
 autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
-autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag/plugin/closetag.vim 
+autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag.vim/plugin/closetag.vim 
+"autocmd! BufWritePost vimrc nested :source ~/.vimrc
 
-"set omnifunc=syntaxcomplete#Complete
-"set completeopt=longest,menuone
+
+set omnifunc=syntaxcomplete#Complete
+"set completeopt=longest,menuone,preview
+set completeopt=menuone,preview
 
 let g:SuperTabDefaultCompletionType = "context"
 
@@ -102,6 +101,8 @@ endfunction
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 set ic
+" inoremap = insertmode
+" noremap, nnoremap  = normal mode
 inoremap <C-@> <C-Space>
 noremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?  \ "\<lt>C-n>" : \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .  \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .  \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 inoremap <expr> <Nul> Auto_complete_string()
@@ -115,3 +116,244 @@ nnoremap <C-t>     :tabnew<CR>
 inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 inoremap <C-tab>   <Esc>:tabnext<CR>i
 inoremap <C-t>     <Esc>:tabnew<CR>
+" big word keys should act like a normal ones
+noremap <silent> W w
+noremap <silent> B b
+noremap <silent> E b
+
+" and little word keys should know about camel case and underscores
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+
+" store undos
+set undofile
+set undodir=/tmp/.vimundo/
+set undolevels=10000
+
+" Highlight problematic whitespace
+"set listchars=tab:>.,trail:.,extends:#,nbsp:. 
+set listchars=tab:\|\ ,trail:.,extends:#,nbsp:. 
+"set listchars=eol:¬,tab:→→,extends:>,precedes:<,nbsp:..
+set list
+
+" nerdcommenter
+let mapleader = ","
+let maplocalleader = ";"
+
+
+" Reselect visual block after indent/outdent
+" <3 you, vimbits.com
+vnoremap < <gv
+vnoremap > >gv
+
+" tab auto completion 
+" via http://robots.thoughtbot.com/post/27041742805/vim-you-complete-me
+imap <Tab> <C-P>
+set wildmode=longest,list:longest,list:full
+set completeopt=menu,preview
+"  UI
+set ruler                  " show the cursor position all the time
+set noshowcmd              " don't display incomplete commands
+set nolazyredraw           " turn off lazy redraw
+set wildmenu               " turn on wild menu
+set wildmode=list:longest,full
+set ch=2                   " command line height
+set backspace=2            " allow backspacing over everything in insert mode
+set whichwrap+=<,>,h,l,[,] " backspace and cursor keys wrap to
+set shortmess=filtIoOA     " shorten messages
+set nostartofline          " don't jump to the start of line when scrolling
+
+
+" syntastic
+let g:syntastic_quiet_messages = {'level': 'warnings'}
+let g:syntastic_enable_signs=1
+
+" fix for user defined mapping not found 
+"
+let g:clang_user_options='|| exit 0'
+"
+" Search mappings: These will make it so that going to the next one in a
+" search will center on the line it's found in.
+map N Nzz
+map n nzz
+
+" Split in a more normal way
+set splitbelow
+set splitright
+set complete=.,w,t
+function! InsertTabWrapper()
+      let col = col('.') - 1
+      if !col || getline('.')[col - 1] !~ '\k'
+         return "\<tab>"
+      else
+         return "\<c-p>"
+      endif
+endfunction
+inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+set fillchars+=fold:\ 
+"set foldmethod=syntax
+set foldlevelstart=20
+set fillchars+=stl:\ ,stlnc:\
+set termencoding=utf-8
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+
+
+" Set a nicer foldtext function
+set foldtext=MyFoldText()
+  function! MyFoldText()
+    let line = getline(v:foldstart)
+    if match( line, '^[ \t]*\(\/\*\|\/\/\)[*/\\]*[ \t]*$' ) == 0
+      let initial = substitute( line, '^\([ \t]\)*\(\/\*\|\/\/\)\(.*\)', '\1\2', '' )
+      let linenum = v:foldstart + 1
+      while linenum < v:foldend
+        let line = getline( linenum )
+        let comment_content = substitute( line, '^\([ \t\/\*]*\)\(.*\)$', '\2', 'g' )
+        if comment_content != ''
+          break
+        endif
+        let linenum = linenum + 1
+      endwhile
+      let sub = initial . ' ' . comment_content
+    else
+      let sub = line
+      let startbrace = substitute( line, '^.*{[ \t]*$', '{', 'g')
+      if startbrace == '{'
+        let line = getline(v:foldend)
+        let endbrace = substitute( line, '^[ \t]*}\(.*\)$', '}', 'g')
+        if endbrace == '}'
+          let sub = sub.substitute( line, '^[ \t]*}\(.*\)$', '...}\1', 'g')
+        endif
+      endif
+    endif
+    let n = v:foldend - v:foldstart + 1
+    let info = " " . n . " lines"
+    let sub = sub . "                                                                                                                  "
+    let num_w = getwinvar( 0, '&number' ) * getwinvar( 0, '&numberwidth' )
+    let fold_w = getwinvar( 0, '&foldcolumn' )
+    let sub = strpart( sub, 0, winwidth(0) - strlen( info ) - num_w - fold_w - 1 )
+    return sub . info
+  endfunction
+highlight FoldColumn  gui=bold    guifg=grey65     guibg=Grey90
+highlight Folded      gui=italic  guifg=Black      guibg=Grey90
+highlight LineNr      gui=NONE    guifg=grey60     guibg=Grey90
+
+
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
+ 
+
+" Search
+nmap <leader>s  :%s/
+vmap <leader>s  :s/
+" Split screen
+map <leader>v   :vsp<CR>
+
+
+" Move between screens
+map <leader>w   ^Ww
+map <leader>=   ^W=
+map <leader>j   ^Wj
+map <leader>k   ^Wk
+nmap <C-j>      <C-w>j
+nmap <C-k>      <C-w>k
+nmap <C-h>      <C-w>h
+nmap <C-l>      <C-w>l
+
+
+" Auto-indent whole file
+nmap <leader>=  gg=G``
+map <silent> <F7> gg=G``:echo "Reformatted."<CR>
+
+" Fast scrolling
+nnoremap <C-e>  3<C-e>
+nnoremap <C-y>  3<C-y>
+
+" Previous/next quickfix file listings (e.g. search results)
+map <M-D-Down>  :cn<CR>
+map <M-D-Up>    :cp<CR>
+
+" Previous/next buffers
+map <M-D-Left>  :bp<CR>
+map <M-D-Right> :bn<CR>
+
+
+" File tree browser
+map \           :NERDTreeToggle<CR>
+
+" File tree browser showing current file - pipe (shift-backslash)
+map \|          :NERDTreeFind<CR>
+
+"indent/unindent visual mode selection with tab/shift+tab
+vmap <tab> >gv
+vmap <s-tab> <gv
+
+
+" Comment/uncomment lines
+map <leader>/   <plug>NERDCommenterToggle
+map <D-/>       <plug>NERDCommenterToggle
+imap <D-/>      <Esc><plug>NERDCommenterToggle i
+
+" In command-line mode, <C-A> should go to the front of the line, as in bash.
+cmap <C-A> <C-B>
+
+" Copy current file path to system pasteboard
+map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
+map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
+
+" Disable middle mouse button, F1
+map <MiddleMouse>   <Nop>
+imap <MiddleMouse>  <Nop>
+map <F1>            <Nop>
+imap <F1>           <Nop>
+
+" Easy access to the shell
+map <Leader><Leader> :!
+
+" AckGrep current word
+map <leader>a :call AckGrep()<CR>
+" AckVisual current selection
+vmap <leader>a :call AckVisual()<CR>
+
+" Make Y consistent with D and C
+map Y           y$
+
+
+fu! SeeTab()
+  if !exists("g:SeeTabEnabled")
+    let g:SeeTabEnabled = 1
+    let g:SeeTab_list = &list
+    let g:SeeTab_listchars = &listchars
+    let regA = @a
+    redir @a
+    hi SpecialKey
+    redir END
+    let g:SeeTabSpecialKey = @a
+    let @a = regA
+    silent! hi SpecialKey guifg=black guibg=DarkBlue ctermfg=black ctermbg=magenta
+    set list
+    set listchars=tab:\|\
+  else
+    let &list = g:SeeTab_list
+    let &listchars = &listchars
+    silent! exe "hi ".substitute(g:SeeTabSpecialKey,'xxx','','e')
+    unlet g:SeeTabEnabled g:SeeTab_list g:SeeTab_listchars
+  endif
+endfunc
+com! -nargs=0 SeeTab :call SeeTab()
+
+syn match LeadingWS /\(^\s*\)\@<=\s/ conceal cchar=·
+setlocal conceallevel=2 concealcursor=nv
+silent! nmap <C-p> :NERDTreeToggle<CR>
+silent! map <F3> :NERDTreeFind<CR>
+let g:NERDTreeMapActivateNode="<F3>"
+let g:NERDTreeMapPreview="<F4>"
+
