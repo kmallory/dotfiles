@@ -1,4 +1,5 @@
-filetype off                  " required
+filetype off				  " required
+
 
 let mapleader = ","
 " set the runtime path to include Vundle and initialize
@@ -29,51 +30,50 @@ Plugin 'bkad/CamelCaseMotion'
 Plugin 'https://github.com/scrooloose/nerdcommenter.git' 
 Plugin 'https://github.com/mileszs/ack.vim.git' "grep current project tree
 Plugin 'https://github.com/sjl/gundo.vim.git' "view vim undo tree (and patch!)
-
-"
+Plugin 'https://github.com/tpope/vim-surround.git' "for adding and removing tags quickly
+Plugin 'https://github.com/bolasblack/csslint.vim.git'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()			 " required
+filetype plugin indent on	 " required
 "set ffs=dos,unix,mac
 set t_co=256
 "colorscheme distinguished
 vmap ,x :!tidy -q -c -i --show-errors 0>
 set macmeta
 
-"set softtabstop=4          " yep, two
-"set tabstop=4
+set noexpandtab
+set softtabstop=4		   " yep, two
+set tabstop=4
 
 if has("gui_running")
   " GUI  s running or is about to start.
   " Maximize gvim window (for an alternative on Windows, see simalt below).
   set lines=999 columns=999
-"colorscheme Monokai-Refined
-"colorscheme solarized
-set background=light
+  "colorscheme Monokai-Refined
+  "colorscheme solarized
+  set lines=56
+  set columns=230
+  set background=light
 else
   " This is console Vim.
   if exists("+lines")
-    set lines=50
+	set lines=50
   endif
   if exists("+columns")
-    set columns=150
+	set columns=150
   endif
-set term=xterm-256color
-colorscheme solarized
-set background=light
+  set term=xterm-256color
+  colorscheme solarized
+  set background=light
 endif
 "set guifont=Monaco:h16
-set guifont=Inconsolata-g\ for\ Powerline:h16
+set guifont=Inconsolata-g\ for\ Powerline:h14
 let g:solarized_termcolors=256
 
 
-if (&ft=='aspvbs')
-    compiler tidy
-    setlocal makeprg=tidy -c -quiet -e %
-endif
-autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
-autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag.vim/plugin/closetag.vim 
+"autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
+"autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag.vim/plugin/closetag.vim 
 "autocmd! BufWritePost vimrc nested :source ~/.vimrc
 
 
@@ -85,18 +85,18 @@ let g:SuperTabDefaultCompletionType = "context"
 
 
 function! Auto_complete_string()
-    if pumvisible()
-        return "\<C-n>"
-    else
-        return "\<C-x>\<C-o>\<C-r>=Auto_complete_opened()\<CR>"
-    end
+  if pumvisible()
+	return "\<C-n>"
+  else
+	return "\<C-x>\<C-o>\<C-r>=Auto_complete_opened()\<CR>"
+  end
 endfunction
 
 function! Auto_complete_opened()
-    if pumvisible()
-        return "\<Down>"
-    end
-    return ""
+  if pumvisible()
+	return "\<Down>"
+  end
+  return ""
 endfunction
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
@@ -104,18 +104,18 @@ set ic
 " inoremap = insertmode
 " noremap, nnoremap  = normal mode
 inoremap <C-@> <C-Space>
-noremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?  \ "\<lt>C-n>" : \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .  \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .  \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+noremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?  \ "\<lt>C-n>" : \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .	\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .	\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
 inoremap <expr> <Nul> Auto_complete_string()
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
-            \ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+	  \ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
 " tab navigation like firefox
 nnoremap <C-S-tab> :tabprevious<CR>
 nnoremap <C-tab>   :tabnext<CR>
-nnoremap <C-t>     :tabnew<CR>
+nnoremap <C-t>	   :tabnew<CR>
 inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 inoremap <C-tab>   <Esc>:tabnext<CR>i
-inoremap <C-t>     <Esc>:tabnew<CR>
+inoremap <C-t>	   <Esc>:tabnew<CR>
 " big word keys should act like a normal ones
 noremap <silent> W w
 noremap <silent> B b
@@ -133,8 +133,10 @@ set undolevels=10000
 
 " Highlight problematic whitespace
 "set listchars=tab:>.,trail:.,extends:#,nbsp:. 
-set listchars=tab:\|\ ,trail:.,extends:#,nbsp:. 
+set listchars=tab:\|\ ,trail:.,extends:#,nbsp:.,eol:¬
 "set listchars=eol:¬,tab:→→,extends:>,precedes:<,nbsp:..
+"nnoremap    <F2> :<C-U>setlocal lcs=tab:\|\ ,trail:.,extends:#,nbsp:.,eol:¬ list! list? <CR>
+
 set list
 
 " nerdcommenter
@@ -153,16 +155,16 @@ imap <Tab> <C-P>
 set wildmode=longest,list:longest,list:full
 set completeopt=menu,preview
 "  UI
-set ruler                  " show the cursor position all the time
-set noshowcmd              " don't display incomplete commands
-set nolazyredraw           " turn off lazy redraw
-set wildmenu               " turn on wild menu
+set ruler				   " show the cursor position all the time
+set noshowcmd			   " don't display incomplete commands
+set nolazyredraw		   " turn off lazy redraw
+set wildmenu			   " turn on wild menu
 set wildmode=list:longest,full
-set ch=2                   " command line height
-set backspace=2            " allow backspacing over everything in insert mode
+set ch=2				   " command line height
+set backspace=2			   " allow backspacing over everything in insert mode
 set whichwrap+=<,>,h,l,[,] " backspace and cursor keys wrap to
-set shortmess=filtIoOA     " shorten messages
-set nostartofline          " don't jump to the start of line when scrolling
+set shortmess=filtIoOA	   " shorten messages
+set nostartofline		   " don't jump to the start of line when scrolling
 
 
 " syntastic
@@ -183,17 +185,19 @@ set splitbelow
 set splitright
 set complete=.,w,t
 function! InsertTabWrapper()
-      let col = col('.') - 1
-      if !col || getline('.')[col - 1] !~ '\k'
-         return "\<tab>"
-      else
-         return "\<c-p>"
-      endif
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+	return "\<tab>"
+  else
+	return "\<c-p>"
+  endif
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 set fillchars+=fold:\ 
-"set foldmethod=syntax
-set foldlevelstart=20
+set foldmethod=indent
+"set foldopen=all,insert 
+"set foldclose=all
+"set foldlevelstart=20
 set fillchars+=stl:\ ,stlnc:\
 set termencoding=utf-8
 let g:Powerline_symbols = 'fancy'
@@ -201,43 +205,81 @@ set encoding=utf-8
 
 
 " Set a nicer foldtext function
-set foldtext=MyFoldText()
-  function! MyFoldText()
-    let line = getline(v:foldstart)
-    if match( line, '^[ \t]*\(\/\*\|\/\/\)[*/\\]*[ \t]*$' ) == 0
-      let initial = substitute( line, '^\([ \t]\)*\(\/\*\|\/\/\)\(.*\)', '\1\2', '' )
-      let linenum = v:foldstart + 1
-      while linenum < v:foldend
-        let line = getline( linenum )
-        let comment_content = substitute( line, '^\([ \t\/\*]*\)\(.*\)$', '\2', 'g' )
-        if comment_content != ''
-          break
-        endif
-        let linenum = linenum + 1
-      endwhile
-      let sub = initial . ' ' . comment_content
-    else
-      let sub = line
-      let startbrace = substitute( line, '^.*{[ \t]*$', '{', 'g')
-      if startbrace == '{'
-        let line = getline(v:foldend)
-        let endbrace = substitute( line, '^[ \t]*}\(.*\)$', '}', 'g')
-        if endbrace == '}'
-          let sub = sub.substitute( line, '^[ \t]*}\(.*\)$', '...}\1', 'g')
-        endif
-      endif
-    endif
-    let n = v:foldend - v:foldstart + 1
-    let info = " " . n . " lines"
-    let sub = sub . "                                                                                                                  "
-    let num_w = getwinvar( 0, '&number' ) * getwinvar( 0, '&numberwidth' )
-    let fold_w = getwinvar( 0, '&foldcolumn' )
-    let sub = strpart( sub, 0, winwidth(0) - strlen( info ) - num_w - fold_w - 1 )
-    return sub . info
-  endfunction
-highlight FoldColumn  gui=bold    guifg=grey65     guibg=Grey90
-highlight Folded      gui=italic  guifg=Black      guibg=Grey90
-highlight LineNr      gui=NONE    guifg=grey60     guibg=Grey90
+"set foldtext=MyFoldText()
+"function! MyFoldText()
+  "let line = getline(v:foldstart)
+  "if match( line, '^[ \t]*\(\/\*\|\/\/\)[*/\\]*[ \t]*$' ) == 0
+	"let initial = substitute( line, '^\([ \t]\)*\(\/\*\|\/\/\)\(.*\)', '\1\2', '' )
+	"let linenum = v:foldstart + 1
+	"while linenum < v:foldend
+	  "let line = getline( linenum )
+	  "let comment_content = substitute( line, '^\([ \t\/\*]*\)\(.*\)$', '\2', 'g' )
+	  "if comment_content != ''
+		"break
+	  "endif
+	  "let linenum = linenum + 1
+	"endwhile
+	"let sub = initial . ' ' . comment_content
+  "else
+	"let sub = line
+	"let startbrace = substitute( line, '^.*{[ \t]*$', '{', 'g')
+	"if startbrace == '{'
+	  "let line = getline(v:foldend)
+	  "let endbrace = substitute( line, '^[ \t]*}\(.*\)$', '}', 'g')
+	  "if endbrace == '}'
+		"let sub = sub.substitute( line, '^[ \t]*}\(.*\)$', '...}\1', 'g')
+	  "endif
+	"endif
+  "endif
+  "let n = v:foldend - v:foldstart + 1
+  "let info = " " . n . " lines"
+  "let sub = sub . "																												  "
+  "let num_w = getwinvar( 0, '&number' ) * getwinvar( 0, '&numberwidth' )
+  "let fold_w = getwinvar( 0, '&foldcolumn' )
+  "let sub = strpart( sub, 0, winwidth(0) - strlen( info ) - num_w - fold_w - 1 )
+  "return sub . info
+"endfunction
+
+"set foldtext=GetFoldedHeader()
+
+
+function! GetFoldedHeader()
+  let numlines_folded = v:foldend - v:foldstart + 1
+  let line_num = v:foldstart
+  let firstline = getline(v:foldstart)
+
+  let charline = matchstr(firstline, '^\s*\(<[^!]\|\w\+\)[^{}]*')
+
+  " Handle javadoc style comments, display the javadoc summary as the foldtext
+  if match(firstline, '^\s*\/\*\*') == 0
+	if match(firstline, '^\s*\/\*\*\s*$') == 0
+	  let charline = substitute(getline(v:foldstart+1), '^\s*\**\s*', '(doc) ', '')
+	  let charline = substitute(charline, '\..*$', '.', '')
+	else
+	  let charline = substitute(firstline, '\s*\/\*\*\s*', '', '')
+	endif
+  else
+	" handle the special case of multiple single line comments
+	if match(firstline, '^\s*\/\/') == 0
+	  if match(getline(v:foldend), '^\s*\/\/') == 0
+		let charline = substitute(firstline, '\s*\/*\s*', '', '')
+	  endif
+	else
+	  let charline = matchstr(firstline, '^\s*\(<[^!]\|\w\+\)[^{}]*')
+	  while strlen(charline) == 0 && line_num < v:foldend
+		let line_num = line_num + 1
+		let charline = matchstr(getline(line_num), '^\s*\(<[^!]\|\w\+\)[^{}]*')
+	  endw
+	endif
+  endif
+
+  let preamble = printf("[%d lines folded]:", numlines_folded)
+  return printf("%20s%s", substitute(charline, '^\s*', '', ''), preamble)
+
+endfunction
+highlight FoldColumn  gui=bold	  guifg=grey65	   guibg=Grey90
+highlight Folded	  gui=italic  guifg=Black	   guibg=Grey90
+highlight LineNr	  gui=NONE	  guifg=grey60	   guibg=Grey90
 
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -249,48 +291,48 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
- 
+
 
 " Search
-nmap <leader>s  :%s/
-vmap <leader>s  :s/
+nmap <leader>s	:%s/
+vmap <leader>s	:s/
 " Split screen
-map <leader>v   :vsp<CR>
+map <leader>v	:vsp<CR>
 
 
 " Move between screens
-map <leader>w   ^Ww
-map <leader>=   ^W=
-map <leader>j   ^Wj
-map <leader>k   ^Wk
-nmap <C-j>      <C-w>j
-nmap <C-k>      <C-w>k
-nmap <C-h>      <C-w>h
-nmap <C-l>      <C-w>l
+map <leader>w	^Ww
+map <leader>=	^W=
+map <leader>j	^Wj
+map <leader>k	^Wk
+nmap <C-j>		<C-w>j
+nmap <C-k>		<C-w>k
+nmap <C-h>		<C-w>h
+nmap <C-l>		<C-w>l
 
 
 " Auto-indent whole file
-nmap <leader>=  gg=G``
-map <silent> <F7> gg=G``:echo "Reformatted."<CR>
+nmap <leader>=	gg=G``
+map <silent> <F7> echo "Working...": gg=G``: :delmarks z<CR>:echo "Reformatted."<CR>
 
 " Fast scrolling
-nnoremap <C-e>  3<C-e>
-nnoremap <C-y>  3<C-y>
+nnoremap <C-e>	3<C-e>
+nnoremap <C-y>	3<C-y>
 
 " Previous/next quickfix file listings (e.g. search results)
-map <M-D-Down>  :cn<CR>
-map <M-D-Up>    :cp<CR>
+map <M-D-Down>	:cn<CR>
+map <M-D-Up>	:cp<CR>
 
 " Previous/next buffers
-map <M-D-Left>  :bp<CR>
+map <M-D-Left>	:bp<CR>
 map <M-D-Right> :bn<CR>
 
 
 " File tree browser
-map \           :NERDTreeToggle<CR>
+map \			:NERDTreeToggle<CR>
 
 " File tree browser showing current file - pipe (shift-backslash)
-map \|          :NERDTreeFind<CR>
+map \|			:NERDTreeFind<CR>
 
 "indent/unindent visual mode selection with tab/shift+tab
 vmap <tab> >gv
@@ -298,9 +340,9 @@ vmap <s-tab> <gv
 
 
 " Comment/uncomment lines
-map <leader>/   <plug>NERDCommenterToggle
-map <D-/>       <plug>NERDCommenterToggle
-imap <D-/>      <Esc><plug>NERDCommenterToggle i
+map <leader>/	<plug>NERDCommenterToggle
+map <D-/>		<plug>NERDCommenterToggle
+imap <D-/>		<Esc><plug>NERDCommenterToggle i
 
 " In command-line mode, <C-A> should go to the front of the line, as in bash.
 cmap <C-A> <C-B>
@@ -310,10 +352,10 @@ map <silent> <D-C> :let @* = expand("%")<CR>:echo "Copied: ".expand("%")<CR>
 map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%").":".line(".")<CR>
 
 " Disable middle mouse button, F1
-map <MiddleMouse>   <Nop>
-imap <MiddleMouse>  <Nop>
-map <F1>            <Nop>
-imap <F1>           <Nop>
+map <MiddleMouse>	<Nop>
+imap <MiddleMouse>	<Nop>
+map <F1>			<Nop>
+imap <F1>			<Nop>
 
 " Easy access to the shell
 map <Leader><Leader> :!
@@ -324,28 +366,28 @@ map <leader>a :call AckGrep()<CR>
 vmap <leader>a :call AckVisual()<CR>
 
 " Make Y consistent with D and C
-map Y           y$
+map Y			y$
 
 
 fu! SeeTab()
   if !exists("g:SeeTabEnabled")
-    let g:SeeTabEnabled = 1
-    let g:SeeTab_list = &list
-    let g:SeeTab_listchars = &listchars
-    let regA = @a
-    redir @a
-    hi SpecialKey
-    redir END
-    let g:SeeTabSpecialKey = @a
-    let @a = regA
-    silent! hi SpecialKey guifg=black guibg=DarkBlue ctermfg=black ctermbg=magenta
-    set list
-    set listchars=tab:\|\
+	let g:SeeTabEnabled = 1
+	let g:SeeTab_list = &list
+	let g:SeeTab_listchars = &listchars
+	let regA = @a
+	redir @a
+	hi SpecialKey
+	redir END
+	let g:SeeTabSpecialKey = @a
+	let @a = regA
+	silent! hi SpecialKey guifg=black guibg=DarkBlue ctermfg=black ctermbg=magenta
+	set list
+	set listchars=tab:\|\
   else
-    let &list = g:SeeTab_list
-    let &listchars = &listchars
-    silent! exe "hi ".substitute(g:SeeTabSpecialKey,'xxx','','e')
-    unlet g:SeeTabEnabled g:SeeTab_list g:SeeTab_listchars
+	let &list = g:SeeTab_list
+	let &listchars = &listchars
+	silent! exe "hi ".substitute(g:SeeTabSpecialKey,'xxx','','e')
+	unlet g:SeeTabEnabled g:SeeTab_list g:SeeTab_listchars
   endif
 endfunc
 com! -nargs=0 SeeTab :call SeeTab()
@@ -356,4 +398,9 @@ silent! nmap <C-p> :NERDTreeToggle<CR>
 silent! map <F3> :NERDTreeFind<CR>
 let g:NERDTreeMapActivateNode="<F3>"
 let g:NERDTreeMapPreview="<F4>"
+
+syn region AspVBSFold start="^\s*\(if\)\s\+.*$" end="^\s*end\s\+\(if\)\>.*$" fold contained transparent keepend
+highlight FoldColumn  gui=bold	  guifg=grey65	   guibg=Grey90
+highlight Folded	  gui=italic  guifg=Black	   guibg=Grey90
+highlight LineNr	  gui=NONE	  guifg=grey60	   guibg=Grey90
 

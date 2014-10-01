@@ -11,12 +11,14 @@ alias gh='cd ~/Documents/github'
 function gvim 
         /Applications/Shareware/MacVim.app/Contents/MacOS/MacVim  $argv
 end 
+function vi 
+			/Applications/Shareware/MacVim.app/Contents/MacOS/Vim $argv
+end
 
 alias vim='/Applications/Shareware/MacVim.app/Contents/MacOS/Vim'
 alias view='/Applications/Shareware/MacVim.app/Contents/MacOS/Vim'
-alias vi='/Applications/Shareware/MacVim.app/Contents/MacOS/Vim'
 #
-set PATH /usr/local/bin $PATH /Users/kmallory/.gem/ruby/1.8/bin /Users/kmallory/Documents/github/powerline/scripts ~/.rvm/bin
+set PATH /usr/local/bin $PATH /Users/kmallory/bin /Users/kmallory/Documents/github/powerline/scripts ~/.rvm/bin
 set GIT_EDITOR /Applications/Shareware/MacVim.app/Contents/MacOS/Vim
 set EDITOR /Applications/Shareware/MacVim.app/Contents/MacOS/Vim
 set VISUAL /Applications/Shareware/MacVim.app/Contents/MacOS/Vim
