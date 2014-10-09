@@ -1,3 +1,4 @@
+set nocompatible
 filetype off				  " required
 
 
@@ -32,6 +33,8 @@ Plugin 'https://github.com/mileszs/ack.vim.git' "grep current project tree
 Plugin 'https://github.com/sjl/gundo.vim.git' "view vim undo tree (and patch!)
 Plugin 'https://github.com/tpope/vim-surround.git' "for adding and removing tags quickly
 Plugin 'https://github.com/bolasblack/csslint.vim.git'
+Plugin 'https://github.com/walm/jshint.vim'
+Plugin 'https://github.com/mklabs/grunt.vim.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()			 " required
@@ -40,7 +43,6 @@ filetype plugin indent on	 " required
 set t_co=256
 "colorscheme distinguished
 vmap ,x :!tidy -q -c -i --show-errors 0>
-set macmeta
 
 set noexpandtab
 set softtabstop=4		   " yep, two
@@ -55,6 +57,7 @@ if has("gui_running")
   set lines=56
   set columns=230
   set background=light
+  set macmeta
 else
   " This is console Vim.
   if exists("+lines")
@@ -197,14 +200,47 @@ set fillchars+=fold:\
 set foldmethod=indent
 "set foldopen=all,insert 
 "set foldclose=all
-"set foldlevelstart=20
+set foldlevelstart=20
 set fillchars+=stl:\ ,stlnc:\
 set termencoding=utf-8
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 
+set foldtext=CustomFoldText()
+fu! CustomFoldText()
+     "get first non-blank line
+     let fs = v:foldstart
+     while getline(fs) =~ '^\s*$' | let fs = nextnonblank(fs + 1)
+     endwhile
+    if fs > v:foldend
+         let line = getline(v:foldstart)
+     else
+         let line = substitute(getline(fs), '\t', repeat(' ', &tabstop), 'g')
+    endif
+
+    let w = winwidth(0) - &foldcolumn - (&number ? 8 : 0)
+    let foldSize = 1 + v:foldend - v:foldstart
+    let foldSizeStr = " " . foldSize . " lines "
+    let foldLevelStr = repeat("+--", v:foldlevel)
+    let lineCount = line("$")
+    let foldPercentage = printf("[%.1f", (foldSize*1.0)/lineCount*100) . "%] "
+    let expansionString = repeat(".", w - strwidth(foldSizeStr.line.foldLevelStr.foldPercentage))
+    return line . expansionString . foldSizeStr . foldPercentage . foldLevelStr
+ endf
+
 
 " Set a nicer foldtext function
+"set foldtext=NeatFoldText()
+"function! NeatFoldText() {{{2
+  "let line = ' ' . substitute(getline(v:foldstart), '^\s*"\?\s*\|\s*"\?\s*{{' . '{\d*\s*', '', 'g') . ' '
+  "let lines_count = v:foldend - v:foldstart + 1
+  "let lines_count_text = '| ' . printf("%10s", lines_count . ' lines') . ' |'
+  "let foldchar = matchstr(&fillchars, 'fold:\zs.')
+  "let foldtextstart = strpart('+' . repeat(foldchar, v:foldlevel*2) . line, 0, (winwidth(0)*2)/3)
+  "let foldtextend = lines_count_text . repeat(foldchar, 8)
+  "let foldtextlength = strlen(substitute(foldtextstart . foldtextend, '.', 'x', 'g')) + &foldcolumn
+  "return foldtextstart . repeat(foldchar, winwidth(0)-foldtextlength) . foldtextend
+"endfunction
 "set foldtext=MyFoldText()
 "function! MyFoldText()
   "let line = getline(v:foldstart)
@@ -243,40 +279,40 @@ set encoding=utf-8
 "set foldtext=GetFoldedHeader()
 
 
-function! GetFoldedHeader()
-  let numlines_folded = v:foldend - v:foldstart + 1
-  let line_num = v:foldstart
-  let firstline = getline(v:foldstart)
+"function! GetFoldedHeader()
+  "let numlines_folded = v:foldend - v:foldstart + 1
+  "let line_num = v:foldstart
+  "let firstline = getline(v:foldstart)
 
-  let charline = matchstr(firstline, '^\s*\(<[^!]\|\w\+\)[^{}]*')
+  "let charline = matchstr(firstline, '^\s*\(<[^!]\|\w\+\)[^{}]*')
 
-  " Handle javadoc style comments, display the javadoc summary as the foldtext
-  if match(firstline, '^\s*\/\*\*') == 0
-	if match(firstline, '^\s*\/\*\*\s*$') == 0
-	  let charline = substitute(getline(v:foldstart+1), '^\s*\**\s*', '(doc) ', '')
-	  let charline = substitute(charline, '\..*$', '.', '')
-	else
-	  let charline = substitute(firstline, '\s*\/\*\*\s*', '', '')
-	endif
-  else
-	" handle the special case of multiple single line comments
-	if match(firstline, '^\s*\/\/') == 0
-	  if match(getline(v:foldend), '^\s*\/\/') == 0
-		let charline = substitute(firstline, '\s*\/*\s*', '', '')
-	  endif
-	else
-	  let charline = matchstr(firstline, '^\s*\(<[^!]\|\w\+\)[^{}]*')
-	  while strlen(charline) == 0 && line_num < v:foldend
-		let line_num = line_num + 1
-		let charline = matchstr(getline(line_num), '^\s*\(<[^!]\|\w\+\)[^{}]*')
-	  endw
-	endif
-  endif
+  "" Handle javadoc style comments, display the javadoc summary as the foldtext
+  "if match(firstline, '^\s*\/\*\*') == 0
+	"if match(firstline, '^\s*\/\*\*\s*$') == 0
+	  "let charline = substitute(getline(v:foldstart+1), '^\s*\**\s*', '(doc) ', '')
+	  "let charline = substitute(charline, '\..*$', '.', '')
+	"else
+	  "let charline = substitute(firstline, '\s*\/\*\*\s*', '', '')
+	"endif
+  "else
+	"" handle the special case of multiple single line comments
+	"if match(firstline, '^\s*\/\/') == 0
+	  "if match(getline(v:foldend), '^\s*\/\/') == 0
+		"let charline = substitute(firstline, '\s*\/*\s*', '', '')
+	  "endif
+	"else
+	  "let charline = matchstr(firstline, '^\s*\(<[^!]\|\w\+\)[^{}]*')
+	  "while strlen(charline) == 0 && line_num < v:foldend
+		"let line_num = line_num + 1
+		"let charline = matchstr(getline(line_num), '^\s*\(<[^!]\|\w\+\)[^{}]*')
+	  "endw
+	"endif
+  "endif
 
-  let preamble = printf("[%d lines folded]:", numlines_folded)
-  return printf("%20s%s", substitute(charline, '^\s*', '', ''), preamble)
+  "let preamble = printf("[%d lines folded]:", numlines_folded)
+  "return printf("%20s%s", substitute(charline, '^\s*', '', ''), preamble)
 
-endfunction
+"endfunction
 highlight FoldColumn  gui=bold	  guifg=grey65	   guibg=Grey90
 highlight Folded	  gui=italic  guifg=Black	   guibg=Grey90
 highlight LineNr	  gui=NONE	  guifg=grey60	   guibg=Grey90
