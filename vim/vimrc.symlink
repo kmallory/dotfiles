@@ -15,7 +15,12 @@ Plugin 'git://github.com/tpope/vim-fugitive.git' "git support
 Plugin 'https://kmallory@github.com/vim-scripts/L9.git' "grep buffer, grepbufferall 
 Plugin 'https://github.com/wincent/command-t.git' " file explorer
 Plugin 'https://kmallory@github.com/vim-scripts/The-NERD-tree.git' " file explorer
+Plugin 'https://github.com/Shougo/unite.vim.git'  " needed by vimfiler
+Plugin 'https://github.com/Shougo/vimfiler.vim.git' 
 Plugin 'flazz/vim-colorschemes'
+Plugin 'bling/vim-airline'
+Plugin 'https://github.com/Lokaltog/powerline.git'
+Plugin 'https://github.com/stephenmckinney/vim-solarized-powerline.git'
 Plugin 'https://kmallory@github.com/tpope/vim-sensible.git' "common keys 
 Plugin 'https://kmallory@github.com/tpope/vim-sleuth.git' "guess at tab settings based on file 
 Plugin 'syntastic' "syntax checking
@@ -35,29 +40,28 @@ Plugin 'https://github.com/tpope/vim-surround.git' "for adding and removing tags
 Plugin 'https://github.com/bolasblack/csslint.vim.git'
 Plugin 'https://github.com/walm/jshint.vim'
 Plugin 'https://github.com/mklabs/grunt.vim.git'
+Plugin 'https://github.com/mhinz/vim-signify' " instead of git-gutter 
 
 " All of your Plugins must be added before the following line
 call vundle#end()			 " required
 filetype plugin indent on	 " required
 "set ffs=dos,unix,mac
 set t_co=256
-"colorscheme distinguished
 vmap ,x :!tidy -q -c -i --show-errors 0>
 
 set noexpandtab
 set softtabstop=4		   " yep, two
 set tabstop=4
 
+let g:airline_theme="understated"
 if has("gui_running")
   " GUI  s running or is about to start.
   " Maximize gvim window (for an alternative on Windows, see simalt below).
   set lines=999 columns=999
   "colorscheme Monokai-Refined
   "colorscheme solarized
-  set lines=56
-  set columns=230
-  set background=light
-  set macmeta
+colorscheme Tomorrow
+set macmeta
 else
   " This is console Vim.
   if exists("+lines")
@@ -67,11 +71,11 @@ else
 	set columns=150
   endif
   set term=xterm-256color
-  colorscheme solarized
+  colorscheme Tomorrow 
   set background=light
 endif
 "set guifont=Monaco:h16
-set guifont=Inconsolata-g\ for\ Powerline:h14
+set guifont=Inconsolata-g\ for\ Powerline:h16
 let g:solarized_termcolors=256
 
 
@@ -140,7 +144,7 @@ set listchars=tab:\|\ ,trail:.,extends:#,nbsp:.,eol:¬
 "set listchars=eol:¬,tab:→→,extends:>,precedes:<,nbsp:..
 "nnoremap    <F2> :<C-U>setlocal lcs=tab:\|\ ,trail:.,extends:#,nbsp:.,eol:¬ list! list? <CR>
 
-set list
+set nolist
 
 " nerdcommenter
 let mapleader = ","
