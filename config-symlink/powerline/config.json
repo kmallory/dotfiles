@@ -12,7 +12,7 @@
 			}
 		},
 		"shell": {
-			"colorscheme": "default",
+			"colorscheme": "solarized",
 			"theme": "default",
 			"local_themes": {
 				"continuation": "continuation",
@@ -28,11 +28,9 @@
 			"theme": "default",
 			"local_themes": {
 				"__tabline__": "tabline",
-
 				"cmdwin": "cmdwin",
 				"help": "help",
 				"quickfix": "quickfix",
-
 				"powerline.matchers.vim.plugin.nerdtree.nerdtree": "plugin_nerdtree",
 				"powerline.matchers.vim.plugin.ctrlp.ctrlp": "plugin_ctrlp",
 				"powerline.matchers.vim.plugin.gundo.gundo": "plugin_gundo",
