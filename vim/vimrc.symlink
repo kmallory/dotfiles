@@ -73,7 +73,7 @@ else
 endif
 set term=xterm-256color
 colorscheme Tomorrow-Night-Bright
-set background=light
+set background=dark
 endif
 "set guifont=Monaco:h16
 set guifont=Inconsolata-g\ for\ Powerline:h16

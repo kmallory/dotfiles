@@ -1,0 +1,171 @@
+#!/bin/sh
+get_basename() {
+  echo "$1" | awk '{ n=split(fp,field,"/"); printf("%s",field[n]) }' fp="$1"
+}
+
+get_dirname() {
+  echo "$1" | awk '{ n=split(fp,field,"/"); i=1; while(i<n) { printf("%s/",field[i]);i=i+1 } }' fp="$1"
+}
+
+get_line() {
+  sudo sed -n "${2}p" "$1"
+}
+
+get_numoflines() {
+  sudo cat $1 | sudo awk 'BEGIN { i=0 } { i=i+1 } END { printf("%s\n",i) }'
+}
+
+correct_encoding() {
+  sudo tr -s '\015\012' '\012' < "$1" | sudo tr '\015' '\012' >"$1"01
+  sudo mv -f "$1"01 "$1"
+}
+
+turn_nss_off() {
+  sudo cp -f "$1" "$1"_nssbak
+  sudo cat "$1" | sudo awk 'BEGIN { p=1;a=0 } {
+  if( match($0,"<key>NSServices</key>")>0 ) { p=0 }
+  if( p==0 && match($0,"<array>")>0 ) { a=a+1 }
+  if( p==0 && match($0,"</array>")>0 ) { a=a-1; if(a==0) { p=1 }; next }
+  if( p==1 ) { printf("%s\n",$0) } }' >"$tmpdir/${me}.encodebak"
+  sudo mv -f "$tmpdir/${me}.encodebak" "$1"
+  echo "   NSServices OFF."
+}
+
+turn_nss_on() {
+  sudo mv -f "$1"_nssbak "$1"
+  echo "   NSServices ON."
+}
+ 
+# MAIN
+ 
+me=`get_basename "$0"`; version="0.2"
+tmpdir="$HOME/Library/Preferences"
+ 
+echo "$me, v$version - NSServices enabler/disabler - by zeorge 9-2003"
+sudo -p "   please authenticate : " -v
+if [ $? -ne 0 ]; then echo "authentication error. abort!"; exit; fi
+ 
+if [ -f "$tmpdir/${me}00.applist" ]; then
+  applistdate=`ls -l "$tmpdir/${me}00.applist" | awk '{ print $6" "$7" "$8 }'`
+  nof=`get_numoflines "$tmpdir/${me}00.applist"`
+  echo "application list contains $nof applications, generated : $applistdate"
+  echo -n " * update application list ? "; read ans
+else
+  echo "generating application list"
+  ans="y"
+fi
+ 
+if [ ${ans:=n} = "q" ]; then exit; fi
+if [ ${ans:=n} = "y" ]; then
+  sudo -p "   please authenticate : " -v
+  if [ $? -ne 0 ]; then echo "authentication error. abort!"; exit; fi
+  echo "   searching in /Applications ..."
+  sudo find "/Applications" -name \*.app >"$tmpdir/${me}00.applist"
+  echo "   searching in /System/Library ..."
+  sudo find "/System/Library" -name \*.app >>"$tmpdir/${me}00.applist"
+  echo "   searching in /Library ..."
+  sudo find "/Library" -name \*.app >>"$tmpdir/${me}00.applist"
+  echo "   searching in $HOME/Applictions ..."
+  sudo find "$HOME/Applications" -name \*.app >>"$tmpdir/${me}00.applist"
+  echo "   searching in $HOME/Library ..."
+  sudo find "$HOME/Library" -name \*.app >>"$tmpdir/${me}00.applist"
+ 
+  nof=`get_numoflines "$tmpdir/${me}00.applist"`
+  echo "found $nof applications"
+ 
+  echo "filtering out applications not offering NSServices..."
+  sudo -p "   please authenticate : " -v
+  if [ $? -ne 0 ]; then echo "authentication error. abort!"; exit; fi
+  nof=`get_numoflines "$tmpdir/${me}00.applist"`
+  echo -n "   examining $nof applications ..."
+  n=0; counter=0
+  while [ $n -lt $nof ]
+  do
+    n=`expr $n + 1`
+    app=`get_line "$tmpdir/${me}00.applist" $n`
+    if [ ! -d "$app" ]; then continue; fi
+    cd "$app"/contents
+    if [ -f "info.plist_nssbak" ]; then
+      echo "$app" >> "$tmpdir/${me}01.applist"
+      counter=`expr $counter + 1`
+      echo -n "."
+    elif [ -f "info.plist" ]; then
+      nss=`sudo cat info.plist | sudo grep "<key>NSServices</key>"`
+      if [ -z "$nss" ]; then continue; fi
+      echo "$app" >> "$tmpdir/${me}01.applist"
+      counter=`expr $counter + 1`
+      echo -n "."
+    fi
+  done
+  echo
+  echo "found $counter applications"
+  mv -f "$tmpdir/${me}01.applist" "$tmpdir/${me}00.applist"
+ 
+  nof=`get_numoflines "$tmpdir/${me}00.applist"`
+  echo "application list contains $nof applications offering NSServices"
+ 
+  echo -n " * filter out core services and system services ? "; read ans
+  if [ ${ans:=n} = "q" ]; then exit; fi
+  if [ ${ans:=n} = "y" ]; then
+    cat "$tmpdir/${me}00.applist" | grep -iv "^/System/Library/CoreServices/" > "$tmpdir/${me}01.applist"
+    cat "$tmpdir/${me}01.applist" | grep -iv "^/System/Library/Services/" > "$tmpdir/${me}02.applist"
+    mv -f "$tmpdir/${me}02.applist" "$tmpdir/${me}00.applist"
+    rm -f "$tmpdir/${me}01.applist"
+   
+    nof=`get_numoflines "$tmpdir/${me}00.applist"`
+    echo "application list contains $nof applications"
+  fi
+fi
+ 
+echo -n " * turn on/off individual NSServices ? "; read ans
+if [ ${ans:=n} = "q" ]; then exit; fi
+if [ ${ans:=n} = "y" ]; then
+  sudo -p "   please authenticate : " -v
+  if [ $? -ne 0 ]; then echo "authentication error. abort!"; exit; fi
+  nof=`get_numoflines "$tmpdir/${me}00.applist"`
+  echo -n "processing $nof applications... "
+  echo "\"p\" full path, \"b\" back, \"y\" toggle, \"q\" quit"
+  n=0
+  while [ $n -lt $nof ]
+  do
+    n=`expr $n + 1`
+    app=`get_line "$tmpdir/${me}00.applist" $n`
+    if [ ! -d "$app" ]; then
+      echo $app
+      echo "   cannot find app. try updating application list to find moved apps"
+      continue
+    fi
+    cd "$app"/contents
+    if [ ! -f "info.plist" ]; then continue; fi
+    if [ -f "info.plist_nssbak" ]; then
+      echo -n "$n * toggle NSServices ON  for \"`get_basename "$app"`\" ? "; read ans
+      if [ ${ans:=n} = "q" ]; then exit; fi
+      if [ ${ans:=n} = "p" ]; then echo $app; n=`expr $n - 1`; continue; fi
+      if [ ${ans:=n} = "b" ]; then if [ $n -gt 0 ]; then n=`expr $n - 2`; fi; continue; fi
+      if [ ${ans:=n} = "y" ]; then turn_nss_on "info.plist"; fi
+      continue
+    fi
+    nss=`sudo cat "info.plist" | sudo grep "<key>NSServices</key>"`
+    if [ -z "$nss" ]; then continue; fi
+ 
+    echo -n "$n * toggle NSServices OFF for \"`get_basename "$app"`\" ? "; read ans
+    if [ ${ans:=n} = "q" ]; then exit; fi
+    if [ ${ans:=n} = "p" ]; then echo $app; n=`expr $n - 1`; continue; fi
+    if [ ${ans:=n} = "b" ]; then if [ $n -gt 0 ]; then n=`expr $n - 2`; fi; continue; fi
+    if [ ! ${ans:=n} = "y" ]; then continue; fi
+ 
+    if [ ! "$nss" = "  <key>NSServices</key>" ]; then
+      echo "   text encoding or xml code problem! fixing text encoding..."
+      sudo cp -f "info.plist" "info.plist_encodebak"
+      correct_encoding "info.plist"
+      nss=`sudo cat info.plist | sudo grep "<key>NSServices</key>"`
+      if [ ! "$nss" = "  <key>NSServices</key>" ]; then
+        echo "   fixing unsuccessful! returning app to original state. skipping app."
+        sudo cp -f "info.plist_encodebak" "info.plist"
+        sudo rm -f "info.plist_encodebak"
+        continue
+      fi
+    fi
+    turn_nss_off "info.plist"
+  done
+fi

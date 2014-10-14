@@ -1,0 +1,13 @@
+!/bin/bash
+
+cd "~/Desktop/"
+item=mime-attachment
+
+while "true"; do 
+  if [[ -e $item ]]; then 
+    sed  "s/ORGANIZER\:MAILTO\:.*/&xxxFRED&/" $item | sed "s/xxxFREDORGANIZER//" | sed "s/ORGANIZER\:/ORGANIZER\;CN\=/" | sed "s/CN\=MAILTO\:/CN\=/"> /tmp/iCal.ics
+    rm $item
+  open /tmp/iCal.ics
+  fi
+  sleep 1
+done

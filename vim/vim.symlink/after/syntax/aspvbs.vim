@@ -1,7 +1,5 @@
 compiler tidy
 set foldmethod=indent
-"set foldmethod=syntax
-"setlocal equalprg=tidy\ -config\ ~/.vim/tidy-aspvbs.conf\ -c\ -quiet\ -e\ %
 setlocal makeprg=tidy\ -config\ ~/.vim/tidy-aspvbs.conf\ -c\ -quiet\ -e\ %
 set number
 
