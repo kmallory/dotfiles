@@ -5,11 +5,14 @@ end
 function ls
            /bin/ls -FG $argv
  end
+ function  xitunes
+ ssh itunes Xnest :1 -geometry 1280x1024 -ac
+ end
  function  xlinux
-		 ssh linux Xnest :1 -geometry 1280x810 -query localhost
+		 ssh linux Xnest :1 -geometry 1280x1024 -ac
  end
  function  xc7
-		 ssh linux Xnest :1 -geometry 1280x810 -query localhost
+		 ssh c7 Xnest :1 -geometry 1280x1024 -ac
  end
 alias gvim='/usr/local/bin/gvim'
 alias view='/usr/local/bin/mvim -M'
