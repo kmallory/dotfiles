@@ -1,12 +1,18 @@
-colorscheme desert
+"http://www.vimbits.com/bits?tag=macvim
 set anti
-set lines=999 columns=84
 set guioptions=egmrt
-
+set guioptions-=T " hide toolbar
+set guioptions-=r " hide scrollbar
 " Command + t to :CommandT
 if has("gui_macvim")
+  set transparency=5 " cool seethru effect
   macmenu &File.New\ Tab key=<nop>
+  macmenu &File.Print key=<nop>
   map <D-t> :CommandT<CR>
+  map <D-p> :CommandT<CR>
+  set macmeta
+  nnoremap <silent> <SwipeLeft> :macaction _cycleWindowsBackwards:<CR>
+  nnoremap <silent> <SwipeRight> :macaction _cycleWindows:<CR>
 endif
 
 " Open Command+T in a new tab
@@ -30,3 +36,11 @@ nmap <d-6> 6gt
 nmap <d-7> 7gt
 nmap <d-8> 8gt
 nmap <d-9> 9gt
+
+" navigate splits with command [ and command ]
+map <D-[> <C-w>h
+map <D-]> <C-w>l
+
+
+" open all buffers in tabs (gui)
+map <silent> <leader>tb :tab :ball<cr>
