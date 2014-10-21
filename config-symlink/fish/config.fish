@@ -1,4 +1,10 @@
 set POWERLINE_COMMAND powerline-client
+function a2p
+        ./asp2php -php5 -html -longexternvars -fulltags -change_response_links  $argv;
+        end
+function grep
+/usr/local/bin/ack $argv
+end
 function mvi
 /usr/bin/vi
 end
