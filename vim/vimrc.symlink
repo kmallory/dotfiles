@@ -1,50 +1,66 @@
-set nocompatible
-filetype off                              " required
+set nocompatible | filetype indent plugin on | syn on
 
+fun! SetupVAM()
+  let c = get(g:, 'vim_addon_manager', {})
+  let g:vim_addon_manager = c
+  let g:vim_addon_manager.log_to_buf = 1
+  let c.plugin_root_dir = expand('$HOME', 1) . '/.vim/bundle'
+  let &rtp.=(empty(&rtp)?'':',').c.plugin_root_dir.'/vim-addon-manager'
+  if !isdirectory(c.plugin_root_dir.'/vim-addon-manager/autoload')
+     execute '!git clone --depth=1 https://kmallory@github.com/MarcWeber/vim-addon-manager ' \
+     shellescape(c.plugin_root_dir.'/vim-addon-manager', 1)
+  endif
 
-let mapleader = ","
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+  " This provides the VAMActivate command, you could be passing plugin names, too
+  call vam#ActivateAddons([], {})
+endfun
+call SetupVAM()
+
+VAMActivate vim-pi
+VAMActivate MatchTag " Find matching XML/HTML Tags
+"VAMActivate MatchTagAlways
+VAMActivate fugitive "git support
+VAMActivate L9 "grep buffer, grepbufferall
+VAMActivate Command-T " file explorer
+VAMActivate The_NERD_tree " file explorer
+VAMActivate unite  " needed by vimfiler
+VAMActivate vimfiler
+"VAMActivate vim-colorschemes
+VAMActivate vim-airline
+VAMActivate powerline
+VAMActivate sensible "common keys
+VAMActivate sleuth "guess at tab settings based on file
+VAMActivate Syntastic "syntax checking
+VAMActivate Supertab " use tab for syntax completions
+"VAMActivate docunext/closetag
+VAMActivate HTML_AutoCloseTag "better auto close?
+VAMActivate HTML5_Syntax_File " still have to copy files to ~./vim/syntax
+VAMActivate YouCompleteMe "as you type compile support
+"VAMActivate neomru "
+VAMActivate ctrlp
+VAMActivate linepower%4576
+VAMActivate camelcasemotion
+VAMActivate The_NERD_Commenter
+VAMActivate ack "grep current project tree
+VAMActivate Gundo "view vim undo tree (and patch!)
+VAMActivate surround "for adding and removing tags quickly
+VAMActivate csslint
+VAMActivate jshint2
+"VAMActivate grunt
+VAMActivate vim-signify " instead of git-gutter
+VAMActivate trailing-whitespace
+VAMActivate delimitMate
+VAMActivate Solarized
+VAMActivate ag
+VAMActivate molokai
+VAMActivate github:jelera/vim-javascript-syntax
+VAMActivate UltiSnips
+VAMActivate vim-snippets
+VAMActivate github:tpope/vim-rails
+
 set rtp+=~/Documents/github/powerline/powerline/bindings/vim
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-Plugin 'MatchTag' " Find matching XML/HTML Tags
-Plugin 'https://github.com/Valloric/MatchTagAlways.git'
-Plugin 'git://github.com/tpope/vim-fugitive.git' "git support
-Plugin 'https://kmallory@github.com/vim-scripts/L9.git' "grep buffer, grepbufferall
-Plugin 'https://github.com/wincent/command-t.git' " file explorer
-Plugin 'https://kmallory@github.com/vim-scripts/The-NERD-tree.git' " file explorer
-Plugin 'https://github.com/Shougo/unite.vim.git'  " needed by vimfiler
-Plugin 'https://github.com/Shougo/vimfiler.vim.git'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'bling/vim-airline'
-Plugin 'https://github.com/Lokaltog/powerline.git'
-Plugin 'https://github.com/stephenmckinney/vim-solarized-powerline.git'
-Plugin 'https://kmallory@github.com/tpope/vim-sensible.git' "common keys
-Plugin 'https://kmallory@github.com/tpope/vim-sleuth.git' "guess at tab settings based on file
-Plugin 'syntastic' "syntax checking
-Plugin 'https://github.com/ervandew/supertab.git' " use tab for syntax completions
-"Plugin 'https://kmallory@github.com/docunext/closetag.vim.git'
-Plugin 'https://github.com/vim-scripts/HTML-AutoCloseTag.git' "better auto close?
-Plugin 'HTML5-Syntax-File' " still have to copy files to ~./vim/syntax
-Plugin 'https://kmallory@github.com/Valloric/YouCompleteMe.git' "as you type compile support
-Plugin 'https://kmallory@github.com/Shougo/neomru.vim' " :
-Plugin 'https://kmallory@github.com/kien/ctrlp.vim.git'
-Plugin 'https://kmallory@github.com/zhaocai/linepower.vim'
-Plugin 'bkad/CamelCaseMotion'
-Plugin 'https://github.com/scrooloose/nerdcommenter.git'
-Plugin 'https://github.com/mileszs/ack.vim.git' "grep current project tree
-Plugin 'https://github.com/sjl/gundo.vim.git' "view vim undo tree (and patch!)
-Plugin 'https://github.com/tpope/vim-surround.git' "for adding and removing tags quickly
-Plugin 'https://github.com/bolasblack/csslint.vim.git'
-Plugin 'https://github.com/walm/jshint.vim'
-Plugin 'https://github.com/mklabs/grunt.vim.git'
-Plugin 'https://github.com/mhinz/vim-signify' " instead of git-gutter
-
 " All of your Plugins must be added before the following line
-call vundle#end()                        " required
-filetype plugin indent on        " required
+let mapleader = ","
 "set ffs=dos,unix,mac
 set t_co=256
 vmap ,x :!tidy -q -c -i --show-errors 0>
@@ -54,7 +70,8 @@ set softtabstop=4                  " yep, two
 set tabstop=4
 
 let g:airline_theme="understated"
-colorscheme Tomorrow-Night-Bright
+colorscheme railscasts
+"colorscheme Tomorrow-Night-Bright
 set background=dark
 if has("gui_running")
   set macmeta
@@ -69,7 +86,6 @@ else
     set term=xterm-256color
   endif
 endif
-"let g:solarized_termcolors=256
 
 
 "autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
@@ -100,7 +116,13 @@ function! Auto_complete_opened()
 endfunction
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
-set ic
+
+let g:UltiSnipsExpandTrigger="<c-e>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 " inoremap = insertmode
 " noremap, nnoremap  = normal mode
 inoremap <C-@> <C-Space>
@@ -451,3 +473,17 @@ autocmd BufReadPre * :set et|retab
 set laststatus=2
 set showtabline=2
 set noshowmode
+set ic
+set transparency=0
+" Put plugins and dictionaries in this dir (also on Windows)
+let vimDir = '$HOME/.vim'
+let &runtimepath.=','.vimDir
+
+" Keep undo history across sessions by storing it in a file
+if has('persistent_undo')
+    let myUndoDir = expand(vimDir . '/undodir')
+    " No console pops up
+    call system('mkdir ' . myUndoDir)
+    let &undodir = myUndoDir
+    set undofile
+  endif

@@ -5,7 +5,7 @@ set guioptions-=T " hide toolbar
 set guioptions-=r " hide scrollbar
 " Command + t to :CommandT
 if has("gui_macvim")
-  set transparency=5 " cool seethru effect
+  set transparency=0 " cool seethru effect
   macmenu &File.New\ Tab key=<nop>
   macmenu &File.Print key=<nop>
   map <D-t> :CommandT<CR>

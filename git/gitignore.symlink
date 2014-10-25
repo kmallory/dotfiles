@@ -33,3 +33,5 @@ Icon^M
 *.log
 *.sql
 *.sqlite
+*.*.swo
+*/build/*
