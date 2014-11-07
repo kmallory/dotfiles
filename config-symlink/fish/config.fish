@@ -4,7 +4,7 @@ alias gvim='/usr/local/bin/gvim'
 alias view='/usr/local/bin/mvim -M'
 alias vim='/usr/local/bin/vi'
 alias eclim='/Applications/eclipse/eclipse/plugins/org.eclim_2.4.0/bin/eclim'
-alias dog='cd ~/Downloads/pwd'
+alias dog='cd ~/Downloads/pwd/ror'
 alias dogr='cd /Volumes/pwdhld-devel'
 alias dogprod='cd /Volumes/pwd'
 alias gh='cd ~/Documents/github'
@@ -19,10 +19,10 @@ set fish_function_path $fish_function_path "/Users/kmallory/dotfiles/vim/vim.sym
 powerline-setup
 set fish_greeting ""
 
-set fish_path /Users/kmallory/Documents/github/oh-my-fish
-set fish_theme clearance
+#set fish_path /Users/kmallory/Documents/github/oh-my-fish
+#set fish_theme clearance
 set fish_plugins git osx ruby brew emoji-clock bundler gem node localhost rbenv rails vi-mode
-. $fish_path/oh-my-fish.fish
+#. $fish_path/oh-my-fish.fish
 set NODE_ENV DEVELOPMENT
 set -x PATH $HOME/.rbenv/shims $PATH
 rbenv rehash >/dev/null ^&1
@@ -32,7 +32,7 @@ function rbenv_shell
 
   switch "$vers"
     case '--complete'
-      echo '--unset'
+     echo '--unset'
       echo 'system'
       exec rbenv-versions --bare
       return
@@ -50,7 +50,7 @@ function rbenv_shell
       set -g -x RBENV_VERSION "$vers"
   end
 end
-
+#
 function rbenv
   set -l command $argv[1]
   [ (count $argv) -gt 1 ]; and set -l args $argv[2..-1]
