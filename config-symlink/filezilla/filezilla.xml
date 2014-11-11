@@ -56,15 +56,15 @@
         <Setting name="Concurrent upload limit">0</Setting>
         <Setting name="Update Check">1</Setting>
         <Setting name="Update Check Interval">7</Setting>
-        <Setting name="Last automatic update check">2014-10-20 18:03:13</Setting>
-        <Setting name="Update Check New Version">release 3.9.0.6 http://download.filezilla-project.org/FileZilla_3.9.0.6_macosx-x86.app.tar.bz2 6831818 sha512 ed99a5b5cc7d9acf46a54879f1447293d246a4a44d8c3aaae5e1d3c570c98064e05206d80252c318d9f775ec39b0f0f40b450961830a0a174e00001461a32281&#x0A;&#x0A;3.9.0.6 (2014-10-20)&#x0A;&#x0A;! Disabled support for legacy SSL 3.0 to address the POODLE vulnerability in SSLv3. (CVE-2014-3566)&#x0A;- Fixed generic proxy support in IPv6 environments&#x0A;- Small improvements of control sizes on high-dpi displays&#x0A;- OS X: Fix Drag&amp;Drop while holding down the Ctrl key (or equivalent)&#x0A;- Fix potential crash dragging files over an empty list&#x0A;&#x0A;3.9.0.5 (2014-09-06)&#x0A;&#x0A;- Fix auto-updater not being able to download updates&#x0A;&#x0A;3.9.0.4 (2014-09-06)&#x0A;&#x0A;- MSW: Fixed crash if starting file rename in an unusual way&#x0A;- OS X: Fixed a bug im wxWidgets so that a right-click after a left-click no longer counts as double-click&#x0A;- OS X: Fixed pasting of passwords into the &quot;Enter password&quot; dialog &#x0A;- OS X: Fixed context menu site manager tree not working&#x0A;- *nix, OS X: Fixed context menu of search dialog not working&#x0A;- Fixed loading of resources if FileZilla is installed in a directory containing the # character&#x0A;- Fixed support for SOCKS4 proxies&#x0A;- Attempt reading settings from temporary backup files if loading of settings files fails&#x0A;</Setting>
+        <Setting name="Last automatic update check">2014-11-05 10:47:14</Setting>
+        <Setting name="Update Check New Version">release 3.9.0.5 http://download.filezilla-project.org/FileZilla_3.9.0.5_macosx-x86.app.tar.bz2 6686501 sha512 38c6729f35679e59b8fdcdbc345cc278fabac2ca1e3e62b8b7131bf50bbb8595093e3510784e240e9df30d3bca352145d7fd508d64926db946c5465cdb1ef241&#x0A;&#x0A;3.9.0.5 (2014-09-06)&#x0A;&#x0A;- Fix auto-updater not being able to download updates&#x0A;&#x0A;3.9.0.4 (2014-09-06)&#x0A;&#x0A;- MSW: Fixed crash if starting file rename in an unusual way&#x0A;- OS X: Fixed a bug im wxWidgets so that a right-click after a left-click no longer counts as double-click&#x0A;- OS X: Fixed pasting of passwords into the &quot;Enter password&quot; dialog &#x0A;- OS X: Fixed context menu site manager tree not working&#x0A;- *nix, OS X: Fixed context menu of search dialog not working&#x0A;- Fixed loading of resources if FileZilla is installed in a directory containing the # character&#x0A;- Fixed support for SOCKS4 proxies&#x0A;- Attempt reading settings from temporary backup files if loading of settings files fails&#x0A;</Setting>
         <Setting name="Update Check Check Beta">0</Setting>
         <Setting name="Update Check Download Dir" />
         <Setting name="Show debug menu">0</Setting>
         <Setting name="File exists action download">0</Setting>
         <Setting name="File exists action upload">0</Setting>
         <Setting name="Allow ascii resume">0</Setting>
-        <Setting name="Greeting version">3.9.0.3</Setting>
+        <Setting name="Greeting version">3.9.0.5</Setting>
         <Setting name="Onetime Dialogs" />
         <Setting name="Show Tree Local">1</Setting>
         <Setting name="Show Tree Remote">1</Setting>
@@ -80,7 +80,7 @@
         <Setting name="Window position and size">0 510 217 900 710 </Setting>
         <Setting name="Splitter positions (v2)">97 -134 500000000 178 178 500000000</Setting>
         <Setting name="Local filelist sortorder">0 0</Setting>
-        <Setting name="Remote filelist sortorder">1 3</Setting>
+        <Setting name="Remote filelist sortorder">1 0</Setting>
         <Setting name="Time Format" />
         <Setting name="Date Format" />
         <Setting name="Show message log">1</Setting>

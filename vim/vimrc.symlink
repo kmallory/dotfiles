@@ -17,13 +17,15 @@ endfun
 call SetupVAM()
 
 VAMActivate vim-pi
+VAMActivate github:/tmhedberg/matchit
 VAMActivate MatchTag " Find matching XML/HTML Tags
 "VAMActivate MatchTagAlways
-VAMActivate fugitive "git support
 VAMActivate L9 "grep buffer, grepbufferall
 VAMActivate Command-T " file explorer
 VAMActivate The_NERD_tree " file explorer
+VAMActivate github:/jistr/vim-nerdtree-tabs " with tabs, please
 VAMActivate unite  " needed by vimfiler
+VAMActivate taglist
 VAMActivate vimfiler
 "VAMActivate vim-colorschemes
 VAMActivate vim-airline
@@ -37,7 +39,7 @@ VAMActivate HTML_AutoCloseTag "better auto close?
 VAMActivate HTML5_Syntax_File " still have to copy files to ~./vim/syntax
 VAMActivate YouCompleteMe "as you type compile support
 "VAMActivate neomru "
-VAMActivate ctrlp
+"VAMActivate ctrlp
 VAMActivate linepower%4576
 VAMActivate camelcasemotion
 VAMActivate The_NERD_Commenter
@@ -56,7 +58,19 @@ VAMActivate molokai
 VAMActivate github:jelera/vim-javascript-syntax
 VAMActivate UltiSnips
 VAMActivate vim-snippets
-VAMActivate github:tpope/vim-rails
+VAMActivate vim-coffee-script
+VAMActivate github:/tpope/vim-rails
+VAMActivate Tagbar
+VAMActivate html5
+VAMActivate EasyMotion
+"VAMActivate vim-repeat
+VAMActivate DetectIndent
+VAMActivate endwise "auto adds 'end' in ruby"
+"#VAMActivate github:tsaleh/vim-align
+VAMActivate github:tpope/vim-bundler.git
+"#VAMActivate vim-textobj-rubyblock
+"#VAMActivate vim-ruby-refactoring
+VAMActivate github:/tpope/vim-fugitive "git support
 
 set rtp+=~/Documents/github/powerline/powerline/bindings/vim
 " All of your Plugins must be added before the following line
@@ -69,13 +83,29 @@ set expandtab
 set softtabstop=4                  " yep, two
 set tabstop=4
 
-let g:airline_theme="understated"
+let g:airline_theme="murmur"
+function! MyPlugin(...)
+  "first variable is the statusline builder
+  let builder = a:1
+  let spc = g:airline_symbols.space
+  " WARNING: the API for the builder is not finalized and change
+  call builder.add_section('airline_c', '%t')
+  call builder.add_section('airline_c', airline#section#create(['%<', 'file', spc,'readonly']))
+  call builder.split()
+  call builder.add_section('airline_x', airline#section#create_right(['tagbar', 'filetype']))
+  " tell the core to use the contents of the builder
+  return 1
+  endfunction
+call airline#add_inactive_statusline_func('MyPlugin')
+
 colorscheme railscasts
 "colorscheme Tomorrow-Night-Bright
 set background=dark
 if has("gui_running")
   set macmeta
-  set guifont=Inconsolata-g\ for\ Powerline:h16
+  set guifont=Inconsolata-g\ for\ Powerline:h14
+  set lines=41
+  set columns=178
 else
   " This is console Vim.
   if exists("+lines")
@@ -90,8 +120,11 @@ endif
 
 "autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 "autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
-"autocmd! BufWritePost vimrc nested :source ~/.vimrc
+autocmd! BufWritePost vimrc nested :source ~/.vimrc
+autocmd BufReadPost * :DetectIndent
 
+autocmd QuickFixCmdPost * nested cwindow | redraw!
+autocmd BufWritePost *.coffee silent make!
 
 set omnifunc=syntaxcomplete#Complete
 "set completeopt=longest,menuone,preview
@@ -164,6 +197,7 @@ set nolist
 " nerdcommenter
 let mapleader = ","
 let maplocalleader = ";"
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 
 " Reselect visual block after indent/outdent
@@ -349,8 +383,8 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 
 
 " Search
-nmap <leader>s  :%s/
-vmap <leader>s  :s/
+"nmap <leader>s  :%s/
+"vmap <leader>s  :s/
 " Split screen
 map <leader>v   :vsp<CR>
 
@@ -416,15 +450,17 @@ map <F1>                        <Nop>
 imap <F1>                       <Nop>
 
 " Easy access to the shell
-map <Leader><Leader> :!
+"map <Leader><Leader> :!
 
 " AckGrep current word
-map <leader>a :call AckGrep()<CR>
+map <leader>a :Ack<CR>
 " AckVisual current selection
-vmap <leader>a :call AckVisual()<CR>
+"vmap <leader>a :call AckVisual()<CR>
 
 " Make Y consistent with D and C
 map Y                   y$
+
+nnoremap <silent> <F9> :TagbarToggle<CR>
 
 
 fu! SeeTab()
@@ -456,12 +492,14 @@ silent! nmap <C-p> :NERDTreeToggle<CR>
 silent! map <F3> :NERDTreeFind<CR>
 let g:NERDTreeMapActivateNode="<F3>"
 let g:NERDTreeMapPreview="<F4>"
-let g:ctrlp_root_markers = ['.ctrlp']
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_match_window = ''
-let g:ctrlp_max_files = 0
-let g:ctrlp_follow_symlinks=1
-let g:ctrlp_max_depth=40
+let g:NERDTreeWinPos="right"
+let g:NERDTreeAutoDeleteBuffer=1
+"let g:ctrlp_root_markers = ['.ctrlp']
+"let g:ctrlp_working_path_mode = 'ra'
+"let g:ctrlp_match_window = ''
+"let g:ctrlp_max_files = 0
+"let g:ctrlp_follow_symlinks=1
+"let g:ctrlp_max_depth=40
 
 syn region AspVBSFold start="^\s*\(if\)\s\+.*$" end="^\s*end\s\+\(if\)\>.*$" fold contained transparent keepend
 "highlight FoldColumn  gui=bold    guifg=white     guibg=darkgray
@@ -469,7 +507,7 @@ syn region AspVBSFold start="^\s*\(if\)\s\+.*$" end="^\s*end\s\+\(if\)\>.*$" fol
 "highlight LineNr          gui=NONE        guifg=grey60     guibg=Grey90
 
 autocmd BufWritePre * :%s/\s\+$//e
-autocmd BufReadPre * :set et|retab
+"autocmd BufReadPre *.asp :set et|retab
 set laststatus=2
 set showtabline=2
 set noshowmode
@@ -487,3 +525,9 @@ if has('persistent_undo')
     let &undodir = myUndoDir
     set undofile
   endif
+
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
