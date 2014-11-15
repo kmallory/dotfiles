@@ -17,7 +17,7 @@ endfun
 call SetupVAM()
 
 VAMActivate vim-pi
-VAMActivate github:/tmhedberg/matchit
+VAMActivate matchit.zip
 VAMActivate MatchTag " Find matching XML/HTML Tags
 "VAMActivate MatchTagAlways
 VAMActivate L9 "grep buffer, grepbufferall
