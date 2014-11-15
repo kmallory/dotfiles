@@ -3,3 +3,5 @@ config-symlink/fish/fish_history
 sublime2/User/Package\ Control.sublime-settings
 vim/vim.symlink/.netrwhist
 vim/vim.symlink/bundle/*
+vim/vim.symlink/view/*
+vim/vim.symlink/view/~*
