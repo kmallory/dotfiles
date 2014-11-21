@@ -90,7 +90,7 @@ setlocal nolinebreak
 setlocal nolisp
 setlocal lispwords=
 setlocal nolist
-setlocal nomacmeta
+setlocal macmeta
 setlocal makeprg=tidy\ -config\ ~/.vim/tidy-aspvbs.conf\ -c\ -quiet\ -e\ %
 setlocal matchpairs=(:),{:},[:]
 setlocal modeline
@@ -108,7 +108,7 @@ setlocal norelativenumber
 setlocal norightleft
 setlocal rightleftcmd=search
 setlocal noscrollbind
-setlocal shiftwidth=2
+setlocal shiftwidth=1
 setlocal noshortname
 setlocal nosmartindent
 setlocal softtabstop=4
@@ -116,7 +116,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!pyeval('powerline.statusline(1)')
+setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -133,12 +133,12 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 20 - ((1 * winheight(0) + 16) / 33)
+let s:l = 266 - ((12 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-20
-normal! 023|
+266
+normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 " vim: set ft=vim :

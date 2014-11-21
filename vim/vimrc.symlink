@@ -1,18 +1,18 @@
 set nocompatible | filetype indent plugin on | syn on
 
 fun! SetupVAM()
-  let c = get(g:, 'vim_addon_manager', {})
-  let g:vim_addon_manager = c
-  let g:vim_addon_manager.log_to_buf = 1
-  let c.plugin_root_dir = expand('$HOME', 1) . '/.vim/bundle'
-  let &rtp.=(empty(&rtp)?'':',').c.plugin_root_dir.'/vim-addon-manager'
-  if !isdirectory(c.plugin_root_dir.'/vim-addon-manager/autoload')
-     execute '!git clone --depth=1 https://kmallory@github.com/MarcWeber/vim-addon-manager ' \
-     shellescape(c.plugin_root_dir.'/vim-addon-manager', 1)
-  endif
+ let c = get(g:, 'vim_addon_manager', {})
+ let g:vim_addon_manager = c
+ let g:vim_addon_manager.log_to_buf = 1
+ let c.plugin_root_dir = expand('$HOME', 1) . '/.vim/bundle'
+ let &rtp.=(empty(&rtp)?'':',').c.plugin_root_dir.'/vim-addon-manager'
+ if !isdirectory(c.plugin_root_dir.'/vim-addon-manager/autoload')
+  execute '!git clone --depth=1 https://kmallory@github.com/MarcWeber/vim-addon-manager ' \
+  shellescape(c.plugin_root_dir.'/vim-addon-manager', 1)
+ endif
 
-  " This provides the VAMActivate command, you could be passing plugin names, too
-  call vam#ActivateAddons([], {})
+ " This provides the VAMActivate command, you could be passing plugin names, too
+ call vam#ActivateAddons([], {})
 endfun
 call SetupVAM()
 
@@ -74,13 +74,14 @@ VAMActivate github:/tpope/vim-fugitive "git support
 VAMActivate restore_view
 VAMActivate vim-ruby
 VAMActivate eruby
+"VAMActivate github:/ingydotnet/yaml-vim.git
+VAMActivate github:/thoughtbot/vim-rspec
+
 
 set rtp+=~/Documents/github/powerline/powerline/bindings/vim
 " All of your Plugins must be added before the following line
-let mapleader = ","
 "set ffs=dos,unix,mac
 set t_co=256
-vmap ,x :!tidy -q -c -i --show-errors 0>
 
 set expandtab
 set softtabstop=4                  " yep, two
@@ -88,36 +89,36 @@ set tabstop=4
 
 let g:airline_theme="murmur"
 function! MyPlugin(...)
-  "first variable is the statusline builder
-  let builder = a:1
-  let spc = g:airline_symbols.space
-  " WARNING: the API for the builder is not finalized and change
-  call builder.add_section('airline_c', '%t')
-  call builder.add_section('airline_c', airline#section#create(['%<', 'file', spc,'readonly']))
-  call builder.split()
-  call builder.add_section('airline_x', airline#section#create_right(['tagbar', 'filetype']))
-  " tell the core to use the contents of the builder
-  return 1
-  endfunction
+ "first variable is the statusline builder
+ let builder = a:1
+ let spc = g:airline_symbols.space
+ " WARNING: the API for the builder is not finalized and change
+ call builder.add_section('airline_c', '%t')
+ call builder.add_section('airline_c', airline#section#create(['%<', 'file', spc,'readonly']))
+ call builder.split()
+ call builder.add_section('airline_x', airline#section#create_right(['tagbar', 'filetype']))
+ " tell the core to use the contents of the builder
+ return 1
+endfunction
 call airline#add_inactive_statusline_func('MyPlugin')
 
 colorscheme railscasts
 "colorscheme Tomorrow-Night-Bright
 set background=dark
 if has("gui_running")
-  set macmeta
-  set guifont=Inconsolata-g\ for\ Powerline:h14
-  set lines=41
-  set columns=178
+ set macmeta
+ set guifont=Inconsolata-g\ for\ Powerline:h14
+ set lines=41
+ set columns=178
 else
-  " This is console Vim.
-  if exists("+lines")
-        set lines=50
-  endif
-  if exists("+columns")
-    set columns=150
-    set term=xterm-256color
-  endif
+ " This is console Vim.
+ if exists("+lines")
+  set lines=50
+ endif
+ if exists("+columns")
+  set columns=150
+  set term=xterm-256color
+ endif
 endif
 
 
@@ -137,18 +138,18 @@ let g:SuperTabDefaultCompletionType = "context"
 
 
 function! Auto_complete_string()
-  if pumvisible()
-        return "\<C-n>"
-  else
-        return "\<C-x>\<C-o>\<C-r>=Auto_complete_opened()\<CR>"
-  end
+ if pumvisible()
+  return "\<C-n>"
+ else
+  return "\<C-x>\<C-o>\<C-r>=Auto_complete_opened()\<CR>"
+ end
 endfunction
 
 function! Auto_complete_opened()
-  if pumvisible()
-        return "\<Down>"
-  end
-  return ""
+ if pumvisible()
+  return "\<Down>"
+ end
+ return ""
 endfunction
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
@@ -159,31 +160,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-" inoremap = insertmode
-" noremap, nnoremap  = normal mode
-inoremap <C-@> <C-Space>
-noremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?  \ "\<lt>C-n>" : \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .      \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .      \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
-inoremap <expr> <Nul> Auto_complete_string()
-nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
-inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
-          \ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
-" tab navigation like firefox
-nnoremap <C-S-tab> :tabprevious<CR>
-nnoremap <C-tab>   :tabnext<CR>
-nnoremap <C-t>     :tabnew<CR>
-inoremap <C-S-tab> <Esc>:tabprevious<CR>i
-inoremap <C-tab>   <Esc>:tabnext<CR>i
-inoremap <C-t>     <Esc>:tabnew<CR>
-" big word keys should act like a normal ones
-noremap <silent> W w
-noremap <silent> B b
-noremap <silent> E b
-
-" and little word keys should know about camel case and underscores
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
-
 " store undos
 set undofile
 set undodir=/tmp/.vimundo/
@@ -193,24 +169,15 @@ set undolevels=10000
 "set listchars=tab:>.,trail:.,extends:#,nbsp:.
 set listchars=tab:\|\ ,trail:.,extends:#,nbsp:.,eol:¬
 "set listchars=eol:¬,tab:→→,extends:>,precedes:<,nbsp:..
-"nnoremap    <F2> :<C-U>setlocal lcs=tab:\|\ ,trail:.,extends:#,nbsp:.,eol:¬ list! list? <CR>
 
 set nolist
 
-" nerdcommenter
-let mapleader = ","
-let maplocalleader = ";"
-map <Leader>n <plug>NERDTreeTabsToggle<CR>
 
 
-" Reselect visual block after indent/outdent
-" <3 you, vimbits.com
-vnoremap < <gv
-vnoremap > >gv
+
 
 " tab auto completion
 " via http://robots.thoughtbot.com/post/27041742805/vim-you-complete-me
-imap <Tab> <C-P>
 set wildmode=longest,list:longest,list:full
 set completeopt=menu,preview
 "  UI
@@ -233,25 +200,20 @@ let g:syntastic_enable_signs=1
 " fix for user defined mapping not found
 "
 let g:clang_user_options='|| exit 0'
-"
-" Search mappings: These will make it so that going to the next one in a
-" search will center on the line it's found in.
-map N Nzz
-map n nzz
+
 
 " Split in a more normal way
 set splitbelow
 set splitright
 set complete=.,w,t
 function! InsertTabWrapper()
-  let col = col('.') - 1
-  if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-  else
-        return "\<c-p>"
-  endif
+ let col = col('.') - 1
+ if !col || getline('.')[col - 1] !~ '\k'
+  return "\<tab>"
+ else
+  return "\<c-p>"
+ endif
 endfunction
-inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 set fillchars+=fold:\
 set foldmethod=syntax
 "set foldopen=all,insert
@@ -264,25 +226,25 @@ set encoding=utf-8
 
 set foldtext=CustomFoldText()
 fu! CustomFoldText()
-     "get first non-blank line
-     let fs = v:foldstart
-     while getline(fs) =~ '^\s*$' | let fs = nextnonblank(fs + 1)
-     endwhile
-    if fs > v:foldend
-         let line = getline(v:foldstart)
-     else
-         let line = substitute(getline(fs), '\t', repeat(' ', &tabstop), 'g')
-    endif
+ "get first non-blank line
+ let fs = v:foldstart
+ while getline(fs) =~ '^\s*$' | let fs = nextnonblank(fs + 1)
+ endwhile
+ if fs > v:foldend
+  let line = getline(v:foldstart)
+ else
+  let line = substitute(getline(fs), '\t', repeat(' ', &tabstop), 'g')
+ endif
 
-    let w = winwidth(0) - &foldcolumn - (&number ? 8 : 0)
-    let foldSize = 1 + v:foldend - v:foldstart
-    let foldSizeStr = " " . foldSize . " lines "
-    let foldLevelStr = repeat("+--", v:foldlevel)
-    let lineCount = line("$")
-    let foldPercentage = printf("[%.1f", (foldSize*1.0)/lineCount*100) . "%] "
-    let expansionString = repeat(".", w - strwidth(foldSizeStr.line.foldLevelStr.foldPercentage))
-    return line . expansionString . foldSizeStr . foldPercentage . foldLevelStr
- endf
+ let w = winwidth(0) - &foldcolumn - (&number ? 8 : 0)
+ let foldSize = 1 + v:foldend - v:foldstart
+ let foldSizeStr = " " . foldSize . " lines "
+ let foldLevelStr = repeat("+--", v:foldlevel)
+ let lineCount = line("$")
+ let foldPercentage = printf("[%.1f", (foldSize*1.0)/lineCount*100) . "%] "
+ let expansionString = repeat(".", w - strwidth(foldSizeStr.line.foldLevelStr.foldPercentage))
+ return line . expansionString . foldSizeStr . foldPercentage . foldLevelStr
+endf
 
 
 "highlight FoldColumn  gui=bold    guifg=grey65     guibg=Grey90
@@ -300,23 +262,25 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 
-
+"
+" KEY MAPPINGS
+"
 " Search
-"nmap <leader>s  :%s/
-"vmap <leader>s  :s/
+nmap <leader>s  :%s/
+vmap <leader>s  :s/
 " Split screen
 map <leader>v   :vsp<CR>
 
 
 " Move between screens
-map <leader>w   ^Ww
-map <leader>=   ^W=
-map <leader>j   ^Wj
-map <leader>k   ^Wk
-nmap <C-j>              <C-w>j
-nmap <C-k>              <C-w>k
-nmap <C-h>              <C-w>h
-nmap <C-l>              <C-w>l
+"map <leader>w   ^Ww
+"map <leader>=   ^W=
+"map <leader>j   ^Wj
+"map <leader>k   ^Wk
+"nmap <C-j>              <C-w>j
+"nmap <C-k>              <C-w>k
+"nmap <C-h>              <C-w>h
+"nmap <C-l>              <C-w>l
 
 
 " Auto-indent whole file
@@ -365,8 +329,8 @@ map <leader>C :let @* = expand("%").":".line(".")<CR>:echo "Copied: ".expand("%"
 " Disable middle mouse button, F1
 map <MiddleMouse>       <Nop>
 imap <MiddleMouse>      <Nop>
-map <F1>                        <Nop>
-imap <F1>                       <Nop>
+map <F1>                <Nop>
+imap <F1>               <Nop>
 
 " Easy access to the shell
 "map <Leader><Leader> :!
@@ -383,32 +347,30 @@ nnoremap <silent> <F9> :TagbarToggle<CR>
 
 
 fu! SeeTab()
-  if !exists("g:SeeTabEnabled")
-        let g:SeeTabEnabled = 1
-        let g:SeeTab_list = &list
-        let g:SeeTab_listchars = &listchars
-        let regA = @a
-        redir @a
-        hi SpecialKey
-        redir END
-        let g:SeeTabSpecialKey = @a
-        let @a = regA
-        silent! hi SpecialKey guifg=black guibg=DarkBlue ctermfg=black ctermbg=magenta
-        set list
-        set listchars=tab:\|\
-  else
-        let &list = g:SeeTab_list
-        let &listchars = &listchars
-        silent! exe "hi ".substitute(g:SeeTabSpecialKey,'xxx','','e')
-        unlet g:SeeTabEnabled g:SeeTab_list g:SeeTab_listchars
-  endif
+ if !exists("g:SeeTabEnabled")
+  let g:SeeTabEnabled = 1
+  let g:SeeTab_list = &list
+  let g:SeeTab_listchars = &listchars
+  let regA = @a
+  redir @a
+  hi SpecialKey
+  redir END
+  let g:SeeTabSpecialKey = @a
+  let @a = regA
+  silent! hi SpecialKey guifg=black guibg=DarkBlue ctermfg=black ctermbg=magenta
+  set list
+  set listchars=tab:\|\
+ else
+  let &list = g:SeeTab_list
+  let &listchars = &listchars
+  silent! exe "hi ".substitute(g:SeeTabSpecialKey,'xxx','','e')
+  unlet g:SeeTabEnabled g:SeeTab_list g:SeeTab_listchars
+ endif
 endfunc
 com! -nargs=0 SeeTab :call SeeTab()
 
 syn match LeadingWS /\(^\s*\)\@<=\s/ conceal cchar=·
 setlocal conceallevel=2 concealcursor=nv
-silent! nmap <C-p> :NERDTreeToggle<CR>
-silent! map <F3> :NERDTreeFind<CR>
 let g:NERDTreeMapActivateNode="<F3>"
 let g:NERDTreeMapPreview="<F4>"
 let g:NERDTreeWinPos="right"
@@ -439,15 +401,70 @@ let &runtimepath.=','.vimDir
 
 " Keep undo history across sessions by storing it in a file
 if has('persistent_undo')
-    let myUndoDir = expand(vimDir . '/undodir')
-    " No console pops up
-    call system('mkdir ' . myUndoDir)
-    let &undodir = myUndoDir
-    set undofile
-  endif
+ let myUndoDir = expand(vimDir . '/undodir')
+ " No console pops up
+ call system('mkdir ' . myUndoDir)
+ let &undodir = myUndoDir
+ set undofile
+endif
 
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"
+" Key Mappings
+"
+
+let mapleader = ","
+let maplocalleader = ";"
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
+vmap ,x :!tidy -q -c -i --show-errors 0>
+" inoremap = insertmode
+" noremap, nnoremap  = normal mode
+inoremap <C-@> <C-Space>
+noremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?  \ "\<lt>C-n>" : \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .      \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .      \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+inoremap <expr> <Nul> Auto_complete_string()
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
+   \ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+" tab navigation like firefox
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-S-tab> <Esc>:tabprevious<CR>i
+inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-t>     <Esc>:tabnew<CR>
+" big word keys should act like a normal ones
+noremap <silent> W w
+noremap <silent> B b
+noremap <silent> E b
+
+" and little word keys should know about camel case and underscores
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+
+"nnoremap    <F2> :<C-U>setlocal lcs=tab:\|\ ,trail:.,extends:#,nbsp:.,eol:¬ list! list? <CR>
+" Reselect visual block after indent/outdent
+" <3 you, vimbits.com
+vnoremap < <gv
+vnoremap > >gv
+imap <Tab> <C-P>
+"
+" Search mappings: These will make it so that going to the next one in a
+" search will center on the line it's found in.
+map N Nzz
+map n nzz
+inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+"Record into register 'q', playback with 'Q'
+"For quick recordings just type qq to start recording, then q to stop. You don't have to worry about the name this way (you just named the recording 'q'). Now, to play back the recording you just type Q.
+nnoremap Q @q
+"copy to end of line
+nnoremap Y y$
+"use space for search in normal mode rather than "/"
+nmap <Space> /
+nmap <C-Space> ?
+silent! nmap <C-p> :NERDTreeToggle<CR>
+silent! map <F3> :NERDTreeFind<CR>
+
