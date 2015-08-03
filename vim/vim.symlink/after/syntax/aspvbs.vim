@@ -1,4 +1,4 @@
-compiler tidy
+"#compiler tidy
 set foldmethod=indent
 setlocal makeprg=tidy\ -config\ ~/.vim/tidy-aspvbs.conf\ -c\ -quiet\ -e\ %
 set number

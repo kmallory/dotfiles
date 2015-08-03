@@ -1,10 +1,54 @@
+#Sample gitconfig
+#
+# You probably want to change the [user] section here since you are not me.
+
+[hub]
+        protocol = https
 [user]
-	name = Kevin Mallory
+	name = kevin mallory
 	email = kmallory@gourmetgeeks.org
-[diff]
-	tool = winmerge
-	external = gitdiff.bat
-[difftool "winmerge"]
-	cmd = winmerge.sh \"
+[credential]
+        helper = osxkeychain
+[alias]
+        co = checkout
+        promote = !$ZSH/bin/git-promote
+	wtf = !git-wtf
+        rank-contributers = !$ZSH/bin/git-rank-contributers
+        count   = !git shortlog -sn
+	whatadded = log --diff-filter=A
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+	ui = true
+[core]
+	excludesfile = /Users/kmallory/.gitignore_global
+        editor = /usr/local/bin/vi
+	autocrlf = false
+	safecrlf = false
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Shareware/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+[apply]
+        whitespace = nowarn
+[mergetool]
+        keepBackup = false
+	prompt = false
 [difftool]
 	prompt = false
+[help]
+        autocorrect = 1
+[push]
+	default = simple
+[url "https://"]
+	insteadOf = git://
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[web]
+	browser = open

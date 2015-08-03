@@ -17,5 +17,5 @@ syn region SynFold
       \ containedin=ALLBUT,htmlComment
 
 " kill the excessive whitespace on linebreaks, etc.
-"syn match htmlLinkWhite "\_s\{2,\}" contained containedin=htmlLink
-"hi default link htmlLinkWhite Ignore
+syn match htmlLinkWhite "\_s\{2,\}" contained containedin=htmlLink
+hi default link htmlLinkWhite Ignore
