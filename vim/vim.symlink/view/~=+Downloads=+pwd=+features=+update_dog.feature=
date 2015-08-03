@@ -1,0 +1,148 @@
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+argglobal
+let s:cpo_save=&cpo
+set cpo&vim
+imap <buffer> <S-Tab> <Plug>delimitMateS-Tab
+imap <buffer> <S-BS> <Plug>delimitMateS-BS
+imap <buffer> <BS> <Plug>delimitMateBS
+nmap <buffer> gf <Plug>RailsTabFind
+nmap <buffer> f <Plug>RailsSplitFind
+nmap <buffer> [f <Plug>RailsAlternate
+noremap <buffer> \\async-magic :
+nmap <buffer> ]f <Plug>RailsRelated
+nmap <buffer> gf <Plug>RailsFind
+nnoremap <buffer> <silent> <Plug>RailsTabFind :RTfind
+nnoremap <buffer> <silent> <Plug>RailsVSplitFind :RVfind
+nnoremap <buffer> <silent> <Plug>RailsSplitFind :RSfind
+nnoremap <buffer> <silent> <Plug>RailsFind :REfind
+nnoremap <buffer> <silent> <Plug>RailsRelated :R
+nnoremap <buffer> <silent> <Plug>RailsAlternate :A
+imap <buffer> <silent> g <Plug>delimitMateJumpMany
+imap <buffer>  <Plug>delimitMateBS
+imap <buffer> " <Plug>delimitMate"
+imap <buffer> ' <Plug>delimitMate'
+imap <buffer> ( <Plug>delimitMate(
+imap <buffer> ) <Plug>delimitMate)
+imap <buffer> [ <Plug>delimitMate[
+inoremap <buffer> \\async-magic 
+imap <buffer> ] <Plug>delimitMate]
+imap <buffer> ` <Plug>delimitMate`
+imap <buffer> { <Plug>delimitMate{
+imap <buffer> } <Plug>delimitMate}
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=:#
+setlocal commentstring=#\ %s
+setlocal complete=.,w,t
+setlocal concealcursor=nv
+setlocal conceallevel=2
+setlocal completefunc=youcompleteme#Complete
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=%f:%l:%c:\ Error:%m,%f:%l:%c:\ Warning:%m,%-G%.%#
+setlocal noexpandtab
+if &filetype != 'cucumber'
+setlocal filetype=cucumber
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=20
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=indent
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=CustomFoldText()
+setlocal formatexpr=
+setlocal formatoptions=jcroql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=2
+setlocal imsearch=2
+setlocal include=
+setlocal includeexpr=RailsIncludeexpr()
+setlocal indentexpr=GetCucumberIndent()
+setlocal indentkeys=o,O,*<Return>,<:>,0<Bar>,0#,=,!^F
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal macmeta
+setlocal makeprg=tidy\ -config\ ~/.vim/tidy-aspvbs.conf\ -c\ -quiet\ -e\ %
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=hex
+setlocal nonumber
+setlocal numberwidth=4
+setlocal omnifunc=CucumberComplete
+setlocal path=.,~/Downloads/pwd,~/Downloads/pwd/app,~/Downloads/pwd/app/models,~/Downloads/pwd/app/controllers,~/Downloads/pwd/app/helpers,~/Downloads/pwd/config,~/Downloads/pwd/lib,~/Downloads/pwd/app/views,~/Downloads/pwd/test,~/Downloads/pwd/test/unit,~/Downloads/pwd/test/functional,~/Downloads/pwd/test/integration,~/Downloads/pwd/spec,~/Downloads/pwd/spec/models,~/Downloads/pwd/spec/controllers,~/Downloads/pwd/spec/helpers,~/Downloads/pwd/spec/views,~/Downloads/pwd/spec/lib,~/Downloads/pwd/spec/requests,~/Downloads/pwd/spec/integration,~/Downloads/pwd/app/*,~/Downloads/pwd/vendor,~/Downloads/pwd/vendor/plugins/*/lib,~/Downloads/pwd/vendor/plugins/*/test,~/Downloads/pwd/vendor/rails/*/lib,~/Downloads/pwd/vendor/rails/*/test,/usr/include,
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=4
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=%!airline#statusline(2)
+setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.css,.js,.yml,.csv,.rake,.sql,.html,.xml
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'cucumber'
+setlocal syntax=cucumber
+endif
+setlocal tabstop=4
+setlocal tags=~/Downloads/pwd/tmp/tags,./tags;,tags,~/Downloads/pwd/tags,~/Downloads/pwd/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/better_errors-b5de722fb4ff/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/paper_trail-cb105798f09a/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/pry-83d000b76a4c/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rails4-autocomplete-0a5bb621fe39/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/ransack-bcce3a0d9678/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rbenv-6f1216cfe0a6/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/accessible_tooltip-1.0.7/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/actionmailer-4.2.3/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.3/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/actionview-4.2.3/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/actionview-encoded_mail_to-1.0.6/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/activejob-4.2.3/tags,~/Downloads/pw
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal undofile
+setlocal undolevels=-123456
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+let s:l = 2 - ((1 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+2
+normal! 031|
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+" vim: set ft=vim :

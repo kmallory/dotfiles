@@ -1,0 +1,1009 @@
+
+>>>>>>>>>>>> Sat Jul 18 10:08:48 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:08:52 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:10:00 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:10:06 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:10:10 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:12:33 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:12:38 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:12:43 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:12:45 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:12:47 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:12:49 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:12:51 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:12:54 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:12:55 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:12:57 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:13:00 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:13:04 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:13:05 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:13:08 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:13:11 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:14:51 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:15:10 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:15:25 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:15:29 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:16:17 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:19:24 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:20:22 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:20:56 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:21:02 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:22:20 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:22:41 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:22:45 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:22:50 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:26:13 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:26:34 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:27:06 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:27:14 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:34:13 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:35:36 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:36:33 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:37:54 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:38:00 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:39:06 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:50:04 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:50:43 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:54:33 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:56:33 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:57:47 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:57:53 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 10:58:13 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:00:03 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:02:17 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:02:22 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:03:19 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:03:47 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:04:25 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:05:18 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:06:38 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:10:25 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:10:34 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:36:17 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:36:23 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:36:31 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:37:54 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:38:42 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:44:49 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:48:20 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:49:32 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:52:11 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 11:53:12 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:18:06 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:20:31 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:22:08 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:22:53 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:24:25 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:24:47 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:24:54 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:25:15 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:28:01 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:32:38 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:34:38 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:36:00 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:36:08 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:36:38 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:36:56 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:37:13 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:39:15 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 12:45:14 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:00:22 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:02:41 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:06:03 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:06:39 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:07:15 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:10:55 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:13:25 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:13:29 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:16:21 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:18:05 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:18:22 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:19:09 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:22:38 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:23:40 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:24:18 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:24:22 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:29:07 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:31:29 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:31:51 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:33:01 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:33:30 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:34:46 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:39:29 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:39:39 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:40:28 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:42:23 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:43:48 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:45:10 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:46:07 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:47:57 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:51:03 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:51:35 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:54:16 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:55:00 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:56:39 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:57:01 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 13:58:42 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
+>>>>>>>>>>>> Sat Jul 18 14:00:04 2015
+Plugin: github:/maksimr/vim-jsbeautify
+Home page: https://github.com/git://github.com//maksimr/vim-jsbeautify
+Source URL: git://github.com//maksimr/vim-jsbeautify (type git)
+name: 'github:/maksimr/vim-jsbeautify'
+Target: /Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify
+git clone --recursive --depth 1 'git://github.com//maksimr/vim-jsbeautify' '/Users/kmallory/.vim/bundle/github-maksimr-vim-jsbeautify'
+
