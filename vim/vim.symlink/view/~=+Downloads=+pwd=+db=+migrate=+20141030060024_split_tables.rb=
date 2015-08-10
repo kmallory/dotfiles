@@ -2,10 +2,10 @@ let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
-cnoremap <buffer> <SNR>176_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>200_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 imap <buffer> <S-BS> <Plug>delimitMateS-BS
 imap <buffer> <BS> <Plug>delimitMateBS
+cnoremap <buffer> <SNR>200_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>176_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 nmap <buffer> gf <Plug>RailsTabFind
 nmap <buffer> f <Plug>RailsSplitFind
 nmap <buffer> [f <Plug>RailsAlternate
@@ -101,7 +101,7 @@ setlocal matchpairs=(:),{:},[:]
 setlocal modeline
 setlocal modifiable
 setlocal nrformats=hex
-setlocal nonumber
+setlocal number
 setlocal numberwidth=4
 setlocal omnifunc=rubycomplete#Complete
 setlocal path=~/Downloads/pwd,~/Downloads/pwd/app,~/Downloads/pwd/app/models,~/Downloads/pwd/app/controllers,~/Downloads/pwd/app/helpers,~/Downloads/pwd/config,~/Downloads/pwd/lib,~/Downloads/pwd/app/views,~/Downloads/pwd/test,~/Downloads/pwd/test/unit,~/Downloads/pwd/test/functional,~/Downloads/pwd/test/integration,~/Downloads/pwd/spec,~/Downloads/pwd/spec/models,~/Downloads/pwd/spec/controllers,~/Downloads/pwd/spec/helpers,~/Downloads/pwd/spec/views,~/Downloads/pwd/spec/lib,~/Downloads/pwd/spec/requests,~/Downloads/pwd/spec/integration,~/Downloads/pwd/app/*,~/Downloads/pwd/vendor,~/Downloads/pwd/vendor/plugins/*/lib,~/Downloads/pwd/vendor/plugins/*/test,~/Downloads/pwd/vendor/rails/*/lib,~/Downloads/pwd/vendor/rails/*/test,~/.rbenv/versions/2.2.2/lib/ruby/site_ruby/2.2.0,~/.rbenv/versions/2.2.2/lib/ruby/site_ruby/2.2.0/x86_64-darwin14.4.0,~/.rbenv/versions/2.2.2/lib/ruby/site_ruby,~/.rbenv/versions/2.2.2/lib/ruby/vendor_ruby/2.2.0,~/.rbenv/versions/2.2.2/lib/ruby/vendor_ruby/2.2.0/x86_64-darwin14.4.0,~/.rbenv/versions/2
@@ -121,7 +121,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!airline#statusline(2)
+setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.yml,.csv,.rake,s.rb
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -148,18 +148,20 @@ normal! zo
 normal! zo
 97
 normal! zo
-193
+141
 normal! zo
-201
+199
 normal! zo
-211
+207
 normal! zo
-let s:l = 219 - ((31 * winheight(0) + 19) / 38)
+217
+normal! zo
+let s:l = 225 - ((29 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-219
-normal! 014|
+225
+normal! 09|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

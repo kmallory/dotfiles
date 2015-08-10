@@ -2,13 +2,13 @@ let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
-imap <buffer> <S-BS> <Plug>delimitMateS-BS
-imap <buffer> <BS> <Plug>delimitMateBS
 cnoremap <buffer> <SNR>176_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 cnoremap <buffer> <SNR>192_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 cnoremap <buffer> <SNR>172_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 cnoremap <buffer> <SNR>204_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 cnoremap <buffer> <SNR>197_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+imap <buffer> <S-BS> <Plug>delimitMateS-BS
+imap <buffer> <BS> <Plug>delimitMateBS
 nmap <buffer> gf <Plug>RailsTabFind
 nmap <buffer> f <Plug>RailsSplitFind
 nmap <buffer> [f <Plug>RailsAlternate
@@ -125,7 +125,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!airline#statusline(1)
+setlocal statusline=%!airline#statusline(2)
 setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.css,.js,.yml,.csv,.rake,.sql,.html,.xml
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -133,7 +133,7 @@ if &syntax != 'haml'
 setlocal syntax=haml
 endif
 setlocal tabstop=4
-setlocal tags=~/Downloads/pwd/tmp/tags,./tags;,tags,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/2.2.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/2.2.0/x86_64-darwin14.1.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/tags,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/2.2.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/2.2.0/x86_64-darwin14.1.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/tags,~/.rbenv/versions/2.2.0/lib/ruby/2.2.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/2.2.0/x86_64-darwin14.1.0/tags,~/Downloads/pwd/tags,~/Downloads/pwd/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/better_errors-b5de722fb4ff/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/paper_trail-f3b31fae0395/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/pry-c2169eb2453b/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rails4-autocomplete-0a5bb621fe39/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/ransack-bcce3a0d9678/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rbenv
+setlocal tags=~/Downloads/pwd/tmp/tags,~/Downloads/pwd/tmp/tags,./tags;,tags,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/2.2.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/2.2.0/x86_64-darwin14.1.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/tags,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/2.2.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/2.2.0/x86_64-darwin14.1.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/tags,~/.rbenv/versions/2.2.0/lib/ruby/2.2.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/2.2.0/x86_64-darwin14.1.0/tags,~/Downloads/pwd/tags,~/Downloads/pwd/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/better_errors-b5de722fb4ff/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/paper_trail-f3b31fae0395/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/pry-c2169eb2453b/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rails4-autocomplete-0a5bb621fe39/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/ransack-bcce3a0d9678/tags,~/Downloads/pwd/vendor/bundle/ruby
 setlocal textwidth=0
 setlocal thesaurus=
 setlocal undofile
@@ -150,12 +150,12 @@ normal! zo
 normal! zo
 6
 normal! zo
-let s:l = 19 - ((12 * winheight(0) + 13) / 27)
+let s:l = 1 - ((0 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-19
-normal! 028|
+1
+normal! 05|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

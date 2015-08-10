@@ -2,14 +2,14 @@ let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
-cnoremap <buffer> <SNR>140_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>144_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+imap <buffer> <S-Tab> <Plug>delimitMateS-Tab
 imap <buffer> <S-BS> <Plug>delimitMateS-BS
 imap <buffer> <BS> <Plug>delimitMateBS
-cnoremap <buffer> <SNR>174_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 noremap <buffer> \\async-magic :
 imap <buffer> <silent> g <Plug>delimitMateJumpMany
 imap <buffer>  <Plug>delimitMateBS
+cmap <buffer>  <Plug><cfile>
+cmap <buffer>  <Plug><cword>
 imap <buffer> " <Plug>delimitMate"
 imap <buffer> ' <Plug>delimitMate'
 imap <buffer> ( <Plug>delimitMate(
@@ -25,8 +25,11 @@ unlet s:cpo_save
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
+setlocal backupcopy=
 setlocal balloonexpr=
 setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
 setlocal bufhidden=
 setlocal buflisted
 setlocal buftype=
@@ -61,16 +64,16 @@ setlocal foldexpr=0
 setlocal foldignore=#
 setlocal foldlevel=20
 setlocal foldmarker={{{,}}}
-setlocal foldmethod=syntax
+setlocal foldmethod=indent
 setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=CustomFoldText()
 setlocal formatexpr=
-setlocal formatoptions=jcroql
+setlocal formatoptions=croql
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=0
+setlocal iminsert=2
+setlocal imsearch=2
 setlocal include=^\\s*\\<\\(load\\>\\|require\\>\\|autoload\\s*:\\=[\"']\\=\\h\\w*[\"']\\=,\\)
 setlocal includeexpr=substitute(substitute(v:fname,'::','/','g'),'$','.rb','')
 setlocal indentexpr=GetRubyIndent(v:lnum)
@@ -91,7 +94,7 @@ setlocal nrformats=hex
 setlocal nonumber
 setlocal numberwidth=4
 setlocal omnifunc=rubycomplete#Complete
-setlocal path=~/Documents/github/ey-cloud-recipes/lib,~/Documents/github/ey-cloud-recipes/ext,~/.rbenv/versions/2.1.5/lib/ruby/site_ruby/2.1.0,~/.rbenv/versions/2.1.5/lib/ruby/site_ruby/2.1.0/x86_64-darwin14.0,~/.rbenv/versions/2.1.5/lib/ruby/site_ruby,~/.rbenv/versions/2.1.5/lib/ruby/vendor_ruby/2.1.0,~/.rbenv/versions/2.1.5/lib/ruby/vendor_ruby/2.1.0/x86_64-darwin14.0,~/.rbenv/versions/2.1.5/lib/ruby/vendor_ruby,~/.rbenv/versions/2.1.5/lib/ruby/2.1.0,~/.rbenv/versions/2.1.5/lib/ruby/2.1.0/x86_64-darwin14.0
+setlocal path=~/Documents/github/ey-cloud-recipes/lib,~/Documents/github/ey-cloud-recipes/ext,~/.rbenv/versions/2.0.0-p645/lib/ruby/site_ruby/2.0.0,~/.rbenv/versions/2.0.0-p645/lib/ruby/site_ruby/2.0.0/x86_64-darwin15.0.0,~/.rbenv/versions/2.0.0-p645/lib/ruby/site_ruby,~/.rbenv/versions/2.0.0-p645/lib/ruby/vendor_ruby/2.0.0,~/.rbenv/versions/2.0.0-p645/lib/ruby/vendor_ruby/2.0.0/x86_64-darwin15.0.0,~/.rbenv/versions/2.0.0-p645/lib/ruby/vendor_ruby,~/.rbenv/versions/2.0.0-p645/lib/ruby/2.0.0,~/.rbenv/versions/2.0.0-p645/lib/ruby/2.0.0/x86_64-darwin15.0.0
 setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
@@ -108,7 +111,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!airline#statusline(1)
+setlocal statusline=%!airline#statusline(2)
 setlocal suffixesadd=.rb
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -116,7 +119,7 @@ if &syntax != 'ruby'
 setlocal syntax=ruby
 endif
 setlocal tabstop=4
-setlocal tags=./tags;,tags,~/.rbenv/versions/2.1.5/lib/ruby/site_ruby/2.1.0/tags,~/.rbenv/versions/2.1.5/lib/ruby/site_ruby/2.1.0/x86_64-darwin14.0/tags,~/.rbenv/versions/2.1.5/lib/ruby/site_ruby/tags,~/.rbenv/versions/2.1.5/lib/ruby/vendor_ruby/2.1.0/tags,~/.rbenv/versions/2.1.5/lib/ruby/vendor_ruby/2.1.0/x86_64-darwin14.0/tags,~/.rbenv/versions/2.1.5/lib/ruby/vendor_ruby/tags,~/.rbenv/versions/2.1.5/lib/ruby/2.1.0/tags,~/.rbenv/versions/2.1.5/lib/ruby/2.1.0/x86_64-darwin14.0/tags,~/Documents/github/ey-cloud-recipes/tags
+setlocal tags=./tags;,tags,~/.rbenv/versions/2.0.0-p645/lib/ruby/site_ruby/2.0.0/tags,~/.rbenv/versions/2.0.0-p645/lib/ruby/site_ruby/2.0.0/x86_64-darwin15.0.0/tags,~/.rbenv/versions/2.0.0-p645/lib/ruby/site_ruby/tags,~/.rbenv/versions/2.0.0-p645/lib/ruby/vendor_ruby/2.0.0/tags,~/.rbenv/versions/2.0.0-p645/lib/ruby/vendor_ruby/2.0.0/x86_64-darwin15.0.0/tags,~/.rbenv/versions/2.0.0-p645/lib/ruby/vendor_ruby/tags,~/.rbenv/versions/2.0.0-p645/lib/ruby/2.0.0/tags,~/.rbenv/versions/2.0.0-p645/lib/ruby/2.0.0/x86_64-darwin15.0.0/tags,~/Documents/github/ey-cloud-recipes/tags
 setlocal textwidth=0
 setlocal thesaurus=
 setlocal undofile
@@ -125,11 +128,11 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 162 - ((19 * winheight(0) + 19) / 38)
+let s:l = 1 - ((0 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-162
+1
 normal! 0
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

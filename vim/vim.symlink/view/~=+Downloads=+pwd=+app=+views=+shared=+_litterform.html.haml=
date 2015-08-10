@@ -2,17 +2,17 @@ let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
-cnoremap <buffer> <SNR>176_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>192_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>182_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>149_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>208_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>181_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>204_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>232_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>197_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 imap <buffer> <S-BS> <Plug>delimitMateS-BS
 imap <buffer> <BS> <Plug>delimitMateBS
+cnoremap <buffer> <SNR>197_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>232_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>204_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>181_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>208_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>149_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>182_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>192_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>176_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 nmap <buffer> gf <Plug>RailsTabFind
 nmap <buffer> f <Plug>RailsSplitFind
 nmap <buffer> [f <Plug>RailsAlternate
@@ -109,7 +109,7 @@ setlocal matchpairs=(:),{:},[:]
 setlocal modeline
 setlocal modifiable
 setlocal nrformats=hex
-setlocal nonumber
+setlocal number
 setlocal numberwidth=4
 setlocal omnifunc=rubycomplete#Complete
 setlocal path=~/Downloads/pwd,~/Downloads/pwd/app,~/Downloads/pwd/app/models,~/Downloads/pwd/app/controllers,~/Downloads/pwd/app/helpers,~/Downloads/pwd/config,~/Downloads/pwd/lib,~/Downloads/pwd/app/views,~/Downloads/pwd/app/views/shared,~/Downloads/pwd/public,~/Downloads/pwd/test,~/Downloads/pwd/test/unit,~/Downloads/pwd/test/functional,~/Downloads/pwd/test/integration,~/Downloads/pwd/spec,~/Downloads/pwd/spec/models,~/Downloads/pwd/spec/controllers,~/Downloads/pwd/spec/helpers,~/Downloads/pwd/spec/views,~/Downloads/pwd/spec/lib,~/Downloads/pwd/spec/requests,~/Downloads/pwd/spec/integration,~/Downloads/pwd/app/*,~/Downloads/pwd/vendor,~/Downloads/pwd/vendor/plugins/*/lib,~/Downloads/pwd/vendor/plugins/*/test,~/Downloads/pwd/vendor/rails/*/lib,~/Downloads/pwd/vendor/rails/*/test,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/2.2.0,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/2.2.0/x86_64-darwin14.1.0,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/2.2.0,~/.rbenv/versions/2.2.0/lib/ruby/v
@@ -222,14 +222,16 @@ normal! zo
 normal! zo
 151
 normal! zo
-157
+154
 normal! zo
-let s:l = 154 - ((23 * winheight(0) + 13) / 27)
+158
+normal! zo
+let s:l = 152 - ((31 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-154
-normal! 038|
+152
+normal! 022|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

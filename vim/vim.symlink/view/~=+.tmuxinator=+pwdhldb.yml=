@@ -39,8 +39,8 @@ setlocal colorcolumn=
 setlocal comments=:#
 setlocal commentstring=#\ %s
 setlocal complete=.,w,t
-setlocal concealcursor=
-setlocal conceallevel=0
+setlocal concealcursor=nv
+setlocal conceallevel=2
 setlocal completefunc=youcompleteme#Complete
 setlocal nocopyindent
 setlocal cryptmethod=
@@ -126,12 +126,12 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 25 - ((24 * winheight(0) + 19) / 38)
+let s:l = 13 - ((12 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-25
-normal! 010|
+13
+normal! 034|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

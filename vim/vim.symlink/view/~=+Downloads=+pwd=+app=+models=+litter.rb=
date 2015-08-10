@@ -2,16 +2,16 @@ let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
-cnoremap <buffer> <SNR>176_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>178_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>181_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>189_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>143_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>186_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>171_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>201_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>179_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 cnoremap <buffer> <SNR>190_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>179_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>201_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>171_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>186_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>143_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>189_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>181_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>178_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>176_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 imap <buffer> <S-BS> <Plug>delimitMateS-BS
 imap <buffer> <BS> <Plug>delimitMateBS
 nmap <buffer> gf <Plug>RailsTabFind
@@ -131,7 +131,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!airline#statusline(2)
+setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.yml,.csv,.rake,s.rb
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -150,38 +150,38 @@ setlocal wrap
 setlocal wrapmargin=0
 1
 normal! zo
-87
+90
 normal! zo
-99
+102
 normal! zo
-100
+103
 normal! zo
-101
+104
 normal! zo
-121
+124
 normal! zo
-146
+149
 normal! zo
-161
+164
 normal! zo
-165
+168
 normal! zo
-170
+173
 normal! zo
-174
+177
 normal! zo
-195
+198
 normal! zo
-207
+210
 normal! zo
-209
+212
 normal! zo
-let s:l = 105 - ((18 * winheight(0) + 19) / 38)
+let s:l = 66 - ((23 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-105
-normal! 013|
+66
+normal! 012|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

@@ -150,8 +150,6 @@ normal! zc
 normal! zc
 43
 normal! zc
-64
-normal! zc
 72
 normal! zc
 86
@@ -178,12 +176,12 @@ normal! zc
 normal! zo
 192
 normal! zo
-let s:l = 194 - ((45 * winheight(0) + 19) / 38)
+let s:l = 72 - ((29 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-194
-normal! 0
+72
+normal! 01|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

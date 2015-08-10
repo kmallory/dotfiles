@@ -160,12 +160,12 @@ normal! zo
 normal! zo
 247
 normal! zo
-let s:l = 18 - ((8 * winheight(0) + 19) / 38)
+let s:l = 83 - ((8 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-18
-normal! 025|
+83
+normal! 024|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

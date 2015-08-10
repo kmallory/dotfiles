@@ -47,8 +47,8 @@ setlocal cinkeys=0{,0},0),:,!^F,o,O,e,0]
 setlocal cinoptions=j1,J1
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=:#
-setlocal commentstring=#\ %s
+setlocal comments=s:<!--,m:\ \ \ \ ,e:-->
+setlocal commentstring=<!--%s-->
 setlocal complete=.,w,t
 setlocal concealcursor=
 setlocal conceallevel=0
@@ -58,14 +58,14 @@ setlocal cryptmethod=
 setlocal nocursorbind
 setlocal nocursorcolumn
 setlocal nocursorline
-setlocal define=^\\s*def\\s\\+\\(self\\.\\)\\=
+setlocal define=^\\s*#\\s*define
 setlocal dictionary=
 setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal expandtab
-if &filetype != 'ruby'
-setlocal filetype=ruby
+if &filetype != 'html'
+setlocal filetype=html
 endif
 setlocal foldcolumn=0
 setlocal foldenable
@@ -78,32 +78,32 @@ setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=CustomFoldText()
 setlocal formatexpr=
-setlocal formatoptions=jcroql
+setlocal formatoptions=tcqj
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
 setlocal iminsert=2
 setlocal imsearch=2
-setlocal include=^\\s*\\<\\(load\\>\\|require\\>\\|autoload\\s*:\\=[\"']\\=\\h\\w*[\"']\\=,\\)
+setlocal include=^\\s*#\\s*include
 setlocal includeexpr=RailsIncludeexpr()
-setlocal indentexpr=GetRubyIndent(v:lnum)
-setlocal indentkeys=0{,0},0),0],!^F,o,O,e,:,.,=end,=else,=elsif,=when,=ensure,=rescue,==begin,==end,=private,=protected,=public
+setlocal indentexpr=GetCoffeeHtmlIndent(v:lnum)
+setlocal indentkeys=o,O,*<Return>,<>>,{,},!^F
 setlocal noinfercase
 setlocal iskeyword=@,48-57,_,192-255,$
-setlocal keywordprg=ri\ -T\ -f\ bs
+setlocal keywordprg=man\ -s
 setlocal nolinebreak
 setlocal nolisp
 setlocal lispwords=
 setlocal nolist
 setlocal macmeta
 setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
+setlocal matchpairs=(:),{:},[:],<:>
 setlocal modeline
 setlocal modifiable
 setlocal nrformats=hex
 setlocal nonumber
 setlocal numberwidth=4
-setlocal omnifunc=rubycomplete#Complete
-setlocal path=~/Downloads/pwd,~/Downloads/pwd/app,~/Downloads/pwd/app/models,~/Downloads/pwd/app/controllers,~/Downloads/pwd/app/helpers,~/Downloads/pwd/config,~/Downloads/pwd/lib,~/Downloads/pwd/app/views,~/Downloads/pwd/app/views/compendium/reports,~/Downloads/pwd/public,~/Downloads/pwd/test,~/Downloads/pwd/test/unit,~/Downloads/pwd/test/functional,~/Downloads/pwd/test/integration,~/Downloads/pwd/spec,~/Downloads/pwd/spec/models,~/Downloads/pwd/spec/controllers,~/Downloads/pwd/spec/helpers,~/Downloads/pwd/spec/views,~/Downloads/pwd/spec/lib,~/Downloads/pwd/spec/requests,~/Downloads/pwd/spec/integration,~/Downloads/pwd/app/*,~/Downloads/pwd/vendor,~/Downloads/pwd/vendor/plugins/*/lib,~/Downloads/pwd/vendor/plugins/*/test,~/Downloads/pwd/vendor/rails/*/lib,~/Downloads/pwd/vendor/rails/*/test,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/2.2.0,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/2.2.0/x86_64-darwin14.1.0,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/2.2.0,~/.rbenv/versions/2.2.
+setlocal omnifunc=htmlcomplete#CompleteTags
+setlocal path=.,~/Downloads/pwd,~/Downloads/pwd/app,~/Downloads/pwd/app/models,~/Downloads/pwd/app/controllers,~/Downloads/pwd/app/helpers,~/Downloads/pwd/config,~/Downloads/pwd/lib,~/Downloads/pwd/app/views,~/Downloads/pwd/app/views/compendium/reports,~/Downloads/pwd/public,~/Downloads/pwd/test,~/Downloads/pwd/test/unit,~/Downloads/pwd/test/functional,~/Downloads/pwd/test/integration,~/Downloads/pwd/spec,~/Downloads/pwd/spec/models,~/Downloads/pwd/spec/controllers,~/Downloads/pwd/spec/helpers,~/Downloads/pwd/spec/views,~/Downloads/pwd/spec/lib,~/Downloads/pwd/spec/requests,~/Downloads/pwd/spec/integration,~/Downloads/pwd/app/*,~/Downloads/pwd/vendor,~/Downloads/pwd/vendor/plugins/*/lib,~/Downloads/pwd/vendor/plugins/*/test,~/Downloads/pwd/vendor/rails/*/lib,~/Downloads/pwd/vendor/rails/*/test,/usr/include,
 setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
@@ -121,14 +121,14 @@ setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
 setlocal statusline=%!airline#statusline(2)
-setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.yml,.csv,.rake,s.rb
+setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.css,.js,.yml,.csv,.rake,.sql,.html,.xml
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != 'ruby'
-setlocal syntax=ruby
+if &syntax != 'html'
+setlocal syntax=html
 endif
 setlocal tabstop=4
-setlocal tags=~/Downloads/pwd/tmp/tags,./tags;,tags,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/2.2.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/2.2.0/x86_64-darwin14.1.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/tags,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/2.2.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/2.2.0/x86_64-darwin14.1.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/tags,~/.rbenv/versions/2.2.0/lib/ruby/2.2.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/2.2.0/x86_64-darwin14.1.0/tags,~/Downloads/pwd/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/better_errors-b5de722fb4ff/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/paper_trail-cb105798f09a/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/pry-83d000b76a4c/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rails4-autocomplete-0a5bb621fe39/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/ransack-bcce3a0d9678/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rbenv-6f1216cfe0a6/tags,~/
+setlocal tags=~/Downloads/pwd/tmp/tags,./tags;,tags,~/Downloads/pwd/tags,~/Downloads/pwd/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/better_errors-b5de722fb4ff/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/paper_trail-b5c2bce93d05/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/pry-8a932c7b7e7d/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rails4-autocomplete-0a5bb621fe39/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/ransack-bcce3a0d9678/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rbenv-6f1216cfe0a6/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/accessible_tooltip-1.0.7/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/actionmailer-4.2.3/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.3/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/actionview-4.2.3/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/actionview-encoded_mail_to-1.0.6/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/activejob-4.2.3/tags,~/Downloads/pw
 setlocal textwidth=0
 setlocal thesaurus=
 setlocal undofile
@@ -137,20 +137,20 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
+5
+normal! zo
 6
 normal! zo
-11
+18
 normal! zo
-38
+37
 normal! zo
-44
-normal! zo
-let s:l = 37 - ((18 * winheight(0) + 19) / 38)
+let s:l = 14 - ((13 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-37
-normal! 015|
+14
+normal! 010|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

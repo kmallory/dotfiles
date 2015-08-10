@@ -38,7 +38,7 @@ setlocal keymap=
 setlocal noarabic
 setlocal autoindent
 setlocal backupcopy=
-setlocal balloonexpr=RubyBalloonexpr()
+setlocal balloonexpr=
 setlocal nobinary
 setlocal nobreakindent
 setlocal breakindentopt=
@@ -140,6 +140,20 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
+2
+normal! zo
+3
+normal! zo
+9
+normal! zo
+10
+normal! zo
+11
+normal! zo
+15
+normal! zo
+28
+normal! zo
 41
 normal! zo
 42
@@ -152,12 +166,12 @@ normal! zo
 normal! zo
 117
 normal! zo
-let s:l = 128 - ((50 * winheight(0) + 25) / 51)
+let s:l = 26 - ((25 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-128
-normal! 016|
+26
+normal! 092|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

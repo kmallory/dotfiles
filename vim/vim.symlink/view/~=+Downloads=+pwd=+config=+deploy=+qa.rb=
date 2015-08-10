@@ -9,6 +9,7 @@ imap <buffer> <BS> <Plug>delimitMateBS
 nmap <buffer> gf <Plug>RailsTabFind
 nmap <buffer> f <Plug>RailsSplitFind
 nmap <buffer> [f <Plug>RailsAlternate
+snoremap <buffer> \\async-magic :
 onoremap <buffer> \\async-magic :
 xnoremap <buffer> \\async-magic :
 nnoremap <buffer> \\async-magic :
@@ -142,12 +143,12 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 7 - ((6 * winheight(0) + 19) / 38)
+let s:l = 16 - ((15 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-7
-normal! 019|
+16
+normal! 021|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

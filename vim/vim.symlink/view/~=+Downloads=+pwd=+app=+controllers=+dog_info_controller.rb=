@@ -152,141 +152,165 @@ normal! zo
 normal! zc
 62
 normal! zo
-74
+73
 normal! zo
-94
+92
 normal! zo
-95
+93
 normal! zo
-119
+116
 normal! zo
-131
+128
+normal! zo
+134
+normal! zo
+136
 normal! zo
 137
 normal! zo
-139
+137
 normal! zo
-140
+137
 normal! zo
-140
+137
 normal! zo
-140
+137
 normal! zo
-140
+137
 normal! zo
-140
+150
 normal! zo
-140
+151
 normal! zo
-153
+151
 normal! zo
-154
+151
 normal! zo
-154
+151
 normal! zo
-154
+151
 normal! zo
-154
+151
 normal! zo
-154
+155
 normal! zo
-154
+155
 normal! zo
-158
+155
 normal! zo
-158
+155
 normal! zo
-158
+155
 normal! zo
-158
+155
 normal! zo
-158
+174
 normal! zo
-158
-normal! zo
-176
+181
 normal! zo
 183
 normal! zo
-185
+190
 normal! zo
 192
 normal! zo
-194
+244
 normal! zo
-246
+262
 normal! zo
-264
+329
 normal! zo
-332
+348
 normal! zo
-351
+353
 normal! zo
-356
+362
 normal! zo
-365
+381
 normal! zo
-384
+392
 normal! zo
-395
+409
 normal! zo
-412
+411
 normal! zo
-414
+411
 normal! zo
-414
+411
 normal! zo
-414
+411
 normal! zo
-414
+411
 normal! zo
-414
+411
 normal! zo
-414
+411
 normal! zo
-414
+411
 normal! zo
-414
+411
 normal! zo
-414
+416
 normal! zo
 419
 normal! zo
-422
+420
 normal! zo
-423
+420
 normal! zo
-423
+420
 normal! zo
-423
+420
 normal! zo
-423
+420
 normal! zo
-423
+420
 normal! zo
-423
+420
 normal! zo
-423
+420
 normal! zo
-423
+420
 normal! zo
-423
+420
 normal! zo
-423
+420
 normal! zo
-423
+420
 normal! zo
-423
+420
 normal! zo
-423
+420
 normal! zo
-423
+420
 normal! zo
-423
+420
 normal! zo
-423
+514
 normal! zo
-517
+515
+normal! zo
+516
+normal! zo
+516
+normal! zo
+516
+normal! zo
+516
+normal! zo
+516
+normal! zo
+516
+normal! zo
+516
+normal! zo
+516
+normal! zo
+516
+normal! zo
+516
+normal! zo
+516
 normal! zo
 518
 normal! zo
@@ -312,52 +336,28 @@ normal! zo
 normal! zo
 519
 normal! zo
-521
+519
 normal! zo
-522
+519
 normal! zo
-522
+535
 normal! zo
-522
+536
 normal! zo
-522
+536
 normal! zo
-522
+536
 normal! zo
-522
+536
 normal! zo
-522
+536
 normal! zo
-522
-normal! zo
-522
-normal! zo
-522
-normal! zo
-522
-normal! zo
-522
-normal! zo
-522
-normal! zo
-538
-normal! zo
-539
-normal! zo
-539
-normal! zo
-539
-normal! zo
-539
-normal! zo
-539
-normal! zo
-let s:l = 163 - ((5 * winheight(0) + 13) / 27)
+let s:l = 161 - ((23 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-163
-normal! 045|
+161
+normal! 08|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

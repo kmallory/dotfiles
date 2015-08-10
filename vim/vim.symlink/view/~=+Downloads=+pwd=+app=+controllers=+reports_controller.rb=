@@ -121,7 +121,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!airline#statusline(1)
+setlocal statusline=%!airline#statusline(2)
 setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.yml,.csv,.rake,s.rb
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -140,11 +140,85 @@ setlocal wrap
 setlocal wrapmargin=0
 1
 normal! zo
-let s:l = 98 - ((27 * winheight(0) + 18) / 37)
+20
+normal! zo
+23
+normal! zo
+33
+normal! zo
+36
+normal! zo
+49
+normal! zo
+52
+normal! zo
+60
+normal! zo
+76
+normal! zo
+80
+normal! zo
+80
+normal! zo
+115
+normal! zo
+118
+normal! zo
+128
+normal! zo
+131
+normal! zo
+141
+normal! zo
+151
+normal! zo
+154
+normal! zo
+164
+normal! zo
+174
+normal! zo
+178
+normal! zo
+188
+normal! zo
+198
+normal! zo
+201
+normal! zo
+211
+normal! zo
+221
+normal! zo
+224
+normal! zo
+249
+normal! zo
+252
+normal! zo
+262
+normal! zo
+266
+normal! zo
+297
+normal! zo
+300
+normal! zo
+310
+normal! zo
+314
+normal! zo
+324
+normal! zo
+334
+normal! zo
+337
+normal! zo
+let s:l = 137 - ((32 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-98
+137
 normal! 0
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save

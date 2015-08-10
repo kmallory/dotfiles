@@ -2,11 +2,13 @@ let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
+imap <buffer> <S-Tab> <Plug>delimitMateS-Tab
 imap <buffer> <S-BS> <Plug>delimitMateS-BS
 imap <buffer> <BS> <Plug>delimitMateBS
 nmap <buffer> gf <Plug>RailsTabFind
 nmap <buffer> f <Plug>RailsSplitFind
 nmap <buffer> [f <Plug>RailsAlternate
+noremap <buffer> \\async-magic :
 nmap <buffer> ]f <Plug>RailsRelated
 nmap <buffer> gf <Plug>RailsFind
 nnoremap <buffer> <silent> <Plug>RailsTabFind :RTfind
@@ -22,6 +24,7 @@ imap <buffer> ' <Plug>delimitMate'
 imap <buffer> ( <Plug>delimitMate(
 imap <buffer> ) <Plug>delimitMate)
 imap <buffer> [ <Plug>delimitMate[
+inoremap <buffer> \\async-magic 
 imap <buffer> ] <Plug>delimitMate]
 imap <buffer> ` <Plug>delimitMate`
 imap <buffer> { <Plug>delimitMate{
@@ -31,8 +34,11 @@ unlet s:cpo_save
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
+setlocal backupcopy=
 setlocal balloonexpr=
 setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
 setlocal bufhidden=
 setlocal buflisted
 setlocal buftype=
@@ -67,7 +73,7 @@ setlocal foldexpr=0
 setlocal foldignore=#
 setlocal foldlevel=20
 setlocal foldmarker={{{,}}}
-setlocal foldmethod=syntax
+setlocal foldmethod=indent
 setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=CustomFoldText()
@@ -96,7 +102,7 @@ setlocal modifiable
 setlocal nrformats=hex
 setlocal nonumber
 setlocal numberwidth=4
-setlocal omnifunc=syntaxcomplete#Complete
+setlocal omnifunc=javascriptcomplete#CompleteJS
 setlocal path=.,~/Downloads/pwd,~/Downloads/pwd/app,~/Downloads/pwd/app/models,~/Downloads/pwd/app/controllers,~/Downloads/pwd/app/helpers,~/Downloads/pwd/config,~/Downloads/pwd/lib,~/Downloads/pwd/app/views,~/Downloads/pwd/test,~/Downloads/pwd/test/unit,~/Downloads/pwd/test/functional,~/Downloads/pwd/test/integration,~/Downloads/pwd/spec,~/Downloads/pwd/spec/models,~/Downloads/pwd/spec/controllers,~/Downloads/pwd/spec/helpers,~/Downloads/pwd/spec/views,~/Downloads/pwd/spec/lib,~/Downloads/pwd/spec/requests,~/Downloads/pwd/spec/integration,~/Downloads/pwd/app/*,~/Downloads/pwd/vendor,~/Downloads/pwd/vendor/plugins/*/lib,~/Downloads/pwd/vendor/plugins/*/test,~/Downloads/pwd/vendor/rails/*/lib,~/Downloads/pwd/vendor/rails/*/test,/usr/include,
 setlocal nopreserveindent
 setlocal nopreviewwindow
@@ -131,12 +137,12 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 119 - ((1 * winheight(0) + 19) / 38)
+let s:l = 178 - ((37 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-119
-normal! 037|
+178
+normal! 0
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

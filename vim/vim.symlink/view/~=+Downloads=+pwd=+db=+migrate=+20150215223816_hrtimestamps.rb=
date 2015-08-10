@@ -99,7 +99,7 @@ setlocal matchpairs=(:),{:},[:]
 setlocal modeline
 setlocal modifiable
 setlocal nrformats=hex
-setlocal nonumber
+setlocal number
 setlocal numberwidth=4
 setlocal omnifunc=rubycomplete#Complete
 setlocal path=~/Downloads/pwd,~/Downloads/pwd/app,~/Downloads/pwd/app/models,~/Downloads/pwd/app/controllers,~/Downloads/pwd/app/helpers,~/Downloads/pwd/config,~/Downloads/pwd/lib,~/Downloads/pwd/app/views,~/Downloads/pwd/test,~/Downloads/pwd/test/unit,~/Downloads/pwd/test/functional,~/Downloads/pwd/test/integration,~/Downloads/pwd/spec,~/Downloads/pwd/spec/models,~/Downloads/pwd/spec/controllers,~/Downloads/pwd/spec/helpers,~/Downloads/pwd/spec/views,~/Downloads/pwd/spec/lib,~/Downloads/pwd/spec/requests,~/Downloads/pwd/spec/integration,~/Downloads/pwd/app/*,~/Downloads/pwd/vendor,~/Downloads/pwd/vendor/plugins/*/lib,~/Downloads/pwd/vendor/plugins/*/test,~/Downloads/pwd/vendor/rails/*/lib,~/Downloads/pwd/vendor/rails/*/test,~/.rbenv/versions/2.2.2/lib/ruby/site_ruby/2.2.0,~/.rbenv/versions/2.2.2/lib/ruby/site_ruby/2.2.0/x86_64-darwin14.4.0,~/.rbenv/versions/2.2.2/lib/ruby/site_ruby,~/.rbenv/versions/2.2.2/lib/ruby/vendor_ruby/2.2.0,~/.rbenv/versions/2.2.2/lib/ruby/vendor_ruby/2.2.0/x86_64-darwin14.4.0,~/.rbenv/versions/2
@@ -119,7 +119,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!airline#statusline(2)
+setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.yml,.csv,.rake,s.rb
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -127,7 +127,7 @@ if &syntax != 'ruby'
 setlocal syntax=ruby
 endif
 setlocal tabstop=4
-setlocal tags=~/Downloads/pwd/tmp/tags,./tags;,tags,~/.rbenv/versions/2.2.2/lib/ruby/site_ruby/2.2.0/tags,~/.rbenv/versions/2.2.2/lib/ruby/site_ruby/2.2.0/x86_64-darwin14.4.0/tags,~/.rbenv/versions/2.2.2/lib/ruby/site_ruby/tags,~/.rbenv/versions/2.2.2/lib/ruby/vendor_ruby/2.2.0/tags,~/.rbenv/versions/2.2.2/lib/ruby/vendor_ruby/2.2.0/x86_64-darwin14.4.0/tags,~/.rbenv/versions/2.2.2/lib/ruby/vendor_ruby/tags,~/.rbenv/versions/2.2.2/lib/ruby/2.2.0/tags,~/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14.4.0/tags,~/Downloads/pwd/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/better_errors-b5de722fb4ff/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/paper_trail-cb105798f09a/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/pry-83d000b76a4c/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rails4-autocomplete-0a5bb621fe39/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/ransack-bcce3a0d9678/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rbenv-6f1216cfe0a6/tags,~/
+setlocal tags=~/Downloads/pwd/tmp/tags,./tags;,tags,~/.rbenv/versions/2.2.2/lib/ruby/site_ruby/2.2.0/tags,~/.rbenv/versions/2.2.2/lib/ruby/site_ruby/2.2.0/x86_64-darwin14.4.0/tags,~/.rbenv/versions/2.2.2/lib/ruby/site_ruby/tags,~/.rbenv/versions/2.2.2/lib/ruby/vendor_ruby/2.2.0/tags,~/.rbenv/versions/2.2.2/lib/ruby/vendor_ruby/2.2.0/x86_64-darwin14.4.0/tags,~/.rbenv/versions/2.2.2/lib/ruby/vendor_ruby/tags,~/.rbenv/versions/2.2.2/lib/ruby/2.2.0/tags,~/.rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-darwin14.4.0/tags,~/Downloads/pwd/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/better_errors-b5de722fb4ff/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/capistrano3-monit-150c3a67895e/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/paper_trail-b5c2bce93d05/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/pry-8a932c7b7e7d/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rails4-autocomplete-0a5bb621fe39/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/ransack-bcce3a0d
 setlocal textwidth=0
 setlocal thesaurus=
 setlocal undofile
@@ -136,18 +136,30 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-2
+3
 normal! zo
-5
+4
 normal! zo
-27
+19
 normal! zo
-let s:l = 41 - ((28 * winheight(0) + 19) / 38)
+43
+normal! zo
+48
+normal! zo
+66
+normal! zo
+67
+normal! zo
+75
+normal! zo
+84
+normal! zo
+let s:l = 68 - ((18 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-41
-normal! 022|
+68
+normal! 019|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

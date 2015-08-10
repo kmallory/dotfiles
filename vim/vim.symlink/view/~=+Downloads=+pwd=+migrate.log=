@@ -104,7 +104,7 @@ setlocal nrformats=hex
 setlocal nonumber
 setlocal numberwidth=4
 setlocal omnifunc=syntaxcomplete#Complete
-setlocal path=.,~/Downloads/pwd,~/Downloads/pwd/app,~/Downloads/pwd/app/models,~/Downloads/pwd/app/controllers,~/Downloads/pwd/app/helpers,~/Downloads/pwd/config,~/Downloads/pwd/lib,~/Downloads/pwd/app/views,~/Downloads/pwd/test,~/Downloads/pwd/test/unit,~/Downloads/pwd/test/functional,~/Downloads/pwd/test/integration,~/Downloads/pwd/spec,~/Downloads/pwd/spec/models,~/Downloads/pwd/spec/controllers,~/Downloads/pwd/spec/helpers,~/Downloads/pwd/spec/views,~/Downloads/pwd/spec/lib,~/Downloads/pwd/spec/requests,~/Downloads/pwd/spec/integration,~/Downloads/pwd/app/*,~/Downloads/pwd/vendor,~/Downloads/pwd/vendor/plugins/*/lib,~/Downloads/pwd/vendor/plugins/*/test,~/Downloads/pwd/vendor/rails/*/lib,~/Downloads/pwd/vendor/rails/*/test,/usr/include
+setlocal path=.,~/Downloads/pwd,~/Downloads/pwd/app,~/Downloads/pwd/app/models,~/Downloads/pwd/app/controllers,~/Downloads/pwd/app/helpers,~/Downloads/pwd/config,~/Downloads/pwd/lib,~/Downloads/pwd/app/views,~/Downloads/pwd/test,~/Downloads/pwd/test/unit,~/Downloads/pwd/test/functional,~/Downloads/pwd/test/integration,~/Downloads/pwd/spec,~/Downloads/pwd/spec/models,~/Downloads/pwd/spec/controllers,~/Downloads/pwd/spec/helpers,~/Downloads/pwd/spec/views,~/Downloads/pwd/spec/lib,~/Downloads/pwd/spec/requests,~/Downloads/pwd/spec/integration,~/Downloads/pwd/app/*,~/Downloads/pwd/vendor,~/Downloads/pwd/vendor/plugins/*/lib,~/Downloads/pwd/vendor/plugins/*/test,~/Downloads/pwd/vendor/rails/*/lib,~/Downloads/pwd/vendor/rails/*/test,~/Downloads/pwd/app/*,~/Downloads/pwd/vendor,~/Downloads/pwd/vendor/plugins/*/lib,~/Downloads/pwd/vendor/plugins/*/test,~/Downloads/pwd/vendor/rails/*/lib,~/Downloads/pwd/vendor/rails/*/test,/usr/include
 setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
@@ -121,7 +121,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!airline#statusline(2)
+setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.css,.js,.yml,.csv,.rake,.sql,.html,.xml
 setlocal noswapfile
 setlocal synmaxcol=3000
@@ -129,7 +129,7 @@ if &syntax != 'railslog'
 setlocal syntax=railslog
 endif
 setlocal tabstop=4
-setlocal tags=~/Downloads/pwd/tmp/tags,./tags;,tags,~/Downloads/pwd/tags,~/Downloads/pwd/tags
+setlocal tags=~/Downloads/pwd/tmp/tags,./tags;,tags,~/Downloads/pwd/tags,~/Downloads/pwd/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/better_errors-b5de722fb4ff/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/capistrano3-monit-150c3a67895e/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/paper_trail-b5c2bce93d05/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/pry-8a932c7b7e7d/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rails4-autocomplete-0a5bb621fe39/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/ransack-bcce3a0d9678/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rbenv-6f1216cfe0a6/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/accessible_tooltip-1.0.7/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/actionmailer-4.2.3/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/actionpack-4.2.3/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/actionview-4.2.3/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/gems/actionview-encoded_mail_to-1.
 setlocal textwidth=0
 setlocal thesaurus=
 setlocal undofile
@@ -138,12 +138,12 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-let s:l = 120 - ((14 * winheight(0) + 19) / 38)
+let s:l = 1 - ((0 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-120
-normal! 036|
+1
+normal! 067|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

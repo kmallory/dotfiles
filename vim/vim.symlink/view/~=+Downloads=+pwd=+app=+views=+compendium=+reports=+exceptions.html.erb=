@@ -137,44 +137,46 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
+5
+normal! zo
 6
 normal! zo
 7
 normal! zo
-8
+10
 normal! zo
-11
+14
 normal! zo
-16
+15
 normal! zo
-17
+18
 normal! zo
-20
+22
 normal! zo
-26
+23
 normal! zo
-27
+33
 normal! zo
-117
+35
 normal! zo
-122
+40
 normal! zo
-127
+45
 normal! zo
-130
+48
 normal! zo
-133
+51
 normal! zo
-136
+54
 normal! zo
-139
+57
 normal! zo
-let s:l = 125 - ((2 * winheight(0) + 19) / 38)
+let s:l = 17 - ((16 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-125
-normal! 07|
+17
+normal! 023|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

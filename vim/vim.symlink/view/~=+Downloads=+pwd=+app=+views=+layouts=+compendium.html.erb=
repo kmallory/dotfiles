@@ -120,7 +120,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!airline#statusline(2)
+setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.css,.js,.yml,.csv,.rake,.sql,.html,.xml
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -128,7 +128,7 @@ if &syntax != 'html'
 setlocal syntax=html
 endif
 setlocal tabstop=4
-setlocal tags=~/Downloads/pwd/tmp/tags,./tags;,tags,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/2.2.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/2.2.0/x86_64-darwin14.1.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/tags,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/2.2.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/2.2.0/x86_64-darwin14.1.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/tags,~/.rbenv/versions/2.2.0/lib/ruby/2.2.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/2.2.0/x86_64-darwin14.1.0/tags,~/Downloads/pwd/tags,~/Downloads/pwd/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/better_errors-b5de722fb4ff/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/paper_trail-cb105798f09a/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/pry-83d000b76a4c/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rails4-autocomplete-0a5bb621fe39/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/ransack-bcce3a0d9678/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rbenv
+setlocal tags=~/Downloads/pwd/tmp/tags,~/Downloads/pwd/tmp/tags,~/Downloads/pwd/tmp/tags,~/Downloads/pwd/tmp/tags,./tags;,tags,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/2.2.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/2.2.0/x86_64-darwin14.1.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/site_ruby/tags,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/2.2.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/2.2.0/x86_64-darwin14.1.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/vendor_ruby/tags,~/.rbenv/versions/2.2.0/lib/ruby/2.2.0/tags,~/.rbenv/versions/2.2.0/lib/ruby/2.2.0/x86_64-darwin14.1.0/tags,~/Downloads/pwd/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/better_errors-b5de722fb4ff/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/paper_trail-f3b31fae0395/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/pry-8a932c7b7e7d/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/rails4-autocomplete-0a5bb621fe39/tags,~/Downloads/pwd/vendor/bundle/ruby/2.2.0/bundler/gems/ransack-bcce3a0d9678/tags,~/Dow
 setlocal textwidth=0
 setlocal thesaurus=
 setlocal undofile
@@ -139,18 +139,18 @@ setlocal wrap
 setlocal wrapmargin=0
 3
 normal! zo
-19
+18
+normal! zo
+21
 normal! zo
 22
-normal! zo
-23
 normal! zo
 let s:l = 5 - ((4 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 5
-normal! 0117|
+normal! 071|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

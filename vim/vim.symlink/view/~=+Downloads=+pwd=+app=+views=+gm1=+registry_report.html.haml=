@@ -34,8 +34,11 @@ unlet s:cpo_save
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
+setlocal backupcopy=
 setlocal balloonexpr=RubyBalloonexpr()
 setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
 setlocal bufhidden=
 setlocal buflisted
 setlocal buftype=
@@ -162,11 +165,11 @@ normal! zo
 normal! zo
 63
 normal! zo
-let s:l = 39 - ((31 * winheight(0) + 24) / 48)
+let s:l = 40 - ((39 * winheight(0) + 26) / 52)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-39
+40
 normal! 010|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save

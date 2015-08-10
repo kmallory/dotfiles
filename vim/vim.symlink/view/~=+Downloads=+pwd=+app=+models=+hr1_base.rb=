@@ -146,7 +146,7 @@ normal! zo
 normal! zo
 204
 normal! zo
-let s:l = 180 - ((6 * winheight(0) + 13) / 27)
+let s:l = 180 - ((22 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt

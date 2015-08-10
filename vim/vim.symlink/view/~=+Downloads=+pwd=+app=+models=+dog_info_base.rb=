@@ -2,24 +2,26 @@ let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
-cnoremap <buffer> <SNR>232_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>199_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>144_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>180_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>189_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>168_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>194_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>188_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>178_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>174_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>200_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>181_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
-cnoremap <buffer> <SNR>176_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+imap <buffer> <S-Tab> <Plug>delimitMateS-Tab
 imap <buffer> <S-BS> <Plug>delimitMateS-BS
 imap <buffer> <BS> <Plug>delimitMateBS
+cnoremap <buffer> <SNR>176_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>181_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>200_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>174_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>178_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>188_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>194_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>168_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>189_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>180_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>144_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>199_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+cnoremap <buffer> <SNR>232_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 nmap <buffer> gf <Plug>RailsTabFind
 nmap <buffer> f <Plug>RailsSplitFind
 nmap <buffer> [f <Plug>RailsAlternate
+noremap <buffer> \\async-magic :
 nmap <buffer> ]f <Plug>RailsRelated
 nmap <buffer> gf <Plug>RailsFind
 nnoremap <buffer> <silent> <Plug>RailsTabFind :RTfind
@@ -37,6 +39,7 @@ imap <buffer> ' <Plug>delimitMate'
 imap <buffer> ( <Plug>delimitMate(
 imap <buffer> ) <Plug>delimitMate)
 imap <buffer> [ <Plug>delimitMate[
+inoremap <buffer> \\async-magic 
 imap <buffer> ] <Plug>delimitMate]
 imap <buffer> ` <Plug>delimitMate`
 imap <buffer> { <Plug>delimitMate{
@@ -132,7 +135,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!airline#statusline(2)
+setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.yml,.csv,.rake,s.rb
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -149,14 +152,38 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
-1
+2
 normal! zo
-let s:l = 167 - ((47 * winheight(0) + 32) / 65)
+237
+normal! zo
+246
+normal! zo
+249
+normal! zo
+250
+normal! zo
+275
+normal! zo
+276
+normal! zo
+300
+normal! zo
+301
+normal! zo
+275
+normal! zo
+276
+normal! zo
+300
+normal! zo
+301
+normal! zo
+let s:l = 240 - ((14 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-167
-normal! 0
+240
+normal! 015|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

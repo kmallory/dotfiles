@@ -36,3 +36,5 @@ Icon^M
 *.sqlite
 *.*.swo
 */build/*
+*/vim/vim.symlink/view/*
+*/vim/vim.symlink/undodir/*

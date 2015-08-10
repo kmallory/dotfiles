@@ -2,8 +2,6 @@ let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
-imap <buffer> <S-BS> <Plug>delimitMateS-BS
-imap <buffer> <BS> <Plug>delimitMateBS
 cnoremap <buffer> <SNR>179_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 cnoremap <buffer> <SNR>199_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 cnoremap <buffer> <SNR>144_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
@@ -21,6 +19,9 @@ cnoremap <buffer> <SNR>181_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|en
 cnoremap <buffer> <SNR>163_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 cnoremap <buffer> <SNR>232_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
 cnoremap <buffer> <SNR>176_foldopen |if &foldopen =~# 'tag'|exe 'norm! zv'|endif
+imap <buffer> <S-Tab> <Plug>delimitMateS-Tab
+imap <buffer> <S-BS> <Plug>delimitMateS-BS
+imap <buffer> <BS> <Plug>delimitMateBS
 nmap <buffer> gf <Plug>RailsTabFind
 nmap <buffer> f <Plug>RailsSplitFind
 nmap <buffer> [f <Plug>RailsAlternate
@@ -155,162 +156,184 @@ setlocal wrap
 setlocal wrapmargin=0
 1
 normal! zo
-279
+29
 normal! zo
-315
+35
 normal! zo
-325
+45
 normal! zo
-326
+61
 normal! zo
-450
+77
+normal! zo
+89
+normal! zo
+111
+normal! zo
+134
+normal! zo
+136
+normal! zo
+148
+normal! zo
+163
+normal! zo
+188
+normal! zo
+205
+normal! zo
+222
+normal! zo
+223
+normal! zo
+230
+normal! zo
+235
+normal! zo
+245
+normal! zo
+246
+normal! zo
+255
+normal! zo
+265
+normal! zo
+266
+normal! zo
+275
+normal! zo
+288
+normal! zo
+301
+normal! zo
+302
+normal! zo
+309
+normal! zo
+314
+normal! zo
+324
+normal! zo
+334
+normal! zo
+335
+normal! zo
+349
+normal! zo
+369
+normal! zo
+370
+normal! zo
+380
+normal! zo
+393
+normal! zo
+427
+normal! zo
+440
+normal! zo
+459
+normal! zo
+485
 normal! zo
 502
 normal! zo
-503
+511
 normal! zo
-517
+512
 normal! zo
-519
+526
 normal! zo
-532
+528
 normal! zo
-591
+541
 normal! zo
-605
+600
 normal! zo
-609
+614
 normal! zo
-655
+618
 normal! zo
-663
+664
 normal! zo
-684
+672
 normal! zo
-702
+693
 normal! zo
-735
+711
 normal! zo
-746
+744
 normal! zo
-747
+755
 normal! zo
-748
+756
 normal! zo
-752
+757
 normal! zo
-766
+761
 normal! zo
-786
+775
 normal! zo
-810
+795
 normal! zo
-882
+819
 normal! zo
-897
+891
 normal! zo
-908
+906
 normal! zo
-922
+917
 normal! zo
-933
+931
 normal! zo
-935
+942
 normal! zo
-938
+944
 normal! zo
-945
+947
 normal! zo
-964
+954
 normal! zo
-968
+973
 normal! zo
-969
+977
 normal! zo
-981
-normal! zo
-982
-normal! zo
-983
-normal! zo
-989
+978
 normal! zo
 990
 normal! zo
-1006
+991
 normal! zo
-1007
+992
 normal! zo
-1008
+998
 normal! zo
-1014
-normal! zo
-1015
-normal! zo
-1032
-normal! zo
-1056
-normal! zo
-1058
-normal! zo
-1060
-normal! zo
-882
-normal! zo
-897
-normal! zo
-908
-normal! zo
-922
-normal! zo
-933
-normal! zo
-935
-normal! zo
-938
-normal! zo
-945
-normal! zo
-964
-normal! zo
-968
-normal! zo
-969
-normal! zo
-981
-normal! zo
-982
-normal! zo
-983
-normal! zo
-989
-normal! zo
-990
-normal! zo
-1006
-normal! zo
-1007
-normal! zo
-1008
-normal! zo
-1014
+999
 normal! zo
 1015
 normal! zo
-1032
+1016
 normal! zo
-1056
+1017
 normal! zo
-1058
+1023
 normal! zo
-1060
+1024
 normal! zo
-let s:l = 2 - ((1 * winheight(0) + 13) / 27)
+1040
+normal! zo
+1065
+normal! zo
+1067
+normal! zo
+1069
+normal! zo
+let s:l = 917 - ((18 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-2
-normal! 040|
+917
+normal! 05|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost

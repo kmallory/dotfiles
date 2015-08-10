@@ -4,8 +4,11 @@ let s:cpo_save=&cpo
 set cpo&vim
 imap <buffer> <S-BS> <Plug>delimitMateS-BS
 imap <buffer> <BS> <Plug>delimitMateBS
+nmap <buffer> gf <Plug>RailsTabFind
+nmap <buffer> f <Plug>RailsSplitFind
 nmap <buffer> [f <Plug>RailsAlternate
 nmap <buffer> ]f <Plug>RailsRelated
+nmap <buffer> gf <Plug>RailsFind
 nnoremap <buffer> <silent> <Plug>RailsTabFind :RTfind
 nnoremap <buffer> <silent> <Plug>RailsVSplitFind :RVfind
 nnoremap <buffer> <silent> <Plug>RailsSplitFind :RSfind
@@ -141,12 +144,12 @@ normal! zo
 normal! zo
 371
 normal! zo
-let s:l = 371 - ((2 * winheight(0) + 13) / 27)
+let s:l = 75 - ((23 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-371
-normal! 028|
+75
+normal! 026|
 lcd ~/Downloads/pwd
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
