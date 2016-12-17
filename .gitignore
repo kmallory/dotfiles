@@ -38,3 +38,14 @@ Icon^M
 */build/*
 */vim/vim.symlink/view/*
 */vim/vim.symlink/undodir/*
+fish_prompt.1464304985.copy
+config.1464304985.copy
+config.1464305411.copy
+config.fish.old
+config-symlink/omf/bundle
+config-symlink/omf/init.fish
+config-symlink/omf/theme
+config/vim/view/*
+config/vim/undodir/*
+vim/vim.symlink/undodir/*
+vim/vim.symlink/bundle/*

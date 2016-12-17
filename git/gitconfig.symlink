@@ -19,15 +19,15 @@
         diff = auto
         status = auto
         branch = auto
-	ui = true
+        ui = true
 [core]
 	excludesfile = /Users/kmallory/.gitignore_global
-        editor = vim
+        editor = gvim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/Shareware/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 
 [apply]
@@ -39,10 +39,20 @@
 [help]
         autocorrect = 1
 [push]
-	default = upstream
+	default = nothing
 [filter "media"]
-	required = true
+        required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
 [commit]
-	template = ~/.config/git/.gitmessage
+    #template = ~/.config/git/.gitmessage
+[http]
+	postBuffer = 524288000
+[commit]
+	template = /Users/kmallory/.stCommitMsg
+[merge]
+	renamelimit = 1115
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	required = true
+	clean = git-lfs clean -- %f

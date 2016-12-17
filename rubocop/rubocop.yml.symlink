@@ -1,7 +1,2 @@
-#inherit_from: .rubocop_todo.yml
 AllCops:
-        RunRailsCops: true
-        AutoCorrect: false
-        Metrics/LineLength:
-          Enabled: False
-
+  TargetRubyVersion: "2.3"
