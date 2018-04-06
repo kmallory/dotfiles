@@ -1,35 +1,21 @@
-# Path to Oh My Fish install.
-set -gx OMF_PATH "/Users/kmallory/.local/share/omf"
-
-# Customize Oh My Fish configuration path.
-set -gx OMF_CONFIG "/Users/kmallory/.config/omf"
-
-# Load oh-my-fish configuration.
-source $OMF_PATH/init.fish
-
 set POWERLINE_COMMAND powerline-client
 
-#alias gvim='/usr/lo#cal/bin/gvim'
-#w
-#set -gx VIM_APP_DIR ~/Documents/github/macvim/src/MacVim/build/Release/
-alias gvim='~/bin/gvim'
+#alias gvim='/usr/local/bin/gvim'
 alias view='/usr/local/bin/mvim -M'
 alias vim='/usr/local/bin/vim'
 alias eclim='/Applications/eclipse/eclipse/plugins/org.eclim_2.4.0/bin/eclim'
 alias dog='cd /development/pwd/'
-alias dogasp='cd /development/pwd/asp'
+alias dogasp='cd ~/Downloads/pwd/asp'
+alias dogr='cd /Volumes/pwdhld-devel'
+alias dogprod='cd /Volumes/pwd'
 alias gh='cd /github'
-alias z='zeus'
 alias be='bundle exec'
-alias qar='test/tools/qarun.sh'
-alias q='test/tools/qarun.sh'
-alias z='zeus'
+alias qar="$RAILS_ROOT/test/tools/qarun.sh"
+alias ecr="$RAILS_ROOT/test/tools/ecrun.sh"
 alias yardsql='ssh -L 3307:ec2-54-152-126-181.compute-1.amazonaws.com:3306 deploy@ec2-54-152-126-181.compute-1.amazonaws.com'
 #
-set PATH /usr/local/bin $PATH /Users/kmallory/bin /Users/kmallory/dotfiles/vim/vim.symlink/bundle/vim-powerline /github/depot_tools /Users/kmallory/go/bin
+set PATH /usr/local/bin $PATH /Users/kmallory/bin /Users/kmallory/dotfiles/vim/vim.symlink/bundle/vim-powerline
 
-set -x title 'PWD Health and Litter Log'
-set -x COMPOSE_PROJECT_NAME pwdhll
 set -x PWDHLDB_DATABASE_PASSWORD pwd0
 set -x GIT_EDITOR /usr/bin/vim
 set -x EDITOR /usr/local/bin/vim
@@ -39,18 +25,34 @@ set -x RUBY_GC_HEAP_FREE_SLOTS 200000
 set -x RAILS_ROOT /development/pwd
 #set -x RAILS_ENV development
 set -x HINTS 'nohints'
-set -x HOMEBREW_GITHUB_API_TOKEN dabe85d1da0feec4c3813bcf709b26e079ee118c
+set -x HOMEBREW_GITHUB_API_TOKEN a5dea72e5a411c39300881fc76496d690e786033
 set -x GOPATH $HOME/go
 set ECLIPSE_HOME /Applications/eclipse/eclipse
-set fish_function_path $fish_function_path "/Users/kmallory/dotfiles/vim/vim.symlink/bundle/powerline/powerline/bindings/fish"
-set fish_function_path $fish_function_path "/github/powerline/build/lib/powerline/bindings/fish"
+set fish_function_path $fish_function_path "/github/powerline/powerline/bindings/fish"
+set fish_function_path $fish_function_path "/Users/kmallory/Documents/github/powerline/build/lib/powerline/bindings/fish"
 set fish_greeting ""
 
+#set fish_path /github/oh-my-fish
+#. $fish_path/init.fish
+#Theme "clearance"
+#Theme "bobthefish"
+#Theme "GitStatus"
+#Plugin "Theme"
+#
+#Plugin "git-flow"
+#Plugin "tmux"
+#Plugin "osx"
+#Plugin "brew"
+#Plugin "bundler"
+#Plugin "gem"
+#Plugin "node"
+#Plugin "localhost"
+#Plugin "rbenv"
+#Plugin "vi-mode"
 
-
-#set fish_plugins git osx ruby brew emoji-clock bundler gem node localhost rbenv rails vi-mode
 set NODE_ENV DEVELOPMENT
-set -x PATH /usr/local/go/bin /Applications $HOME/.rbenv/shims $PATH
+set -x PATH /Applications $HOME/.rbenv/shims $PATH
+#set -x PATH /usr/local/go/bin /Applications $HOME/.rbenv/shims $PATH
 rbenv rehash >/dev/null ^&1
 powerline-setup
 

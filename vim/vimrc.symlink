@@ -90,6 +90,7 @@ Plug 'hallison/vim-rdoc'
 "Plug 'docker/docker'
 "Plug 'abolish'
 "Plug 'https://github.com/spiiph/vim-space'
+Plug 'https://github.com/rorymckinley/vim-rubyhash'
 
 call plug#end()
 let g:unite_force_overwrite_statusline = 0
@@ -111,7 +112,7 @@ set tabstop=4
 
 let g:rspec_runner = "os_x_terminal"
 "let g:rspec_command = "!bundle exec rspec --drb {}"
-let g:rspec_command = "cd /development/pwd;zeus rspec {spec}"
+let g:rspec_command = "cd /development/pwd;bundle exec rspec {spec}"
 call airline#add_inactive_statusline_func('Render_Only_File')
 let g:airline_powerline_fonts = 1
 let g:airline_theme="molokai"
@@ -126,7 +127,7 @@ if has("gui_running")
  set lines=41
  set columns=178
   colorscheme Tomorrow-Night-Bright
-  set background=dark
+  set background=light
 else
  " This is console Vim.
  if exists("+lines")
@@ -135,7 +136,7 @@ else
  if exists("+columns")
   set columns=150
   set term=xterm-256color
-  set background=dark
+  set background=light
   colorscheme Tomorrow-Night-Bright
  endif
 endif
