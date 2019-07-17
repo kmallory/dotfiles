@@ -16,6 +16,7 @@
 		</Resources>
 		<Language id="en_US" date="">
 			<Font font="0;13;70;90;90;0;.SF NS Text;49" width="779" height="15" />
+			<Dialog name="Site Manager" width="653" />
 		</Language>
 	</Layout>
 </FileZilla3>

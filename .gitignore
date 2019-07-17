@@ -36,7 +36,6 @@ Icon^M
 *.sqlite
 *.*.swo
 */build/*
-*/vim/vim.symlink/undodir/*
 fish_prompt.1464304985.copy
 config.1464304985.copy
 config.1464305411.copy

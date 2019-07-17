@@ -18,16 +18,16 @@ endfunction
 call plug#begin('~/.vim/bundle')
 
 "Plug 'vim-pi'
-Plug 'matchit.zip'
-Plug 'MatchTag' " Find matching XML/HTML Tags
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/MatchTag' " Find matching XML/HTML Tags
 "Plug 'MatchTagAlways'
-Plug 'L9' "grep buffer, grepbufferall
-Plug 'command-t' " file explorer
+Plug 'vim-scripts/L9' "grep buffer, grepbufferall
+Plug 'vim-scripts/command-t' " file explorer
 Plug 'https://github.com/scrooloose/nerdtree.git' " file explorer
 "Plug 'jistr/vim-nerdtree-tabs' " with tabs, please
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'https://github.com/Shougo/unite.vim.git'
-Plug 'taglist.vim'
+Plug 'vim-scripts/taglist.vim'
 "Plug 'vimfiler' " similar to nerdTree
 Plug 'https://github.com/flazz/vim-colorschemes.git'
 "Plug 'tpope/vim-rails'
@@ -39,7 +39,7 @@ Plug 'tpope/vim-haml'
 Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'https://github.com/vim-airline/vim-airline-themes.git'
 Plug 'https://github.com/Lokaltog/vim-powerline.git'
-Plug 'Syntastic' "syntax checking
+Plug 'vim-scripts/Syntastic' "syntax checking
 Plug 'gcorne/vim-sass-lint'
 "Plug 'Supertab' " use tab for syntax completions
 Plug 'https://github.com/alvan/vim-closetag.git'
@@ -48,29 +48,29 @@ Plug 'https://github.com/othree/html5-syntax.vim.git' " still have to copy files
 Plug 'https://github.com/Valloric/YouCompleteMe.git' "as you type compile support
 Plug 'https://github.com/Shougo/neomru.vim.git' " for UNITE file_mru
 "Plug 'ctrlp'
-Plug 'camelcasemotion'
+Plug 'vim-scripts/camelcasemotion'
 Plug 'https://github.com/scrooloose/nerdcommenter.git'
 Plug 'https://github.com/mileszs/ack.vim.git' "grep current project tree
-Plug 'Gundo' "view vim undo tree (and patch!)
+Plug 'vim-scripts/Gundo' "view vim undo tree (and patch!)
 "Plug 'csslint.vim'
 Plug 'https://github.com/Shutnik/jshint2.vim.git'
 "Plug 'grunt'
 Plug 'https://github.com/mhinz/vim-signify.git' " instead of git-gutter
-Plug 'trailing-whitespace'
+Plug 'vim-scripts/trailing-whitespace'
 Plug 'https://github.com/Raimondi/delimitMate.git'
 "Plug 'Solarized'
 Plug 'jelera/vim-javascript-syntax'
 "Plug 'UltiSnips'
 Plug 'https://github.com/honza/vim-snippets.git'
-Plug 'vim-coffee-script'
+Plug 'vim-scripts/vim-coffee-script'
 "Plug 'Tagbar'
 Plug 'othree/html5.vim'
-Plug 'EasyMotion'
-Plug 'DetectIndent'
+Plug 'vim-scripts/EasyMotion'
+Plug 'vim-scripts/DetectIndent'
 Plug 'tsaleh/vim-align'
-Plug 'restore_view.vim'
+Plug 'vim-scripts/restore_view.vim'
 Plug 'https://github.com/vim-ruby/vim-ruby.git'
-Plug 'eruby.vim'
+Plug 'vim-scripts/eruby.vim'
 Plug 'ingydotnet/yaml-vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-sleuth' "guess at tab settings based on file
@@ -78,7 +78,7 @@ Plug 'tpope/vim-endwise' "auto adds 'end' in ruby
 Plug 'tpope/vim-sensible' "common keys/default settings
 Plug 'https://github.com/tpope/vim-surround.git' "for adding and removing tags quickly
 "" set default directory when opening a file
-Plug 'vim-rooter'
+Plug 'vim-scripts/vim-rooter'
 Plug 'vim-scripts/dbext.vim'
 Plug 'MarcWeber/vim-addon-async'
 Plug 'nathanaelkane/vim-indent-guides'
