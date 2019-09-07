@@ -84,6 +84,7 @@ Plug 'MarcWeber/vim-addon-async'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ujihisa/unite-colorscheme'
 Plug 'junkblocker/unite-codesearch'
+"Plug 'vim-scripts/deunite'
 Plug 'junkblocker/unite-tasklist'
 Plug 'godlygeek/tabular'
 Plug 'hallison/vim-rdoc'
@@ -94,7 +95,7 @@ Plug 'https://github.com/rorymckinley/vim-rubyhash'
 
 call plug#end()
 let g:unite_force_overwrite_statusline = 0
-let g:unite_codesearch_command = "~/bin/csearch -m %d '%s'"
+let g:unite_codesearch_command = "/Users/kmallory/go/bin/csearch '%s'"
 let g:csearchhighlight = 'Y'
 let g:unite_source_codesearch_ignore_case = 0
 let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linenr', ':%3v'])

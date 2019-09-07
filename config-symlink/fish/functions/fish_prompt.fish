@@ -1,1 +1,1 @@
-/Users/kmallory/.local/share/omf/themes/clearance/fish_prompt.fish
+/Users/kmallory/.local/share/omf/themes/bobthefish/fish_prompt.fish
