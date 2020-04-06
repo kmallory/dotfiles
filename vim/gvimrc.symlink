@@ -44,3 +44,8 @@ map <D-]> <C-w>l
 
 " open all buffers in tabs (gui)
 map <silent> <leader>tb :tab :ball<cr>
+map <silent> <leader>` :set guitablabel=%!GuiTabLabel()<cr>
+
+" remove default touchbar stuff
+aunmenu TouchBar.
+set guitablabel=%!GuiTabLabel()

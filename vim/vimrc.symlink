@@ -10,60 +10,54 @@ function! Render_Only_File(...)
 
   call builder.add_section('file', '!! %F')
 
-  return 0   " the default: draw the rest of the statusline
-  return -1  " do not modify the statusline
   return 1   " modify the statusline with the current contents of the builder
 endfunction
 
 call plug#begin('~/.vim/bundle')
 
-"Plug 'vim-pi'
 Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/MatchTag' " Find matching XML/HTML Tags
-"Plug 'MatchTagAlways'
 Plug 'vim-scripts/L9' "grep buffer, grepbufferall
 Plug 'vim-scripts/command-t' " file explorer
 Plug 'https://github.com/scrooloose/nerdtree.git' " file explorer
-"Plug 'jistr/vim-nerdtree-tabs' " with tabs, please
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'https://github.com/Shougo/unite.vim.git'
 Plug 'vim-scripts/taglist.vim'
-"Plug 'vimfiler' " similar to nerdTree
 Plug 'https://github.com/flazz/vim-colorschemes.git'
+Plug 'https://github.com/rafi/awesome-vim-colorschemes.git'
 "Plug 'tpope/vim-rails'
+Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-fugitive' "git support
 Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-haml'
+Plug 'tpope/vim-obsession'
+"Plug 'tpope/vim-flagship'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-jdaddy'
 Plug 'https://github.com/vim-airline/vim-airline.git'
 Plug 'https://github.com/vim-airline/vim-airline-themes.git'
-Plug 'https://github.com/Lokaltog/vim-powerline.git'
+Plug 'https://github.com/Lokaltog/powerline.git'
 Plug 'vim-scripts/Syntastic' "syntax checking
+Plug 'ryanoasis/vim-devicons'
 Plug 'gcorne/vim-sass-lint'
-"Plug 'Supertab' " use tab for syntax completions
 Plug 'https://github.com/alvan/vim-closetag.git'
-"Plug 'HTML_AutoCloseTag' "better auto close?
 Plug 'https://github.com/othree/html5-syntax.vim.git' " still have to copy files to ~./vim/syntax
 Plug 'https://github.com/Valloric/YouCompleteMe.git' "as you type compile support
 Plug 'https://github.com/Shougo/neomru.vim.git' " for UNITE file_mru
-"Plug 'ctrlp'
 Plug 'vim-scripts/camelcasemotion'
 Plug 'https://github.com/scrooloose/nerdcommenter.git'
 Plug 'https://github.com/mileszs/ack.vim.git' "grep current project tree
 Plug 'vim-scripts/Gundo' "view vim undo tree (and patch!)
-"Plug 'csslint.vim'
 Plug 'https://github.com/Shutnik/jshint2.vim.git'
 "Plug 'grunt'
 Plug 'https://github.com/mhinz/vim-signify.git' " instead of git-gutter
 Plug 'vim-scripts/trailing-whitespace'
 Plug 'https://github.com/Raimondi/delimitMate.git'
-"Plug 'Solarized'
 Plug 'jelera/vim-javascript-syntax'
-"Plug 'UltiSnips'
 Plug 'https://github.com/honza/vim-snippets.git'
 Plug 'vim-scripts/vim-coffee-script'
-"Plug 'Tagbar'
 Plug 'othree/html5.vim'
 Plug 'vim-scripts/EasyMotion'
 Plug 'vim-scripts/DetectIndent'
@@ -84,22 +78,36 @@ Plug 'MarcWeber/vim-addon-async'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ujihisa/unite-colorscheme'
 Plug 'junkblocker/unite-codesearch'
-"Plug 'vim-scripts/deunite'
 Plug 'junkblocker/unite-tasklist'
 Plug 'godlygeek/tabular'
 Plug 'hallison/vim-rdoc'
-"Plug 'docker/docker'
-"Plug 'abolish'
-"Plug 'https://github.com/spiiph/vim-space'
 Plug 'https://github.com/rorymckinley/vim-rubyhash'
 
 call plug#end()
+let g:airline_powerline_fonts = 1
+let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'unicode'
+call airline#add_inactive_statusline_func('Render_Only_File')
+let g:airline_theme="solarized"
 let g:unite_force_overwrite_statusline = 0
-let g:unite_codesearch_command = "/Users/kmallory/go/bin/csearch '%s'"
+let g:unite_codesearch_command = "/Users/kmallory/go/bin/csearch -m 50 '%s'"
 let g:csearchhighlight = 'Y'
 let g:unite_source_codesearch_ignore_case = 0
 let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linenr', ':%3v'])
 let g:CommandTFileScanner = "watchman"
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type= 2
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline#extensions#bufferline#enabled = 1
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline#extensions#tabline#tabs_label = 't'
+let g:airline#extensions#tabline#buffers_label = 'b'
 
 "set rtp+=~/Documents/github/powerline/powerline/bindings/vim
 set rtp+=~/bin
@@ -113,33 +121,29 @@ set tabstop=4
 
 let g:rspec_runner = "os_x_terminal"
 "let g:rspec_command = "!bundle exec rspec --drb {}"
-let g:rspec_command = "cd /development/pwd;bundle exec rspec {spec}"
-call airline#add_inactive_statusline_func('Render_Only_File')
-let g:airline_powerline_fonts = 1
-let g:airline_theme="molokai"
-"colorscheme bclear
-"colorscheme railscasts
-"colorscheme eclipse
-"colorscheme textmate16
-" kmallory scheme is my updates to TNB
+let g:rspec_command = "cd /Users/kmallory/development/pwd;bundle exec rspec {spec}"
 if has("gui_running")
- set macmeta
- set guifont=Inconsolata-g\ for\ Powerline:h14
- set lines=41
- set columns=178
-  colorscheme Tomorrow-Night-Bright
+  set macmeta
+  set guifont=DaddyTimeMonoNerdFontCompleteM-Book:h18
+  "set guifont=Inconsolata-g\ for\ Powerline:h14
+  "set guifont=Source\ Code\ Pro\ for\ Powerline:14
+  set lines=41
+  set columns=200
+  colorscheme solarized
   set background=light
+  set guioptions-=e
+  set guitablabel=%!GuiTabLabel()
 else
- " This is console Vim.
- if exists("+lines")
-  set lines=50
- endif
- if exists("+columns")
-  set columns=150
-  set term=xterm-256color
-  set background=light
-  colorscheme Tomorrow-Night-Bright
- endif
+  " This is console Vim.
+  if exists("+lines")
+    set lines=50
+  endif
+  if exists("+columns")
+    set columns=150
+    set term=xterm-256color
+    set background=light
+    colorscheme solarized
+  endif
 endif
 
 
@@ -166,18 +170,18 @@ let g:SuperTabDefaultCompletionType = "context"
 
 
 function! Auto_complete_string()
- if pumvisible()
-  return "\<C-n>"
- else
-  return "\<C-x>\<C-o>\<C-r>=Auto_complete_opened()\<CR>"
- end
+  if pumvisible()
+    return "\<C-n>"
+  else
+    return "\<C-x>\<C-o>\<C-r>=Auto_complete_opened()\<CR>"
+  end
 endfunction
 
 function! Auto_complete_opened()
- if pumvisible()
-  return "\<Down>"
- end
- return ""
+  if pumvisible()
+    return "\<Down>"
+  end
+  return ""
 endfunction
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
@@ -225,24 +229,24 @@ set nostartofline                  " don't jump to the start of line when scroll
 "let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_enable_signs=1
 if has('statusline')
- "set laststatus=2
- " Broken down into easily includeable segments
- "set statusline=%<%f\    " Filename
- "set statusline+=%w%h%m%r " Options
- "set statusline+=%{fugitive#statusline()} "  Git Hotness
- "set statusline+=\ [%{&ff}/%Y]            " filetype
- "set statusline+=\ [%{getcwd()}]          " current dir
- "set statusline+=%#warningmsg#
- "set statusline+=%{SyntasticStatuslineFlag()}
- "set statusline+=%*
- "set statusline+=%{fugitive#statusline()}
- let g:syntastic_enable_signs=1
- "set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+  "set laststatus=2
+  " Broken down into easily includeable segments
+  "set statusline=%<%f\    " Filename
+  "set statusline+=%w%h%m%r " Options
+  set statusline+=%{fugitive#statusline()} "  Git Hotness
+  "set statusline+=\ [%{&ff}/%Y]            " filetype
+  "set statusline+=\ [%{getcwd()}]          " current dir
+  "set statusline+=%#warningmsg#
+  "set statusline+=%{SyntasticStatuslineFlag()}
+  "set statusline+=%*
+  set statusline+=%{fugitive#statusline()}
+  let g:syntastic_enable_signs=1
+  "set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 endif
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
-"set statusline+=%{fugitive#statusline()}
+set statusline+=%{fugitive#statusline()}
 let g:syntastic_auto_jump = 3
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
@@ -255,7 +259,7 @@ let g:syntastic_check_on_wq = 1
 let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
 let g:syntastic_ruby_rubocop_exec = '~/bin/rubocop.sh'
 let g:syntastic_haml_checkers = ['haml_lint', 'haml']
-"let g:syntastic_haml_rubocop_exec = '~/bin/rubocop.sh'
+let g:syntastic_haml_rubocop_exec = '~/bin/rubocop.sh'
 let g:syntastic_haml_haml_lint_exec = '~/bin/haml-lint.sh'
 let g:syntastic_sass_checkers=["sass_lint"]
 let g:syntastic_scss_checkers=["scss_lint"]
@@ -276,12 +280,12 @@ set splitbelow
 set splitright
 set complete=.,w,t
 function! InsertTabWrapper()
- let col = col('.') - 1
- if !col || getline('.')[col - 1] !~ '\k'
-  return "\<tab>"
- else
-  return "\<c-p>"
- endif
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
 endfunction
 set fillchars+=fold:\
 set foldmethod=syntax
@@ -290,31 +294,30 @@ set foldmethod=syntax
 set foldlevelstart=20
 set fillchars+=stl:\ ,stlnc:\
 set termencoding=utf-8
-let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
 
 set foldtext=CustomFoldText()
 fu! CustomFoldText()
- "get first non-blank line
- let fs = v:foldstart
- while getline(fs) =~ '^\s*$' | let fs = nextnonblank(fs + 1)
- endwhile
- if fs > v:foldend
-  let line = getline(v:foldstart)
- else
-  let line = substitute(getline(fs), '\t', repeat(' ', &tabstop), 'g')
- endif
+  "get first non-blank line
+  let fs = v:foldstart
+  while getline(fs) =~ '^\s*$' | let fs = nextnonblank(fs + 1)
+  endwhile
+  if fs > v:foldend
+    let line = getline(v:foldstart)
+  else
+    let line = substitute(getline(fs), '\t', repeat(' ', &tabstop), 'g')
+  endif
 
- let w = winwidth(0) - &foldcolumn - (&number ? 8 : 0)
- let foldSize = 1 + v:foldend - v:foldstart
- let foldSizeStr = " l:" . foldSize. " "
- let foldSizeStr = ""
- let foldLevelStr = " "
- "let foldLevelStr = repeat("+--", v:foldlevel)
- let lineCount = line("$")
- let foldPercentage = printf("[%.1f", (foldSize*1.0)/lineCount*100) . "%] "
- let expansionString = repeat(" ", w - strwidth(foldSizeStr.line.foldLevelStr.foldPercentage))
- return line . expansionString . foldSizeStr . foldPercentage . foldLevelStr
+  let w = winwidth(0) - &foldcolumn - (&number ? 8 : 0)
+  let foldSize = 1 + v:foldend - v:foldstart
+  let foldSizeStr = " l:" . foldSize. " "
+  let foldSizeStr = ""
+  let foldLevelStr = " "
+  "let foldLevelStr = repeat("+--", v:foldlevel)
+  let lineCount = line("$")
+  let foldPercentage = printf("[%.1f", (foldSize*1.0)/lineCount*100) . "%] "
+  let expansionString = repeat(" ", w - strwidth(foldSizeStr.line.foldLevelStr.foldPercentage))
+  return line . expansionString . foldSizeStr . foldPercentage . foldLevelStr
 endf
 
 
@@ -344,25 +347,25 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 
 
 fu! SeeTab()
- if !exists("g:SeeTabEnabled")
-  let g:SeeTabEnabled = 1
-  let g:SeeTab_list = &list
-  let g:SeeTab_listchars = &listchars
-  let regA = @a
-  redir @a
-  hi SpecialKey
-  redir END
-  let g:SeeTabSpecialKey = @a
-  let @a = regA
-  silent! hi SpecialKey guifg=black guibg=DarkBlue ctermfg=black ctermbg=magenta
-  set list
-  set listchars=tab:\|\
- else
-  let &list = g:SeeTab_list
-  let &listchars = &listchars
-  silent! exe "hi ".substitute(g:SeeTabSpecialKey,'xxx','','e')
-  unlet g:SeeTabEnabled g:SeeTab_list g:SeeTab_listchars
- endif
+  if !exists("g:SeeTabEnabled")
+    let g:SeeTabEnabled = 1
+    let g:SeeTab_list = &list
+    let g:SeeTab_listchars = &listchars
+    let regA = @a
+    redir @a
+    hi SpecialKey
+    redir END
+    let g:SeeTabSpecialKey = @a
+    let @a = regA
+    silent! hi SpecialKey guifg=black guibg=DarkBlue ctermfg=black ctermbg=magenta
+    set list
+    set listchars=tab:\|\
+  else
+    let &list = g:SeeTab_list
+    let &listchars = &listchars
+    silent! exe "hi ".substitute(g:SeeTabSpecialKey,'xxx','','e')
+    unlet g:SeeTabEnabled g:SeeTab_list g:SeeTab_listchars
+  endif
 endfunc
 com! -nargs=0 SeeTab :call SeeTab()
 
@@ -400,11 +403,11 @@ let &runtimepath.=','.vimDir
 
 " Keep undo history across sessions by storing it in a file
 if has('persistent_undo')
- let myUndoDir = expand(vimDir . '/undodir')
- " No console pops up
- call system('mkdir ' . myUndoDir)
- let &undodir = myUndoDir
- set undofile
+  let myUndoDir = expand(vimDir . '/undodir')
+  " No console pops up
+  call system('mkdir ' . myUndoDir)
+  let &undodir = myUndoDir
+  set undofile
 endif
 
 
@@ -429,7 +432,7 @@ noremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?  \ "\<lt>C-n>" : \ 
 inoremap <expr> <Nul> Auto_complete_string()
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 inoremap <expr> <S-Space> (pumvisible() ? (col('.') > 1 ? '<Esc>i<Right>' : '<Esc>i') : '') .
-   \ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
+      \ '<C-x><C-u><C-r>=pumvisible() ? "\<lt>C-n>\<lt>C-p>\<lt>Down>" : ""<CR>'
 " tab navigation like firefox
 nnoremap <C-S-tab> :tabprevious<CR>
 nnoremap <C-tab>   :tabnext<CR>
@@ -522,10 +525,10 @@ vmap <tab> >gv
 vmap <s-tab> <gv
 
 
- "Comment/uncomment lines
+"Comment/uncomment lines
 map <leader>/   <plug>NERDCommenterToggle
-map <D-/>               <plug>NERDCommenterToggle
-imap <D-/>              <Esc><plug>NERDCommenterToggle i
+map <D-/>       <plug>NERDCommenterToggle
+imap <D-/>      <Esc><plug>NERDCommenterToggle i
 
 " In command-line mode, <C-A> should go to the front of the line, as in bash.
 cmap <C-A> <C-B>
@@ -564,21 +567,24 @@ set diffopt+=vertical
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
 
 function! s:align()
- let p = '^\s*|\s.*\s|\s*$'
- if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
-  let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
-  let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
-  Tabularize/|/l1
-  normal! 0
-  call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
- endif
+  let p = '^\s*|\s.*\s|\s*$'
+  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+    Tabularize/|/l1
+    normal! 0
+    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  endif
 endfunction
 function! GuiTabLabel()
- return fnamemodify(bufname(winbufnr(1)), ":t")
+  "return fnamemodify(bufname(winbufnr(1)), ":t")
+    "return expand("%f")
+    " or do something more clever
+  return substitute( expand("%f"), '\([^/]\)[^/]*/', '\1../', "g" )
+  endif
 endfunction
-set guitablabel=%!GuiTabLabel()
 " MySQL
-let g:dbext_default_profile_mysql_local = 'type=MySQL:user=root:passwd=gandalf0:dbname=pwdror'
+let g:dbext_default_profile_mysql_local = 'type=MySQL:user=root:passwd=pwd0:dbname=pwdror'
 hi Folded guifg=#ffffe5 guibg=#2a2a2a
 "highlight Folded     gui=none guifg=#804030 guibg=#fff0d0 ctermbg=black ctermfg=black cterm=bold
 
@@ -594,3 +600,4 @@ highlight link GitGutterChangeDelete luaStatement " a changed line followed by a
 let coffee_watch_vert = 1
 autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 let g:NERDCustomDelimiters = {'rb': { 'left': '#', 'leftAlt': '#', 'rightAlt': '#' }}
+set encoding=UTF-8

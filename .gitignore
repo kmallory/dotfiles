@@ -1,4 +1,6 @@
 .swn
+*.copy
+bin/*
 Thumbs.db
 ehthumbs.db
 Desktop.ini

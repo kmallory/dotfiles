@@ -1,37 +1,50 @@
 set POWERLINE_COMMAND powerline-client
 
 #alias gvim='/usr/local/bin/gvim'
-alias view='/usr/local/bin/mvim -M'
-alias vim='/usr/local/bin/vim'
+alias view='/usr/local/bin/gvim -M'
+#alias vim='/usr/local/bin/vim'
 alias eclim='/Applications/eclipse/eclipse/plugins/org.eclim_2.4.0/bin/eclim'
 alias dog='cd ~/development/pwd/'
-alias dogasp='cd ~/Downloads/pwd/asp'
+alias dog-deploy='cd ~/development/pwd-deploy/'
+alias rails5='cd ~/development/pwd-rails5/'
 alias dogr='cd /Volumes/pwdhld-devel'
-alias dogprod='cd /Volumes/pwd'
 alias gh='cd ~/github'
 alias be='bundle exec'
 alias qar="$RAILS_ROOT/test/tools/qarun.sh"
 alias ecr="$RAILS_ROOT/test/tools/ecrun.sh"
+alias goqa="ssh deploy@ec2-54-204-87-239.compute-1.amazonaws.com"
+alias goprod="ssh deploy@ec2-54-152-126-181.compute-1.amazonaws.com"
 alias yardsql='ssh -L 3307:ec2-54-152-126-181.compute-1.amazonaws.com:3306 deploy@ec2-54-152-126-181.compute-1.amazonaws.com'
+alias yardqasql='ssh -L 3307:ec2-54-204-87-239.compute-1.amazonaws.com:3306 deploy@ec2-54-204-87-239.compute-1.amazonaws.com'
 alias python='python3'
 alias pip='pip3'
+alias ey='ey-core'
 #
-set PATH /usr/local/bin $PATH /Users/kmallory/github/powerline-shell /Users/kmallory/bin /Users/kmallory/github/powerline-daemon /Users/kmallory/dotfiles/vim/vim.symlink/bundle/vim-powerline
+set PATH /usr/local/opt/gnu-sed/libexec/gnubin /usr/local/bin /usr/local/opt/bison/bin $PATH /Users/kmallory/github/powerline-shell /Users/kmallory/bin /Users/kmallory/github/powerline-daemon /Users/kmallory/dotfiles/vim/vim.symlink/bundle/vim-powerline
 
 set -x PWDHLDB_DATABASE_PASSWORD pwd0
-set -x GIT_EDITOR /usr/bin/vim
-set -x EDITOR /usr/local/bin/vim
-set -x VISUAL /usr/local/bin/gvim
+set -x CHROME_BINARY_PATH "/Applications/shareware/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary"
+set -x CHROME_BINARY_PATH "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+set -x GIT_EDITOR /Users/kmallory/bin/gvim
+set -x EDITOR /Users/kmallory/bin/gvim
+set -x VISUAL /Users/kmallory/bin/gvim
 set -x RUBY_GC_MALLOC_LIMIT 60000000
 set -x RUBY_GC_HEAP_FREE_SLOTS 200000
 set -x RAILS_ROOT ~/development/pwd
+set -x PWDHLL_GEOCODE_DAYS 30
 #set -x RAILS_ENV development
 set -x HINTS 'nohints'
-set -x HOMEBREW_GITHUB_API_TOKEN 11a5807c029e6be6a862db47e0c5e7c763151ea8
+set -x HOMEBREW_GITHUB_API_TOKEN 78a686cb12f3ee42fd001ff71d5f172d1b5f9be4
 set -x GOPATH $HOME/go
 set ECLIPSE_HOME /Applications/eclipse/eclipse
 set fish_function_path $fish_function_path "/Users/kmallory/github/powerline/powerline/bindings/fish"
+set -g fish_key_bindings fish_default_key_bindings
+set -g theme_display_ruby no
+set -g theme_display_user ssh
+set -g theme_title_display_process yes
+set -g theme_color_scheme nord
 #powerline/build/lib/powerline/bindings/fish"
+#
 set -g fish_greeting ""
 set -g theme_powerline_fonts no
 
@@ -60,6 +73,10 @@ set -x PATH /usr/local/opt/openssl/bin /Applications $HOME/.rbenv/shims $GOPATH/
 rbenv rehash >/dev/null ^&1
 #powerline-setup
 
+set -g theme_display_user yes
+set -g theme_hide_hostname yes
+set -g default_user kmallory
+
 export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
 
@@ -76,7 +93,7 @@ end
 end
 
 function repair
-mysql -uroot -ppwd0 mysql -e 'repair table proc;'
+mysql -uroot -ppwd0 mysql -e "repair table proc;"
 end
 
 function a2p
@@ -99,7 +116,7 @@ function ls
 /bin/ls -FG $argv
 end
 
-function fish_prompt
-    powerline-shell.py --shell bare $status
-end
+#function fish_prompt
+    #powerline-shell.py --cwd-max-dir-size 5 --shell bare --colorize-hostname --mode compatible $status ^/dev/null
+#end
 

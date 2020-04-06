@@ -6,7 +6,7 @@
         protocol = https
 [user]
 	name = kevin mallory
-	email = kmallory@gourmetgeeks.org
+	email = sillybaritone@gmail.com
 [credential]
         helper = osxkeychain
 [alias]
@@ -39,7 +39,7 @@
 [help]
         autocorrect = 1
 [push]
-	default = nothing
+	default = upstream
 [filter "media"]
         required = true
 	clean = git media clean %f
